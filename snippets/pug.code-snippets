@@ -1,0 +1,922 @@
+{
+  // Elements
+  "input": {
+    "prefix": "input",
+    "body": [
+      "input(v-model=\"${0:data}\")"
+    ],
+    "description": "v-model directive input"
+  },
+  "img": {
+    "prefix": "img",
+    "body": [
+      "img(:src=\"'${1:filePath}'\" alt=\"${0:altText}\")"
+    ],
+    "description": "Vue image source binding"
+  },
+  "a": {
+    "prefix": "a",
+    "body": "a(:href=\"'${1:#}'\" title=\"${2:title}\")",
+    "description": "a(href=\"#\" title=\"title\")"
+  },
+  "div": {
+    "prefix": "div",
+    "body": "div($0)",
+    "description": "div()"
+  },
+  "span": {
+    "prefix": "span",
+    "body": "span($0)",
+    "description": "span()"
+  },
+  "component": {
+    "prefix": "component",
+    "body": [
+      "component(:is=\"${1:componentId}\") $0"
+    ],
+    "description": "component element"
+  },
+  "keep-alive": {
+    "prefix": "keep-alive",
+    "body": [
+        "keep-alive"
+    ],
+    "description": "keep-alive element"
+  },
+
+  // Transition
+  "transition": {
+    "prefix": "transition",
+    "body": [
+      "transition(name='${1:fade}' mode='${2:out-in}')"
+    ],
+    "description": "transition element"
+  },
+  "transition-group": {
+    "prefix": "transition-group",
+    "body": [
+        "transition-group"
+    ],
+    "description": "transition-group element"
+  },
+  "enter-class": {
+    "prefix": "enter-class",
+    "body": [
+        "enter-class=\"$1\"$0"
+    ],
+    "description": "enter-class=''. Expects: string."
+  },
+  "leave-class": {
+    "prefix": "leave-class",
+    "body": [
+        "leave-class=\"$1\"$0"
+    ],
+    "description": "leave-class=''. Expects: string."
+  },
+  "appear-class": {
+    "prefix": "appear-class",
+    "body": [
+        "appear-class=\"$1\"$0"
+    ],
+    "description": "appear-class=''. Expects: string."
+  },
+  "enter-to-class": {
+    "prefix": "enter-to-class",
+    "body": [
+        "enter-to-class=\"$1\"$0"
+    ],
+    "description": "enter-to-class=''. Expects: string."
+  },
+  "leave-to-class": {
+    "prefix": "leave-to-class",
+    "body": [
+        "leave-to-class=\"$1\"$0"
+    ],
+    "description": "leave-to-class=''. Expects: string."
+  },
+  "appear-to-class": {
+    "prefix": "appear-to-class",
+    "body": [
+        "appear-to-class=\"$1\"$0"
+    ],
+    "description": "appear-to-class=''. Expects: string."
+  },
+  "enter-active-class": {
+    "prefix": "enter-active-class",
+    "body": [
+      "enter-active-class=\"$1\"$0"
+    ],
+    "description": "enter-active-class=''. Expects: string."
+  },
+  "leave-active-class": {
+    "prefix": "leave-active-class",
+    "body": [
+      "leave-active-class=\"$1\"$0"
+    ],
+    "description": "leave-active-class=''. Expects: string."
+  },
+  "appear-active-class": {
+    "prefix": "appear-active-class",
+    "body": [
+      "appear-active-class=\"$1\"$0"
+    ],
+    "description": "appear-active-class=''. Expects: string."
+  },
+
+  // Vue Attributes
+  "v-show": {
+    "prefix": "v-show",
+    "body": [
+      "v-show=\"${1:condition}\""
+    ],
+    "description": "v-show inline statement"
+  },
+  "v-if": {
+    "prefix": "v-if",
+    "body": [
+      "v-if=\"${1:condition}\""
+    ],
+    "description": "v-if inline statement"
+  },
+  "v-else-if": {
+    "prefix": "v-else-if",
+    "body": [
+      "v-else-if=\"${1:condition}\""
+    ],
+    "description": "v-else-if inline statement"
+  },
+  "v-else": {
+    "prefix": "v-else",
+    "body": [
+      "v-else=\"${1:condition}\""
+    ],
+    "description": "v-else inline statement"
+  },
+  "v-for": {
+    "prefix": "v-for",
+    "body": [
+      "v-for=\"(${1:item}, index, key) in ${2:items}\" :key=\"${0:key}\""
+    ],
+    "description": "v-for inline with index and key"
+  },
+  "v-on": {
+    "prefix": "v-on",
+    "body": [
+      "v-on:${1:event}=\"${2:handle}\""
+    ],
+    "description": "v-on"
+  },
+  "v-bind": {
+    "prefix": "v-bind",
+    "body": [
+      "v-bind$1=\"${2}\""
+    ],
+    "description": "v-bind"
+  },
+  "v-model": {
+    "prefix": "v-model",
+    "body": [
+      "v-model=\"${0:data}\""
+    ],
+    "description": "v-model inline statement"
+  },
+  "v-text": {
+    "prefix": "v-text",
+    "body": [
+      "v-text=\"${1:msg}\""
+    ],
+    "description": "v-text"
+  },
+  "v-html": {
+    "prefix": "v-html",
+    "body": [
+      "v-html=\"${1:html}\""
+    ],
+    "description": "v-html"
+  },
+  "v-pre": {
+    "prefix": "v-pre",
+    "body": [
+      "v-pre=\"${1:pre}\""
+    ],
+    "description": "v-pre"
+  },
+  "v-cloak": {
+    "prefix": "v-cloak",
+    "body": [
+      "v-cloak"
+    ],
+    "description": "v-cloak"
+  },
+  "v-once": {
+    "prefix": "v-once",
+    "body": [
+      "v-once"
+    ],
+    "description": "v-once"
+  },
+  ":key": {
+    "prefix": ":key",
+    "body": [
+      ":key=\"${1:key}\""
+    ],
+    "description": "Expects: string. Children of the same common parent must have unique keys. Duplicate keys will cause render errors."
+  },
+  "ref": {
+    "prefix": "ref",
+    "body": [
+      "ref=\"${1:reference}\""
+    ],
+    "description": "Expects: string. ref is used to register a reference to an element or a child component. The reference will be registered under the parent component’s $refs object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance."
+  },
+  "slot": {
+    "prefix": "slot",
+    "body": [
+      "slot=\"$1\""
+    ],
+    "description": "slot=''. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
+  },
+  "slot:scope": {
+    "prefix": "slot:scope",
+    "body": [
+      "slot-scope=\"$1\""
+    ],
+    "description": "Used to denote an element or component as a scoped slot. The attribute’s value should be a valid JavaScript expression that can appear in the argument position of a function signature. This means in supported environments you can also use ES2015 destructuring in the expression. Serves as a replacement for scope in 2.5.0+."
+  },
+  "scope": {
+    "prefix": "scope",
+    "body": [
+        "scope=\"${1:scope}\"$0"
+    ],
+    "description": "Used to denote a <template> element as a scoped slot, which is replaced by `slot-scope` in 2.5.0+."
+  },
+  "tag": {
+    "prefix": "tag",
+    "body": [
+      "tag=\"$1\"$0"
+    ],
+    "description": "tag"
+  },
+
+  // Vue Router
+  "router-link": {
+    "prefix": "router-link",
+    "body": [
+      "router-link(to=\"/${1:page}\") ${2:RouterName}"
+    ],
+    "description": "Vue router link"
+  },
+  "router-view": {
+      "prefix": "router-view",
+      "body": [
+          "router-view $0"
+      ],
+      "description": "router-view element"
+  },
+  "to": {
+    "prefix": "to",
+    "body": [
+      "to=\"$1\"$0"
+    ],
+    "description": "to=''"
+  },
+
+  // Vuex
+
+  // Prop Attributes
+  ":src": {
+    "prefix": ":src",
+    "body": [
+      ":src=\"'${1:filePath}'\" alt=\"${0:altText}\""
+    ],
+    "description": "inline source binding"
+  },
+  ":style": {
+    "prefix": ":style",
+    "body": [
+      ":style=\"{ ${0} }\")"
+    ],
+    "description": "Vue style binding"
+  },
+  ":class": {
+    "prefix": ":class",
+    "body": [
+      ":class=\"{ ${0} }\""
+    ],
+    "description": "Vue class binding"
+  },
+
+  // Element Attributes
+  "class": {
+    "prefix": "class",
+    "body": "class=\"$1\"$0",
+    "description": "Set class attribute"
+  },
+  "id": {
+    "prefix": "id",
+    "body": "id=\"$1\"$0",
+    "description": "Set id attribute"
+  },
+  "type": {
+    "prefix": "type",
+    "body": "type=\"$1\"$0",
+    "description": "Set type attribute for form elements"
+  },
+  "name": {
+    "prefix": "name",
+    "body": "name=\"$1\"$0",
+    "description": "Set name attribute for form elements"
+  },
+  "placeholder": {
+    "prefix": "placeholder",
+    "body": "placeholder=\"$1\"$0",
+    "description": "Set placeholder attribute for form elements"
+  },
+  "value": {
+    "prefix": "value",
+    "body": "value=\"$1\"$0",
+    "description": "Set value attribute for form elements"
+  },
+
+  // --------------- QUASAR COMPOSANTS --------------
+
+  "q-ajax-bar": {
+    "prefix": "q-ajax-bar",
+    "body": "q-ajax-bar(color=\"orange\" text-color=\"black\" label=\"2\")",
+    "description": "set q-ajax-bar component with default value"
+  },
+
+  "q-avatar": {
+    "prefix": "q-avatar",
+    "body": "q-avatar(color=\"red\" text-color=\"white\" icon=\"directions\")",
+    "description": "set q-avatar component with default value"
+  },
+
+  "q-badge": {
+    "prefix": "q-badge",
+    "body": "q-badge(color=\"orange\" text-color=\"black\" label=\"2\")",
+    "description": "set q-badge component with default value"
+  },
+
+  "q-banner": {
+    "prefix": "q-banner",
+    "body": [
+      "q-banner(class=\"bg-primary text-white\")",
+      "\tDefault text for banner",
+      "\ttemplate(v-slot:action)",
+      "\t\tq-btn(flat color=\"white\" label=\"Dismiss\")"
+    ],
+    "description": "set q-banner component with default value"
+  },
+
+  "q-bar": {
+    "prefix": "q-bar",
+    "body": [
+      "q-bar",
+      "\tdiv(class=\"text-weight-bold\")",
+      "\t\ttitle of the banner",
+    ],
+    "description": "set q-bar component with default value"
+  },
+
+  "q-breadcrumbs": {
+    "prefix": "q-breadcrumbs",
+    "body": [
+      "q-breadcrumbs",
+      "\tq-breadcrumbs-el(label=\"Home\")"
+    ],
+    "description": "set q-breadcrumbs component with default value"
+  },
+
+
+  "q-btn": {
+    "prefix": "q-btn",
+    "body": "q-btn(color=\"primary\" label=\"Primary\")",
+    "description": "set q-btn component with default value"
+  },
+
+  "q-btn-group": {
+    "prefix": "q-btn-group",
+    "body": "q-btn-group",
+    "description": "set q-btn-group component with default value"
+  },
+
+  "q-btn-dropdown": {
+    "prefix": "q-btn-dropdown",
+    "body": [
+      "q-btn-dropdown(color=\"primary\" label=\"Dropdown Button\")",
+      "\tq-list",
+      "\t\tq-item(clickable v-close-popup @click=\"onItemClick\")",
+      "\t\t\tq-item-section",
+      "\t\t\t\tq-item-label Articles"
+    ],
+    "description": "set q-btn-dropdown component with default value"
+  },
+
+  "q-card": {
+    "prefix": "q-card",
+    "body": [
+      "q-card(class=\"my-card\")",
+      "\tq-card-section",
+      "\t\tText by default for card component",
+    ],
+    "description": "set q-card component with default value"
+  },
+   
+  "q-carousel": {
+    "prefix": "q-carousel",
+    "body": [
+      "q-carousel(v-model=\"slide\" ",
+      "\ttransition-prev=\"slide-right\"",
+      "\ttransition-next=\"slide-left\"",
+      "\tanimated",
+      "\tcontrol-color=\"primary\"",
+      "\tclass=\"rounded-borders\"",
+      ")",
+      "\t\tq-carousel-slide(name=\"Default text\" class=\"column no-wrap flex-center\")", 
+      "\t\t\tDefault text for carousel", 
+      "\t\tq-carousel-slide(name=\"Default text 2\" class=\"column no-wrap flex-center\")", 
+      "\t\t\tDefault text 2 for carousel", 
+      "div(class=\"row justify-center\")",
+      "\tq-btn-toggle(",
+      "\t\tglossy",
+      "\t\tv-model=\"slide\"",
+      "\t\t:options=\"[{ label: 1, value: 'Default text'}, { label: 2, value: 'Default text 2'}]\" ",
+    ],
+    "description": "set q-carousel component with default value"
+  },
+
+  "q-chat-message" : {
+    "prefix": "q-chat-message",
+    "body":"q-chat-message(text=\"['Default chat message']\" sent )",
+    "description": "set q-chat-message component with default value"
+  },
+
+  "q-chip" : {
+    "prefix": "q-chip",
+    "body":"q-chip(icon=\"event\" ) Default text for calendar ",
+    "description": "set q-chip component with default value"
+  },
+
+  "q-circular-progress" : {
+    "prefix": "q-circular-progress",
+    "body":"q-circular-progress(:value=\"value\" size=\"50px\" color=\"orange\" class=\"q-ma-md\")",
+    "description": "set q-circular-progress component with default value"
+  },
+
+  "q-color" : {
+    "prefix": "q-color",
+    "body":"q-color(v-model=\"hex\" class=\"my-picker\")",
+    "description": "set q-color component with default value"
+  },
+
+  "q-dialog" : {
+    "prefix": "q-dialog",
+    "body": [
+      "q-dialog(v-model=\"alert\")",
+      "\tq-card",
+      "\t\tq-card-section",
+      "\t\t\tdiv(class=\"text-h6\") Default q-dialog b",
+      "\t\tq-card-section( class=\"q-pt-none\" )",
+      "\t\t\tDefault qdialog text",
+      "\t\tq-card-actions( align=\"right\")",
+      "\t\t\tq-btn( flat label=\"OK\" color=\"primary\" v-close-popup)"
+    ],
+    "description": "set q-dialog component with default value"
+  },
+
+  "q-editor" : {
+    "prefix": "q-editor",
+    "body":"q-editor(v-model=\"editor\" min-height=\"5rem\")",
+    "description": "set q-editor component with default value"
+  },
+
+  "q-expansion-item" : {
+    "prefix": "q-expansion-item",
+    "body": [
+      "q-expansion-item(",
+      "\texpand-separator",
+      "\ticon=\"perm_identity\"",
+      "\tlabel=\"Account settings\"",
+      "\tcaption=\"Profil\"",
+      ")",
+      "\tq-card",
+      "\t\tq-card-section",
+      "\t\t\t Default text in q-expansion item"
+    ],
+    "description": "set q-expansion-item component with default value"
+  },
+
+  "q-layout" : {
+    "prefix": "q-layout",
+    "body": [
+      "q-layout( view=\"lhh LpR lff\" container style=\"height: 300px\" class=\"shadow-2 rounded-borders\")",
+      "\tq-header(class=\"bg-black\")",
+      "\t\tq-toolbar",
+      "\t\t\tq-btn(flat round dense icon=\"menu\")",
+      "\t\t\t\tq-toolbar-title", 
+      "\t\t\t\tDefault text header",
+      "\tq-page-container",
+      "\t\tq-page(padding)",
+      "\t\t\tp(v-for=\"n in 15\" :key=\"n\")",
+      "\t\t\t\tDefault text ",
+      "\t\t\tq-page-sticky(position=\"bottom-right\" :offset=\"[18, 18]\")",
+      "\t\t\t\tq-btn(fab icon=\"add\" color=\"accent\")"
+    ],
+    "description": "set q-layout component with default value"
+  },
+
+  "q-input" : {
+    "prefix": "q-input",
+    "body": "q-input(v-model=\"text\" label=\"Standard\")",
+    "description": "set q-input component with default value"
+  },
+
+  "q-select" : {
+    "prefix": "q-select",
+    "body": "q-select(v-model=\"model\" :options=\"options\" label=\"Standard\")",
+    "description": "set q-select component with default value"
+  },
+
+  "q-file" : {
+    "prefix": "q-file",
+    "body": "q-file(v-model=\"model\" label=\"Standard\")",
+    "description": "set q-file component with default value"
+  },
+  
+  "q-form" : {
+    "prefix": "q-form",
+    "body": [
+      "q-form(@submit=\"onSubmit\" @reset=\"onReset\" class=\"q-gutter-md\")",
+      "\tq-input(",
+      "\tfilled",
+      "\tv-model=\"name\"",
+      "\tlabel=\"Your name *\"",
+      "\thint=\"Name and surname\"",
+      "\tlazy-rules",
+      "\t:rules=\"[ val => val && val.length > 0 || 'Please type something']\"",
+      "\t)",
+      "\tq-input(",
+      "\tfilled",
+      "\ttype=\"number\"",
+      "\tv-model=\"age\"",
+      "\tlabel=\"Your age *\"",
+      "\tlazy-rules",
+      "\t:rules=\"[val => val !== null && val !== '' || 'Please type your age', val => val > 0 && val < 100 || 'Please type a real age']\"",
+      "\t)",
+      "\tq-toogle(v-model=\"accept\" label=\"I accept the license and terms\")",
+      "\tdiv",
+      "\t\tq-btn(label=\"Submit\" type=\"submit\" color=\"primary\")",
+      "\t\tq-btn(label=\"Reset\" type=\"reset\" color=\"primary\" flat class=\"q-ml-sm\")"
+    ],
+    "description": "set q-form component with default value"
+  },
+
+  "q-field" : {
+    "prefix": "q-field",
+    "body": [
+      "q-field(label=\"Standard\" stack-label)",
+      "\t<template v-slot:control>",
+      "\t\tdiv(class=\"self-center full-width no-outline\" tabindex=\"0\")Field content",
+      "\t</template>",
+    ],
+    "description": "set q-field component with default value"
+  },
+
+  "q-radio" : {
+    "prefix": "q-radio",
+    "body": "q-radio(v-model=\"shape\" val=\"line\" label=\"Line\")",
+    "description": "set q-radio component with default value"
+  },
+
+  "q-checkbox" : {
+    "prefix": "q-checkbox",
+    "body": "q-checkbox(v-model=\"val\")",
+    "description": "set q-checkbox component with default value"
+  },
+
+  "q-toggle" : {
+    "prefix": "q-toggle",
+    "body": "q-toggle(v-model=\"value\")",
+    "description": "set q-toggle component with default value"
+  },
+
+  "q-btn-toggle" : {
+    "prefix": "q-btn-toggle",
+    "body": [
+      "q-btn-toggle(",
+      "\tv-model=\"val\"",
+      "\tpush",
+      "\tglossy",
+      "\ttoggle-color=\"primary\"",
+      "\t:options=\"[{label: 'One', value: 'one'},{label: 'Two', value: 'two'},{label: 'Three', value: 'three'}]\"",
+      ")",
+    ],
+    "description": "set q-btn-toggle component with default value"
+  },
+
+  "q-option-group" : {
+    "prefix": "q-option-group",
+    "body": "q-option-group(v-model=\"group\" :options=\"options\" color=\"primary\")",
+    "description": "set q-option-group component with default value"
+  },
+
+  "q-slider" : {
+    "prefix": "q-slider",
+    "body": "q-slider(v-model=\"standard\" :min=\"0\" :max=\"50\")",
+    "description": "set q-slider component with default value"
+  },
+
+  "q-range" : {
+    "prefix": "q-range",
+    "body": "q-range(v-model=\"standard\" :min=\"0\" :max=\"50\")",
+    "description": "set q-range component with default value"
+  },
+
+  "q-time" : {
+    "prefix": "q-time",
+    "body": "q-time(v-model=\"time\")",
+    "description": "set q-time component with default value"
+  },
+
+  "q-date" : {
+    "prefix": "q-date",
+    "body": "q-date(v-model=\"date\")",
+    "description": "set q-date component with default value"
+  },
+
+  "q-icon" : {
+    "prefix": "q-icon",
+    "body": "q-icon(name=\"font_download\")",
+    "description": "set q-icon component with default value"
+  },
+
+  "q-img" : {
+    "prefix": "q-img",
+    "body": "q-img(:src=\"url\" spinner-color=\"white\" style=\"height: 140px; max-width: 150px\")",
+    "description": "set q-img component with default value"
+  },
+
+  "q-infinite-scroll" : {
+    "prefix": "q-infinite-scroll",
+    "body": [
+      "q-infinite-scroll(@load=\"onLoad\" :offset=\"250\")",
+      "\tdiv(v-for=\"(item, index) in items\" :key=\"index\" class=\"caption\")",
+      "\t\tp",
+      "\t\t\t Default text",
+      "\t<template  v-slot:loading>",
+      "\t\tdiv(class=\"row justify-center q-my-md\")",
+      "\t\t\tq-spinner-dots(color=\"primary\" size=\"40px\")",
+      "\t</template>",
+    ],
+    "description": "set q-infinite-scroll component with default value"
+  },
+
+  "q-inner-loading" : {
+    "prefix": "q-inner-loading",
+    "body": [
+      "q-inner-loading(:showing=\"visible\")",
+      "\tq-spinner-gears(size=\"50px\" color=\"primary\")"
+    ],
+    "description": "set q-inner-loading component with default value"
+  },
+
+  "q-intersection" : {
+    "prefix": "q-intersection",
+    "body": [
+      "q-intersection(",
+      "\tv-for=\"index in 60\"",
+      "\t:key=\"index\"",
+      "\tclass=\"example-item\"",
+      ")",
+      "\tq-card(class=\"q-ma-sm\")",
+      "\t\timg(src=\"url\")",
+      "\t\tq-card-section",
+      "\t\t\tdiv(class=\"text-h6\")",
+      "\t\t\t\tDefault Card title",
+      "\t\t\tdiv(class=\"text-subtitle2\")",
+      "\t\t\t\tby Default Name",
+    ],
+    "description": "set q-intersection component with default value"
+  },
+
+  "q-knob" : {
+    "prefix": "q-knob",
+    "body": "q-knob(v-model=\"value\" size=\"50px\" color=\"light-blue\" class=\"q-ma-md\")",
+    "description": "set q-knob component with default value"
+  },
+
+  "q-linear-progress" : {
+    "prefix": "q-linear-progress",
+    "body": "q-linear-progress(:value=\"progress\" class=\"q-mt-md\")",
+    "description": "set q-linear-progress component with default value"
+  },
+
+  "q-list" : {
+    "prefix": "q-list",
+    "body": [
+      "q-list(bordered separator)",
+      "\tq-item(clickable v-ripple)",
+      "\t\tq-item-section",
+      "\t\t\tDefault single line item text",
+      "\tq-item(clickable v-ripple)",
+      "\t\tq-item-section",
+      "\t\t\tq-item-label",
+      "\t\t\t\tItem with caption",
+      "\t\t\tq-item-label(caption)",
+      "\t\t\t\tCaption",
+    ],
+    "description": "set q-list component with default value"
+  },
+
+  "q-markup-table" : {
+    "prefix": "q-markup-table",
+    "body": [
+      "q-markup-table",
+      "\tthead",
+      "\t\ttr",
+      "\t\t\tth(class=\"text-left\")",
+      "\t\t\t\tDefault title column 1",
+      "\t\t\tth(class=\"text-right\")",
+      "\t\t\t\tDefault title column 2",
+      "\t\t\tth(class=\"text-right\")",
+      "\t\t\t\tDefault title column 3",
+      "\t\t\tth(class=\"text-right\")",
+      "\t\t\t\tDefault title column 4",
+      "\t\t\tth(class=\"text-right\")",
+      "\t\t\t\tDefault title column 5",
+      "\t\t\tth(class=\"text-right\")",
+      "\t\t\t\tDefault title column 6",
+      "\ttbody",
+      "\t\ttr",
+      "\t\t\ttd(class=\"text-left\")",
+      "\t\t\t\tDefault item 1",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\ttr",
+      "\t\t\ttd(class=\"text-left\")",
+      "\t\t\t\tDefault item 2",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\ttr",
+      "\t\t\ttd(class=\"text-left\")",
+      "\t\t\t\tDefault item 3",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\ttr",
+      "\t\t\ttd(class=\"text-left\")",
+      "\t\t\t\tDefault item 4",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\ttr",
+      "\t\t\ttd(class=\"text-left\")",
+      "\t\t\t\tDefault item 5",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\ttr",
+      "\t\t\ttd(class=\"text-left\")",
+      "\t\t\t\tDefault item 6",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+      "\t\t\ttd(class=\"text-right\")",
+      "\t\t\t\tDefault text",
+    ],
+    "description": "set q-markup-table component with default value"
+  },
+
+  "q-menu" : {
+    "prefix": "q-menu",
+    "body": [
+      "q-menu",
+      "\tq-list(style=\"min-width: 100px\")",
+      "\t\tq-item(clickable v-close-popup)",
+      "\t\t\tq-item-section",
+      "\t\t\t\tDefault item 1",
+      "\t\tq-item(clickable v-close-popup)",
+      "\t\t\tq-item-section",
+      "\t\t\t\tDefault item 2",
+      "\t\tq-item(clickable v-close-popup)",
+      "\t\t\tq-item-section",
+      "\t\t\t\tDefault item 3",
+    ],
+    "description": "set q-menu component with default value"
+  },
+
+  "q-resize-observer" : {
+    "prefix": "q-resize-observer",
+    "body": "q-resize-observer(@resize=\"onResize\")",
+    "description": "set q-resize-observer component with default value"
+  }, 
+
+  "q-scroll-observer" : {
+    "prefix": "q-scroll-observer",
+    "body": "q-scroll-observer( @scroll=\"onScroll\")",
+    "description": "set q-scroll-observer component with default value"
+  }, 
+
+  "q-pagination" : {
+    "prefix": "q-pagination",
+    "body": "q-pagination( v-model=\"current\" :max=\"5\")",
+    "description": "set q-pagination component with default value"
+  },
+
+  "q-table" : {
+    "prefix": "q-table",
+    "body": "q-table(title=\"Treats\" :data=\"data\" :columns=\"columns\" row-key=\"name\")",
+    "description": "set q-table component with default value"
+  },
+  
+  "q-separator" : {
+    "prefix": "q-separator",
+    "body": "q-separator",
+    "description": "set q-separator component with default value"
+  },
+  
+
+  // SVG COMPONENTS
+  "svg" : {
+    "prefix": "svg",
+    "body": "svg(xmlns=\"http://www.w3.org/2000/svg\" width=\"150\" height=\"100\" viewBox=\"0 0 3 2\")",
+    "description": "set svg component svg with default value"
+  },
+
+  "rect" : {
+    "prefix": "rect",
+    "body": "rect(width=\"1\" height=\"2\" x=\"0\" fill=\"#008d46\")",
+    "description": "set rect component svg with default value"
+  },
+
+  "circle" : {
+    "prefix": "circle",
+    "body": "circle(cx=\"50\" cy=\"50\" r=\"30\" style=\"fill:url(#gradient)\")",
+    "description": "set circle component svg with default value"
+  },
+
+  "linearGradient" : {
+    "prefix": "linearGradient",
+    "body": [
+      "linearGradient(id=\"gradient\")",
+      "\tstop(class=\"begin\" offset=\"0%\")",
+      "\tstop(class=\"end\" offset=\"100%\")"
+    ],
+    "description": "set linearGradient component svg with default value"
+  },
+
+  "polygon" : {
+    "prefix": "polygon",
+    "body": "polygon(points=\"100,10 40,198 190,78 10,78 160,198\" style=\"fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;\")",
+    "description": "set polygon component svg with default value"
+  },
+
+  "ellipse" : {
+    "prefix": "ellipse",
+    "body": "ellipse(cx=\"100\" cy=\"70\" rx=\"85\" ry=\"55\" fill=\"url(#grad1)\")",
+    "description": "set ellipse component svg with default value"
+  },
+}

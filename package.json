@@ -1,0 +1,206 @@
+{
+	"name": "lsp-sample",
+	"description": "A language server example",
+	"author": "Microsoft Corporation",
+	"license": "MIT",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Microsoft/vscode-extension-samples"
+	},
+	"publisher": "vscode-samples",
+	"categories": [],
+	"keywords": [
+		"multi-root ready"
+	],
+	"engines": {
+		"vscode": "^1.43.0"
+	},
+	"activationEvents": [
+		"onLanguage:plaintext",
+		"onLanguage:jade",
+		"onLanguage:vue",
+		"onLanguage:stylus"
+
+	],
+	"main": "./client/out/extension",
+	
+	"contributes": {
+		"languages": [
+			{
+				"id": "stylus",
+				"aliases": ["Stylus", "stylus"],
+				"extensions": [".styl",".stylus"],
+				"configuration": "./stylus.configuration.json"
+			},
+			{
+				"id": "vue",
+				"aliases": [
+				  "Vue",
+				  "vue"
+				],
+				"extensions": [
+				  ".vue"
+				],
+				"configuration": "./languages/vue-language-configuration.json"
+			  },
+			  {
+				"id": "vue-html",
+				"aliases": [
+				  "Vue-html"
+				],
+				"configuration": "./languages/vue-html-language-configuration.json"
+			  },
+			  {
+				"id": "vue-postcss",
+				"aliases": [
+				  "Vue-PostCSS",
+				  "Vue-POSTCSS",
+				  "vue-postcss"
+				],
+				"configuration": "./languages/vue-postcss-language-configuration.json"
+			  },
+			  {
+				"id": "vue-sugarss",
+				"aliases": [
+				  "Vue-SugarSS",
+				  "Vue-SUGARSS",
+				  "vue-sugarss"
+				],
+				"configuration": "./languages/vue-sugarss-language-configuration.json"
+			  }
+		],
+		"grammars": [
+			{
+				"language": "stylus",
+				"scopeName": "source.stylus",
+				"path": "./syntaxes/stylus.tmLanguage"
+			},
+			{
+				"language": "vue",
+				"scopeName": "source.vue",
+				"path": "./syntaxes/vue-generated.json",
+				"embeddedLanguages": {
+				  "text.html.basic": "html",
+				  "text.html.vue-html": "vue-html",
+				  "text.jade.slm": "slm",
+				  "text.pug": "jade",
+				  "text.haml": "haml",
+				  "text.slim": "slim",
+				  "text.html.liquid": "liquid",
+				  "source.css": "css",
+				  "source.css.scss": "scss",
+				  "source.css.less": "less",
+				  "source.css.postcss": "vue-postcss",
+				  "source.css.sugarss": "vue-sugarss",
+				  "source.sass": "sass",
+				  "source.stylus": "stylus",
+				  "source.js": "javascript",
+				  "source.ts": "typescript",
+				  "source.coffee": "coffeescript",
+				  "text.html.markdown": "md",
+				  "source.yaml": "yaml",
+				  "source.json": "json",
+				  "source.php": "php",
+				  "source.graphql": "graphql"
+				}
+			  },
+			  {
+				"language": "vue-postcss",
+				"scopeName": "source.css.postcss",
+				"path": "./syntaxes/vue-postcss.json"
+			  },
+			  {
+				"language": "vue-sugarss",
+				"scopeName": "source.css.sugarss",
+				"path": "./syntaxes/vue-sugarss.json"
+			  },
+			  {
+				"language": "vue-html",
+				"scopeName": "text.html.vue-html",
+				"path": "./syntaxes/vue-html.tmLanguage.json",
+				"embeddedLanguages": {
+				  "source.js": "javascript"
+				}
+			  },
+			  {
+				"path": "./syntaxes/pug/directives.tmLanguage.json",
+				"scopeName": "vue.pug.directives",
+				"injectTo": [
+				  "source.vue"
+				]
+			  },
+			  {
+				"path": "./syntaxes/pug/interpolations.tmLanguage.json",
+				"scopeName": "vue.pug.interpolations",
+				"injectTo": [
+				  "source.vue"
+				]
+			  },
+			  {
+				"scopeName": "markdown.vue.codeblock",
+				"path": "./syntaxes/markdown-vue.json",
+				"injectTo": [
+				  "text.html.markdown"
+				],
+				"embeddedLanguages": {
+				  "meta.embedded.block.vue": "vue"
+				}
+			  }
+		],
+		
+		"snippets": [
+		{
+			"language": "stylus",
+			"path": "./snippets/stylus.json"
+		},
+		{
+			"language": "jade",
+			"path": "./snippets/pug.code-snippets"
+		},
+		{
+			"language": "vue",
+			"path": "./snippets/pug.code-snippets"
+		}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Example configuration",
+			"properties": {
+				"languageServerExample.maxNumberOfProblems": {
+					"scope": "resource",
+					"type": "number",
+					"default": 100,
+					"description": "Controls the maximum number of problems produced by the server."
+				},
+				"languageServerExample.trace.server": {
+					"scope": "window",
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VS Code and the language server."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+		"test": "sh ./scripts/e2e.sh"
+	},
+	"devDependencies": {
+		"@types/mocha": "^8.2.2",
+		"@types/node": "^12.12.0",
+		"@typescript-eslint/eslint-plugin": "^4.21.0",
+		"@typescript-eslint/parser": "^4.21.0",
+		"eslint": "^7.23.0",
+		"mocha": "^8.3.2",
+		"typescript": "^4.2.3"
+	}
+}
