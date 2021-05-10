@@ -14,7 +14,8 @@ import {
 	CompletionItemKind,
 	TextDocumentPositionParams,
 	TextDocumentSyncKind,
-	InitializeResult
+	InitializeResult,
+	InsertTextFormat
 } from 'vscode-languageserver/node';
 
 import {
@@ -213,7 +214,17 @@ connection.onCompletion(
 				label: 'JavaScript',
 				kind: CompletionItemKind.Text,
 				data: 2
-			}
+			},
+			{
+				label: "func",
+				kind: CompletionItemKind.Snippet,
+				insertText: [
+				  "function ${1:Name}(${2}) ${3:abort}",
+				  "\t${0}",
+				  "endfunction",
+				].join("\n"),
+				insertTextFormat: InsertTextFormat.Snippet,
+			  },
 		];
 	}
 );
