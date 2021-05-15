@@ -1,0 +1,18 @@
+{
+	"Class": {
+        "prefix": "ClassAstronomy",
+        "body": [ 
+			"Class.create({",
+			"\tname: '${0:ClassName}',",
+			"\tcollection: ${1:CollectionName},",
+			"\tfields: {",
+			"\t\t\tuserId: String,",
+			"\t\t\tpublishedAt: Date",
+			"\t},",
+			"\tmeteorMethods: {",
+			"\t}",
+			"});"
+		],
+        "description": "complete @Prop attribute decorator"
+    }
+}

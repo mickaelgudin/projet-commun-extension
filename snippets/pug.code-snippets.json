@@ -1,5 +1,4 @@
 {
-  // Elements
   "input": {
     "prefix": "input",
     "body": [
@@ -44,7 +43,6 @@
     "description": "keep-alive element"
   },
 
-  // Transition
   "transition": {
     "prefix": "transition",
     "body": [
@@ -123,7 +121,6 @@
     "description": "appear-active-class=''. Expects: string."
   },
 
-  // Vue Attributes
   "v-show": {
     "prefix": "v-show",
     "body": [
@@ -258,7 +255,6 @@
     "description": "tag"
   },
 
-  // Vue Router
   "router-link": {
     "prefix": "router-link",
     "body": [
@@ -281,9 +277,6 @@
     "description": "to=''"
   },
 
-  // Vuex
-
-  // Prop Attributes
   ":src": {
     "prefix": ":src",
     "body": [
@@ -306,7 +299,6 @@
     "description": "Vue class binding"
   },
 
-  // Element Attributes
   "class": {
     "prefix": "class",
     "body": "class=\"$1\"$0",
@@ -338,7 +330,6 @@
     "description": "Set value attribute for form elements"
   },
 
-  // --------------- QUASAR COMPOSANTS --------------
 
   "q-ajax-bar": {
     "prefix": "q-ajax-bar",
@@ -374,7 +365,7 @@
     "body": [
       "q-bar",
       "\tdiv(class=\"text-weight-bold\")",
-      "\t\ttitle of the banner",
+      "\t\ttitle of the banner"
     ],
     "description": "set q-bar component with default value"
   },
@@ -418,7 +409,7 @@
     "body": [
       "q-card(class=\"my-card\")",
       "\tq-card-section",
-      "\t\tText by default for card component",
+      "\t\tText by default for card component"
     ],
     "description": "set q-card component with default value"
   },
@@ -441,7 +432,7 @@
       "\tq-btn-toggle(",
       "\t\tglossy",
       "\t\tv-model=\"slide\"",
-      "\t\t:options=\"[{ label: 1, value: 'Default text'}, { label: 2, value: 'Default text 2'}]\" ",
+      "\t\t:options=\"[{ label: 1, value: 'Default text'}, { label: 2, value: 'Default text 2'}]\" "
     ],
     "description": "set q-carousel component with default value"
   },
@@ -578,7 +569,7 @@
       "q-field(label=\"Standard\" stack-label)",
       "\t<template v-slot:control>",
       "\t\tdiv(class=\"self-center full-width no-outline\" tabindex=\"0\")Field content",
-      "\t</template>",
+      "\t</template>"
     ],
     "description": "set q-field component with default value"
   },
@@ -610,7 +601,7 @@
       "\tglossy",
       "\ttoggle-color=\"primary\"",
       "\t:options=\"[{label: 'One', value: 'one'},{label: 'Two', value: 'two'},{label: 'Three', value: 'three'}]\"",
-      ")",
+      ")"
     ],
     "description": "set q-btn-toggle component with default value"
   },
@@ -667,7 +658,7 @@
       "\t<template  v-slot:loading>",
       "\t\tdiv(class=\"row justify-center q-my-md\")",
       "\t\t\tq-spinner-dots(color=\"primary\" size=\"40px\")",
-      "\t</template>",
+      "\t</template>"
     ],
     "description": "set q-infinite-scroll component with default value"
   },
@@ -695,7 +686,7 @@
       "\t\t\tdiv(class=\"text-h6\")",
       "\t\t\t\tDefault Card title",
       "\t\t\tdiv(class=\"text-subtitle2\")",
-      "\t\t\t\tby Default Name",
+      "\t\t\t\tby Default Name"
     ],
     "description": "set q-intersection component with default value"
   },
@@ -724,7 +715,7 @@
       "\t\t\tq-item-label",
       "\t\t\t\tItem with caption",
       "\t\t\tq-item-label(caption)",
-      "\t\t\t\tCaption",
+      "\t\t\t\tCaption"
     ],
     "description": "set q-list component with default value"
   },
@@ -825,7 +816,7 @@
       "\t\t\ttd(class=\"text-right\")",
       "\t\t\t\tDefault text",
       "\t\t\ttd(class=\"text-right\")",
-      "\t\t\t\tDefault text",
+      "\t\t\t\tDefault text"
     ],
     "description": "set q-markup-table component with default value"
   },
@@ -843,7 +834,7 @@
       "\t\t\t\tDefault item 2",
       "\t\tq-item(clickable v-close-popup)",
       "\t\t\tq-item-section",
-      "\t\t\t\tDefault item 3",
+      "\t\t\t\tDefault item 3"
     ],
     "description": "set q-menu component with default value"
   },
@@ -879,7 +870,6 @@
   },
   
 
-  // SVG COMPONENTS
   "svg" : {
     "prefix": "svg",
     "body": "svg(xmlns=\"http://www.w3.org/2000/svg\" width=\"150\" height=\"100\" viewBox=\"0 0 3 2\")",
@@ -919,4 +909,17 @@
     "body": "ellipse(cx=\"100\" cy=\"70\" rx=\"85\" ry=\"55\" fill=\"url(#grad1)\")",
     "description": "set ellipse component svg with default value"
   },
+
+  "attribute" : {
+    "prefix": "attribute",
+    "body": "{{ attribute }}",
+    "description": "set string interpolation {{ attribute }} for attribute"
+  },
+
+  "method" : {
+    "prefix": "method",
+    "body": "{{ method() }}",
+    "description": "set string interpolation {{ method() }} for method"
+  }
+
 }

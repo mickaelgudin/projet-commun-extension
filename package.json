@@ -19,7 +19,6 @@
 	"activationEvents": [
 		"onLanguage:plaintext",
 		"onLanguage:jade",
-		"onLanguage:vue",
 		"onLanguage:stylus"
 
 	],
@@ -150,18 +149,22 @@
 		],
 		
 		"snippets": [
-		{
-			"language": "stylus",
-			"path": "./snippets/stylus.json"
-		},
-		{
-			"language": "jade",
-			"path": "./snippets/pug.code-snippets"
-		},
-		{
-			"language": "vue",
-			"path": "./snippets/pug.code-snippets"
-		}
+			{
+				"language": "stylus",
+				"path": "./snippets/stylus.json"
+			},
+			{
+				"language": "jade",
+				"path": "./snippets/pug.code-snippets.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			}
 		],
 		"configuration": {
 			"type": "object",

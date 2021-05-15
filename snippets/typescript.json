@@ -1,0 +1,133 @@
+{
+	"@Prop": {
+        "prefix": "@Prop",
+        "body": [ "@Prop(Number) readonly propA: number | undefined" ],
+        "description": "complete @Prop attribute decorator"
+    },
+	"@PropSync": {
+        "prefix": "@PropSync",
+        "body": [ "@PropSync('name', { type: String }) syncedName!: string" ],
+        "description": "complete @PropSync attribute decorator"
+    },
+	"@Model": {
+        "prefix": "@Model",
+        "body": [ "@Model('change', { type: Boolean }) readonly checked!: boolean" ],
+        "description": "complete @Model attribute decorator"
+    },
+	"@ModelSync": {
+        "prefix": "@ModelSync",
+        "body": [ "@ModelSync('checked', 'change', { type: Boolean }) readonly checkedValue!: boolean" ],
+        "description": "complete @ModelSync attribute decorator"
+    },
+	"@Watch": {
+        "prefix": "@Watch",
+        "body": [ "@Watch('${0:property}')" ],
+        "description": "complete @Watch attribute decorator"
+    },
+	"@Provide": {
+        "prefix": "@Provide",
+        "body": [ "@Provide('bar') ${0:nameProperty} = 'bar'" ],
+        "description": "complete @Provide attribute decorator"
+    },
+	"@Inject": {
+        "prefix": "@Inject",
+        "body": [ "@Inject('bar') readonly bar!: string" ],
+        "description": "complete @Inject attribute decorator"
+    },
+	"@ProvideReactive": {
+        "prefix": "@ProvideReactive",
+        "body": [ "@ProvideReactive() one = '${0:value}'" ],
+        "description": "complete @ProvideReactive attribute decorator"
+    },
+	"@InjectReactive": {
+        "prefix": "@InjectReactive",
+        "body": [ "@InjectReactive() {0:name}!: string" ],
+        "description": "complete @InjectReactive attribute decorator"
+    },
+	"@Emit": {
+        "prefix": "@Emit",
+        "body": [ "@Emit()" ],
+        "description": "complete @Emit attribute decorator"
+    },
+	"@Ref": {
+        "prefix": "@Ref",
+        "body": [ "@Ref() readonly ${1:anotherComponent}!: ${0:AnotherComponent}" ],
+        "description": "complete @Ref attribute decorator"
+    },
+	"@VModel": {
+        "prefix": "@VModel",
+        "body": [ "@VModel({ type: String }) name!: string" ],
+        "description": "complete @VModel attribute decorator"
+    },
+	"@Component": {
+        "prefix": "@Component",
+        "body": [ "@Component" ],
+        "description": "complete @Component attribute decorator"
+    },
+	"Mixins": {
+        "prefix": "Mixins",
+        "body": [ "Mixins " ],
+        "description": "complete Mixins attribute decorator"
+    },
+    "vue-class-component": {
+        "prefix": "vue-class-component",
+        "body": [ 
+            "@Component ",
+            "export default class LoginForm extends Vue {",
+            "\t${0}",
+            "}"
+        ],
+        "description": "complete basic vue-class-component"
+    },
+    "Meteor": {
+        "prefix": "Meteor",
+        "body": [ "Meteor " ],
+        "description": "complete Meteor class"
+    },
+    "Meteor.startup()": {
+        "prefix": "Meteor.startup()",
+        "body": [ 
+            "Meteor.startup(() => {",
+            "\tnew Vue({",
+            "\t\tel: '#app',",
+            "\t\t...App,",
+            "\t\t...router,",
+            "\t})",
+            "})"
+        ],
+        "description": "complete Meteor class"
+    },
+    "Meteor.methods": {
+        "prefix": "Meteor.methods",
+        "body": [ 
+            "Meteor.methods({",
+            "\tmethod(text) {",
+            "\t\treturn 'meteor method : '+text;",
+            "\t},",
+            "}"
+        ],
+        "description": "complete Meteor class"
+    },
+    "Meteor.publish": {
+        "prefix": "Meteor.publish",
+        "body": [ 
+            "Meteor.publish('tasks', function publishTasks() {",
+            "\treturn TasksCollection.find({ userId: this.userId });",
+            "});"
+        ],
+        "description": "complete Meteor class"
+    },
+
+    "VueRouter": {
+        "prefix": "VueRouter",
+        "body": [ 
+            "new VueRouter({ ",
+            "\troutes: [",
+            "\t\t{path: '/', component: Home, name: '/'}",
+            "\t],",
+            "\tbase: '/Login'",
+            "})"
+        ],
+        "description": "complete Meteor class"
+    }
+}
