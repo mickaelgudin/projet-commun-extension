@@ -22,6 +22,12 @@ import {
 	TextDocument
 } from 'vscode-languageserver-textdocument';
 
+import doPugDiagnostic from './diagnostics/pugDiagnostic';
+import {diagnosticPresencePugElement, diagnosticVuePropertyDecotor} from './diagnostics/typescriptDiagnostic';
+import {getLanguage} from './utils'
+
+import PugLanguage from './languages/pugLanguage';
+import TypeScriptLanguage from './languages/typescriptLanguage';
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -139,67 +145,65 @@ documents.onDidChangeContent(change => {
 async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	// In this simple example we get the settings for every validate run.
 	const settings = await getDocumentSettings(textDocument.uri);
+	let diagnostics: Diagnostic[] = [];
 
 	// The validator creates diagnostics for all uppercase words length 2 and more
 	const text = textDocument.getText();
-	const reg = getPugReg();
-	const pattern = RegExp(reg, 'g');
-	let m: RegExpExecArray | null;
-
+	const reg = PugLanguage.getPugReg();
+	
 	let problems = 0;
-	const diagnostics: Diagnostic[] = [];
-	const allowedComponents: string[] = getPugElements();
 
-	while ((m = pattern.exec(text)) && problems < settings.maxNumberOfProblems) {
-		const isNotInPug = text.substring(m.index + m[0].length).search('<template lang="pug">') == -1 && 
-						text.substring(m.index + m[0].length).search('</template>') == -1;
+	launchDiagnosticPug(reg, text, settings.maxNumberOfProblems, textDocument, problems, diagnostics);
+	
+	launchDiagnosticTypescript(reg, text, settings.maxNumberOfProblems, textDocument, problems, diagnostics);
 
-		if(m[0].length <= 1 || isNotInPug) continue; //excluding if not in pug template
-
-		//should be lowercase
-		if( !allowedComponents.includes(m[0]) && allowedComponents.includes(m[0].toLowerCase()) ) {
-			diagnostics.push({
-				severity: DiagnosticSeverity.Information,
-				range: {
-					start: textDocument.positionAt(m.index),
-					end: textDocument.positionAt(m.index + m[0].length)
-				},
-				message: `${m[0]} should be lowercase.`,
-				source: 'ex'
-			});
-			problems++;
-		}
-
-		//components starting with the match exist but component is not written properly
-    	else if(!allowedComponents.includes(m[0].toLowerCase() ) ) {
-			let componentsStartWith = allowedComponents.filter((comp) => { 
-				if(m != null) {
-					return comp.startsWith(m[0].toLowerCase());
-				}
-
-				return false;
-			});
-
-			if(componentsStartWith.length > 0) {
-				const diagnostic: Diagnostic = {
-					severity: DiagnosticSeverity.Warning,
-					range: {
-						start: textDocument.positionAt(m.index),
-						end: textDocument.positionAt(m.index + m[0].length)
-					},
-					message: `${m[0]} should be one of the following : ${componentsStartWith.join(', ')}`,
-					source: 'ex'
-				};
-				diagnostics.push(diagnostic);
-				problems++;
-			}
-		}
-		
-	}
 
 	// Send the computed diagnostics to VSCode.
 	connection.sendDiagnostics({ uri: textDocument.uri, diagnostics });
 }
+
+function launchDiagnosticTypescript(reg: string, text:string, maxNumberOfProblems: number, textDocument: TextDocument, problems: number,
+	diagnostics: Diagnostic[]
+	) {
+	const allowedVuePropertyDecorators: string[] = TypeScriptLanguage.getVueDecorators();
+	const allowedVuePropertyDecoratorsLowerCase = allowedVuePropertyDecorators.map(el => el.toLowerCase());
+
+	let pattern = RegExp(TypeScriptLanguage.getVueDecoratorRegex(), 'gi');
+	let m = null;
+	//diagnostic script ts vue
+	while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
+		let currentLanguage: string = getLanguage(textDocument, text, m);
+
+		if(currentLanguage === 'vue-typescript') {
+			diagnosticVuePropertyDecotor(allowedVuePropertyDecoratorsLowerCase, allowedVuePropertyDecorators, diagnostics, textDocument, m);
+		}
+	}
+}
+
+function launchDiagnosticPug(reg: string, text:string, maxNumberOfProblems: number, textDocument: TextDocument, problems: number, 
+					diagnostics: Diagnostic[]) {
+	let pattern = RegExp(reg, 'g');
+	let m: RegExpExecArray | null;
+
+	const allowedPugComponents: string[] = PugLanguage.getPugElements();
+
+	//diagnostic pug and template vue
+	while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
+		if(m[0].length <= 1 ) continue; //excluding if not in pug template
+
+		let currentLanguage: string = getLanguage(textDocument, text, m);
+
+		if(currentLanguage === 'jade' || currentLanguage === 'vue-jade') {
+			doPugDiagnostic(textDocument, allowedPugComponents, m, diagnostics);
+		} else if(currentLanguage === 'vue-typescript' && allowedPugComponents.includes(m[0] ) ) {
+			//typescript shouldn't contain pug elements (only import are allowed so we focus only on lowercase scenario)
+			diagnosticPresencePugElement(allowedPugComponents, diagnostics, textDocument, m);
+		}
+
+		problems = diagnostics.length;
+	}
+}
+
 
 connection.onDidChangeWatchedFiles(_change => {
 	// Monitored files have change in VSCode
@@ -219,11 +223,6 @@ connection.onCompletion(
 				data: 1
 			},
 			{
-				label: 'JavaScript',
-				kind: CompletionItemKind.Text,
-				data: 2
-			},
-			{
 				label: "func",
 				kind: CompletionItemKind.Snippet,
 				insertText: [
@@ -236,63 +235,6 @@ connection.onCompletion(
 		];
 	}
 );
-
-function getPugReg(): string {
-	let pugArray = getPugElements(); 
-	let reg:string = '';
-
-	//getting component regex insentive to case and containing at least 2 first letters
-	pugArray.forEach(function(e) {
-		const charsOfComponent =  Array.from(e);
-		reg+= '(';
-
-		let count = 0;
-		let limit = (e.startsWith('q-')) ? 4 : 2;
-		charsOfComponent.forEach(function(c, index){
-			
-			const optionalChar = (count >= limit) ? '?' : '';
-			reg+= '(' + c + '|'+ c.toUpperCase() + ')'+optionalChar;
-			count++;
-		});
-
-		reg+= ')|';
-	});
-
-	reg = reg.slice(0, -1);
-
-	return reg;
-}
-
-
-function getPugElements(): string[] {
-	return ["img",
-			"a",
-			"div",
-			"span",
-			"q-input",
-			"q-infinite-scroll", 
-			"q-inner-loading",
-			"q-intersection",
-			"q-card",
-			"q-carousel",
-			"q-chat-message",
-			"q-chip",
-			"q-circular-progress",
-			"q-color",
-			"q-checkbox",
-			"button",
-			"q-btn",
-			"q-btn-group",
-			"q-btn-dropdown",
-			"q-btn-toggle",
-			"q-badge",
-			"q-banner",
-			"q-bar",
-			"q-breadcrumbs",
-			"q-img"
-		];
-}
-
 
 // This handler resolves additional information for the item selected in
 // the completion list.
