@@ -26,6 +26,22 @@ export default class PugLanguage{
 		return reg;
 	}
 
+	//get regex for svg component
+	static getSvgReg() {
+		return '(svg?)|(rect?)|(circl?e?)|(linearGra?d?i?e?n?t?)|(polygo?n?)|(ellips?e?)';
+	}
+
+	static getSvgElements() : string[] {
+		return [
+			"svg",
+			"rect",
+			"circle",
+			"linearGradient",
+			"polygon",
+			"ellipse"
+		];
+	}
+
 
 	static getPugElements(): string[] {
 		return ["img",

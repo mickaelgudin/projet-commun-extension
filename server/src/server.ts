@@ -22,12 +22,8 @@ import {
 	TextDocument
 } from 'vscode-languageserver-textdocument';
 
-import doPugDiagnostic from './diagnostics/pugDiagnostic';
-import {diagnosticPresencePugElement, diagnosticVuePropertyDecotor} from './diagnostics/typescriptDiagnostic';
-import {getLanguage} from './utils'
-
-import PugLanguage from './languages/pugLanguage';
-import TypeScriptLanguage from './languages/typescriptLanguage';
+import PugDiagnosticHandler from './diagnostics/pugDiagnostic';
+import TypeScriptDiagnosticHandler from './diagnostics/typescriptDiagnostic';
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -39,6 +35,10 @@ const documents: TextDocuments<TextDocument> = new TextDocuments(TextDocument);
 let hasConfigurationCapability = false;
 let hasWorkspaceFolderCapability = false;
 let hasDiagnosticRelatedInformationCapability = false;
+
+//handlers for diagnostics
+const tsDiagnosticHandler: TypeScriptDiagnosticHandler = new TypeScriptDiagnosticHandler();
+const pugDiagnosticHandler: PugDiagnosticHandler = new PugDiagnosticHandler();
 
 connection.onInitialize((params: InitializeParams) => {
 	const capabilities = params.capabilities;
@@ -147,63 +147,17 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	const settings = await getDocumentSettings(textDocument.uri);
 	let diagnostics: Diagnostic[] = [];
 
-	// The validator creates diagnostics for all uppercase words length 2 and more
 	const text = textDocument.getText();
-	const reg = PugLanguage.getPugReg();
-	
 	let problems = 0;
 
-	launchDiagnosticPug(reg, text, settings.maxNumberOfProblems, textDocument, problems, diagnostics);
+	pugDiagnosticHandler.launchDiagnosticPug(text, settings.maxNumberOfProblems, textDocument, problems, diagnostics);
 	
-	launchDiagnosticTypescript(reg, text, settings.maxNumberOfProblems, textDocument, problems, diagnostics);
+	tsDiagnosticHandler.launchDiagnosticTypescript(text, settings.maxNumberOfProblems, textDocument, problems, diagnostics);
 
 
 	// Send the computed diagnostics to VSCode.
 	connection.sendDiagnostics({ uri: textDocument.uri, diagnostics });
 }
-
-function launchDiagnosticTypescript(reg: string, text:string, maxNumberOfProblems: number, textDocument: TextDocument, problems: number,
-	diagnostics: Diagnostic[]
-	) {
-	const allowedVuePropertyDecorators: string[] = TypeScriptLanguage.getVueDecorators();
-	const allowedVuePropertyDecoratorsLowerCase = allowedVuePropertyDecorators.map(el => el.toLowerCase());
-
-	let pattern = RegExp(TypeScriptLanguage.getVueDecoratorRegex(), 'gi');
-	let m = null;
-	//diagnostic script ts vue
-	while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
-		let currentLanguage: string = getLanguage(textDocument, text, m);
-
-		if(currentLanguage === 'vue-typescript') {
-			diagnosticVuePropertyDecotor(allowedVuePropertyDecoratorsLowerCase, allowedVuePropertyDecorators, diagnostics, textDocument, m);
-		}
-	}
-}
-
-function launchDiagnosticPug(reg: string, text:string, maxNumberOfProblems: number, textDocument: TextDocument, problems: number, 
-					diagnostics: Diagnostic[]) {
-	let pattern = RegExp(reg, 'g');
-	let m: RegExpExecArray | null;
-
-	const allowedPugComponents: string[] = PugLanguage.getPugElements();
-
-	//diagnostic pug and template vue
-	while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
-		if(m[0].length <= 1 ) continue; //excluding if not in pug template
-
-		let currentLanguage: string = getLanguage(textDocument, text, m);
-
-		if(currentLanguage === 'jade' || currentLanguage === 'vue-jade') {
-			doPugDiagnostic(textDocument, allowedPugComponents, m, diagnostics);
-		} else if(currentLanguage === 'vue-typescript' && allowedPugComponents.includes(m[0] ) ) {
-			//typescript shouldn't contain pug elements (only import are allowed so we focus only on lowercase scenario)
-			diagnosticPresencePugElement(allowedPugComponents, diagnostics, textDocument, m);
-		}
-
-		problems = diagnostics.length;
-	}
-}
-
 
 connection.onDidChangeWatchedFiles(_change => {
 	// Monitored files have change in VSCode
