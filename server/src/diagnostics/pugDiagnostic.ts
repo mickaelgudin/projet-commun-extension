@@ -16,12 +16,12 @@ export default class PugDiagnosticHandler {
 
 	launchDiagnosticPug(text:string, maxNumberOfProblems: number, textDocument: TextDocument, problems: number, 
 		diagnostics: Diagnostic[]) {
-		let pattern = RegExp(PugLanguage.getPugReg(), 'g');
+		let pattern = RegExp(PugLanguage.getQuasarReg(), 'gi');
 		let m: RegExpExecArray | null;
 
-		let allowedComponents: string[] = PugLanguage.getPugElements();
+		let allowedComponents: string[] = PugLanguage.getQuasarElements();
 
-		//diagnostic pug file and template pug in vue file
+		//diagnostic quasar elements in pug file and template pug in vue file
 		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
 			if(m[0].length < 3 ) continue; //excluding if not in pug template
 
@@ -54,6 +54,7 @@ export default class PugDiagnosticHandler {
 
 
 	doDiagnostic(textDocument: TextDocument, alloweComponents: string[], m: RegExpExecArray, diagnostics: Diagnostic[]) {
+
 
 		//should be lowercase
 		if( !alloweComponents.includes(m[0]) && alloweComponents.includes(m[0].toLowerCase()) ) {
