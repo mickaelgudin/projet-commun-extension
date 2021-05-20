@@ -21,7 +21,7 @@ export default class PugDiagnosticHandler {
 
 		let allowedComponents: string[] = PugLanguage.getQuasarElements();
 
-		//diagnostic quasar elements in pug file and template pug in vue file
+		//QUASAR elements DIAGNOSTIC - VUE TEMPLATE PUG AND PUG FILE
 		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
 			if(m[0].length < 3 ) continue; //excluding if not in pug template
 
@@ -37,8 +37,24 @@ export default class PugDiagnosticHandler {
 			problems = diagnostics.length;
 		}
 
+		//SVG elements DIAGNOSTIC - VUE TEMPLATE PUG AND PUG FILE
 		pattern = RegExp(PugLanguage.getSvgReg(), 'gi');
 		allowedComponents = PugLanguage.getSvgElements();
+		//diagnostic svg in pug file and template pug in vue file
+		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
+			if(m[0].length <= 1 ) continue; //excluding if not in pug template
+
+			let currentLanguage: string = getLanguage(textDocument, text, m);
+			if(currentLanguage === 'jade' || currentLanguage === 'vue-jade') {
+				this.doDiagnostic(textDocument, allowedComponents, m, diagnostics);
+			} 
+
+			problems = diagnostics.length;
+		}
+
+		//HTML AND VUE ELEMENTS DIAGNOSTIC - VUE TEMPLATE PUG AND PUG FILE
+		pattern = RegExp(PugLanguage.getHtmlAndVueReg(), 'gi');
+		allowedComponents = PugLanguage.getHtmlAndVueElements();
 		//diagnostic svg in pug file and template pug in vue file
 		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
 			if(m[0].length <= 1 ) continue; //excluding if not in pug template

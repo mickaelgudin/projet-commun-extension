@@ -17,6 +17,10 @@ export default class PugLanguage{
 		return '(svg?)|(rect?)|(circl?e?)|(linearGra?d?i?e?n?t?)|(polygo?n?)|(ellips?e?)';
 	}
 
+	static getHtmlAndVueReg() {
+		return '(:ke?y?)|((appear|enter|leave)-((ac?t?i?v?e?-?c?l?a?s?s?)|(cl?a?s?s?)|(to?-?c?l?a?s?s?)))|(component?)|(img?)|(input?)|(keep-a?l?i?v?e?)|((router)-((li?n?k?)|(vi?e?w?)))|(slot:?s?c?o?p?e?)|(scop?e?)|(span?)|(transition-?gr?o?u?p?)|(v-bi?n?d?)|(v-clo?a?k?)|(v-els?e?-?i?f?)|(v-fo?r?)|(v-ht?m?l?)|(v-if?)|(v-mo?d?e?l?)|(v-on?c?e?)|(v-pr?e?)|(v-sh?o?w?)|(v-te?x?t?)|(:src?)|(:st?y?l?e?)|(:?class?)|(type?)|(name?)|(placehol?d?e?r?)|(value?)';
+	}
+
 	static getSvgElements() : string[] {
 		return [
 			"svg",
@@ -79,6 +83,61 @@ export default class PugLanguage{
 			"q-table",
 			"q-separator"
 		];
+	}
+
+	static getHtmlAndVueElements(): string[] {
+		return [
+			":key",
+			"a",
+			"appear-active-class",
+			"appear-class",
+			"appear-to-class",
+			"component",
+			"div",
+			"enter-active-class",
+			"enter-class",
+			"enter-to-class",
+			"img",
+			"input",
+			"keep-alive",
+			"leave-active-class",
+			"leave-class",
+			"leave-to-class",
+			"ref",
+			"router-link",
+			"scope",
+			"slot",
+			"slot:scope",
+			"span",
+			"tag",
+			"transition",
+			"transition-group",
+			"v-bind",
+			"v-cloak",
+			"v-else",
+			"v-else-if",
+			"v-for",
+			"v-html",
+			"v-if",
+			"v-model",
+			"v-on",
+			"v-once",
+			"v-pre",
+			"v-show",
+			"v-text",
+			"router-view",
+			"to",
+			":src",
+			":style",
+			":class",
+			"class",
+			"id",
+			"type",
+			"name",
+			"placeholder",
+			"value"
+		];
+		
 	}
 
 }
