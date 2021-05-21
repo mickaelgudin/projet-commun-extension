@@ -34,7 +34,7 @@ export function getLanguage(textDocument: TextDocument, text: string, m: RegExpE
 		} else if(textBeforeOccurrence.includes('<script lang="ts">') && textAfterOccurrence.includes("</script>")) {
 			return 'vue-typescript';
 		} else if(textBeforeOccurrence.includes('<style lang="stylus">') && textAfterOccurrence.includes('</style>') ) {
-			return 'vue-stylus';
+			return 'stylus';
 		}
 	}
 

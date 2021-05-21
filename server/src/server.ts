@@ -24,6 +24,7 @@ import {
 
 import PugDiagnosticHandler from './diagnostics/pugDiagnostic';
 import TypeScriptDiagnosticHandler from './diagnostics/typescriptDiagnostic';
+import StylusDiagnosticHandler from './diagnostics/stylusDiagnostic';
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -39,6 +40,7 @@ let hasDiagnosticRelatedInformationCapability = false;
 //handlers for diagnostics
 const tsDiagnosticHandler: TypeScriptDiagnosticHandler = new TypeScriptDiagnosticHandler();
 const pugDiagnosticHandler: PugDiagnosticHandler = new PugDiagnosticHandler();
+const stylusDiagnosticHandler: StylusDiagnosticHandler = new StylusDiagnosticHandler();
 
 connection.onInitialize((params: InitializeParams) => {
 	const capabilities = params.capabilities;
@@ -150,10 +152,12 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	const text = textDocument.getText();
 	let problems = 0;
 
+
 	pugDiagnosticHandler.launchDiagnosticPug(text, settings.maxNumberOfProblems, textDocument, problems, diagnostics);
 	
 	tsDiagnosticHandler.launchDiagnosticTypescript(text, settings.maxNumberOfProblems, textDocument, problems, diagnostics);
 
+	stylusDiagnosticHandler.launchDiagnosticStylus(text, settings.maxNumberOfProblems, textDocument, problems, diagnostics);
 
 	// Send the computed diagnostics to VSCode.
 	connection.sendDiagnostics({ uri: textDocument.uri, diagnostics });
