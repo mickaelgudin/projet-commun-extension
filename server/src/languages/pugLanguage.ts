@@ -12,6 +12,14 @@ export default class PugLanguage{
 		return reg;
 	}
 
+	static getStringInterpolationRegex(): RegExp {
+		return /({)+( )*[a-zA-z0-9()]*(})+/;
+	}
+
+	static isWellFormedStringInterpolation(text: string): boolean {
+		return /^[^{]*{{( )*[a-zA-z0-9()]+( )*}}[^}]*$/.test(text);
+	}
+
 	//get regex for svg component
 	static getSvgReg() {
 		return '(svg?)|(rect?)|(circl?e?)|(linearGra?d?i?e?n?t?)|(polygo?n?)|(ellips?e?)';

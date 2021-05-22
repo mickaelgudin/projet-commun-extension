@@ -66,6 +66,27 @@ export default class PugDiagnosticHandler {
 
 			problems = diagnostics.length;
 		}
+
+		//String interpolation
+		pattern = RegExp(PugLanguage.getStringInterpolationRegex(), 'gi');
+		
+		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
+			if(m[0].length <= 1 ) continue; //excluding if not in pug template
+
+			let currentLanguage: string = getLanguage(textDocument, text, m);
+			if(currentLanguage === 'jade' || currentLanguage === 'vue-jade') {
+
+				//the string interpolation isn't of the form : {{attribute}} or {{method()}}
+				if( !PugLanguage.isWellFormedStringInterpolation(m[0]) ) {
+					diagnostics.push(
+						createDiagnostic(DiagnosticSeverity.Information, textDocument, m, `${m[0]} string interpolation should be formed like : {{attribute}} or {{method()}} `)
+					);
+				}
+			} 
+
+			problems = diagnostics.length;
+		}
+		
 	}
 
 
