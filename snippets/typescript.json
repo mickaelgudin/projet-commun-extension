@@ -117,6 +117,7 @@
         ],
         "description": "complete Meteor class"
     },
+    
 
     "VueRouter": {
         "prefix": "VueRouter",
@@ -129,5 +130,313 @@
             "})"
         ],
         "description": "complete Meteor class"
+    },
+
+    "mocha.slow": {
+        "prefix": "mocha.slow",
+        "body": [ 
+            "mocha.slow(500)"
+        ],
+        "description": "Sets slowness threshold value."
+    },
+
+    "mocha.addFile": {
+        "prefix": "mocha.addFile",
+        "body": [ 
+            "mocha.addFile('path')"
+        ],
+        "description": "Adds file to be loaded for execution."
+    },
+
+    "mocha.allowUncaught": {
+        "prefix": "mocha.allowUncaught",
+        "body": [ 
+            "mocha.allowUncaught(true)"
+        ],
+        "description": "Enables or disables uncaught errors to propagate."
+    },
+
+    "mocha.asyncOnly": {
+        "prefix": "mocha.asyncOnly",
+        "body": [ 
+            "mocha.asyncOnly(true)"
+        ],
+        "description": "Forces all tests to either accept a done callback or return a promise."
+    },
+
+    "mocha.bail": {
+        "prefix": "mocha.bail",
+        "body": [ 
+            "mocha.bail(true)"
+        ],
+        "description": "Enables or disables bailing on the first failure."
+    },
+
+    "mocha.checkLeaks": {
+        "prefix": "mocha.checkLeaks",
+        "body": [ 
+            "mocha.checkLeaks(true)"
+        ],
+        "description": "Enables or disables checking for global variables leaked while running tests."
+    },
+
+    "mocha.color": {
+        "prefix": "mocha.color",
+        "body": [ 
+            "mocha.color(true)"
+        ],
+        "description": "Enables or disables TTY color output by screen-oriented reporters."
+    },
+
+    "mocha.delay": {
+        "prefix": "mocha.delay",
+        "body": [ 
+            "mocha.delay()"
+        ],
+        "description": "Delays root suite execution."
+    },
+
+    "mocha.diff": {
+        "prefix": "mocha.diff",
+        "body": [ 
+            "mocha.diff(true)"
+        ],
+        "description": "Enables or disables reporter to include diff in test failure output."
+    },
+
+    "mocha.dispose": {
+        "prefix": "mocha.dispose",
+        "body": [ 
+            "mocha.dispose()"
+        ],
+        "description": "Manually dispose this mocha instance. Mark this instance as disposed and unable to run more tests."
+    },
+
+    "mocha.enableGlobalSetup": {
+        "prefix": "mocha.enableGlobalSetup",
+        "body": [ 
+            "mocha.enableGlobalSetup(true)"
+        ],
+        "description": "Toggle execution of any global setup fixture(s)"
+    },
+
+    "mocha.enableGlobalTeardown": {
+        "prefix": "mocha.enableGlobalTeardown",
+        "body": [ 
+            "mocha.enableGlobalTeardown(true)"
+        ],
+        "description": "Toggle execution of any global teardown fixture(s)"
+    },
+
+    "mocha.fgrep": {
+        "prefix": "mocha.fgrep",
+        "body": [ 
+            "mocha.fgrep('foo.')"
+        ],
+        "description": "Sets grep filter after escaping RegExp special characters."
+    },
+
+    "mocha.forbidOnly": {
+        "prefix": "mocha.forbidOnly",
+        "body": [ 
+            "mocha.forbidOnly(true)"
+        ],
+        "description": "Causes tests marked only to fail the suite."
+    },
+
+    "mocha.forbidPending": {
+        "prefix": "mocha.forbidPending",
+        "body": [ 
+            "mocha.forbidPending(true)"
+        ],
+        "description": "Causes pending tests and tests marked skip to fail the suite."
+    },
+
+    "mocha.fullTrace": {
+        "prefix": "mocha.fullTrace",
+        "body": [ 
+            "mocha.fullTrace(true)"
+        ],
+        "description": "Displays full stack trace upon test failure."
+    },
+
+    "mocha.global": {
+        "prefix": "mocha.global",
+        "body": [ 
+            "mocha.global(['jQuery', 'MyLib'])"
+        ],
+        "description": "Specifies whitelist of variable names to be expected in global scope."
+    },
+
+    "mocha.globalSetup": {
+        "prefix": "mocha.globalSetup",
+        "body": [ 
+            "mocha.globalSetup(setupFns = [])"
+        ],
+        "description": "Configures one or more global setup fixtures. If given no parameters, unsets any previously-set fixtures.        "
+    },
+
+    "mocha.globalTeardown": {
+        "prefix": "mocha.globalTeardown",
+        "body": [ 
+            "mocha.globalTeardown(teardownFns = [])"
+        ],
+        "description": "Configures one or more global teardown fixtures. If given no parameters, unsets any previously-set fixtures."
+    },
+
+    "mocha.grep": {
+        "prefix": "mocha.grep",
+        "body": [ 
+            "mocha.grep(/match/i)"
+        ],
+        "description": "Sets grep filter used to select specific tests for execution."
+    },
+
+    "mocha.growl": {
+        "prefix": "mocha.growl",
+        "body": [ 
+            "mocha.growl()"
+        ],
+        "description": "Enables desktop notification support if prerequisite software installed."
+    },
+
+    "mocha.hasGlobalSetupFixtures": {
+        "prefix": "mocha.hasGlobalSetupFixtures",
+        "body": [ 
+            "mocha.hasGlobalSetupFixtures()"
+        ],
+        "description": "Returns true if one or more global setup fixtures have been supplied."
+    },
+
+    "mocha.hasGlobalTeardownFixtures": {
+        "prefix": "mocha.hasGlobalTeardownFixtures",
+        "body": [ 
+            "mocha.hasGlobalTeardownFixtures()"
+        ],
+        "description": "Returns true if one or more global teardown fixtures have been supplied."
+    },
+
+    "mocha.inlineDiffs": {
+        "prefix": "mocha.inlineDiffs",
+        "body": [ 
+            "mocha.inlineDiffs(true)"
+        ],
+        "description": "Enables or disables reporter to use inline diffs (rather than +/-) in test failure output."
+    },
+
+    "mocha.invert": {
+        "prefix": "mocha.invert",
+        "body": [ 
+            "mocha.invert()"
+        ],
+        "description": "Inverts grep matches."
+    },
+
+    "mocha.lazyLoadFiles": {
+        "prefix": "mocha.lazyLoadFiles",
+        "body": [ 
+            "mocha.lazyLoadFiles(true)"
+        ],
+        "description": "Disables implicit call to Mocha#loadFiles in Mocha#run. This setting is used by watch mode, parallel mode, and for loading ESM files."
+    },
+
+    "mocha.loadFilesAsync": {
+        "prefix": "mocha.loadFilesAsync",
+        "body": [ 
+            "mocha.loadFilesAsync()",
+            "\t.then(() => mocha.run(failures => process.exitCode = failures ? 1 : 0))",
+            "\t.catch(() => process.exitCode = 1);"
+        ],
+        "description": "The implementation relies on Node's require and import to execute the test interface functions and will be subject to its cache. Supports both CJS and ESM modules."
+    },
+
+    "mocha.noHighlighting": {
+        "prefix": "mocha.noHighlighting()",
+        "body": [ 
+            "mocha.noHighlighting()"
+        ],
+        "description": "Disables syntax highlighting (in browser)."
+    },
+
+    "mocha.parallelMode": {
+        "prefix": "mocha.parallelMode",
+        "body": [ 
+            "mocha.parallelMode(true)"
+        ],
+        "description": "Toggles parallel mode."
+    },
+
+    "mocha.reporter": {
+        "prefix": "mocha.reporter",
+        "body": [ 
+            "mocha.reporter('xunit', { output: '/path/to/testspec.xunit.xml' }) {"
+        ],
+        "description": "Sets reporter to reporter, defaults to 'spec'."
+    },
+
+    "mocha.retries": {
+        "prefix": "mocha.retries",
+        "body": [ 
+            "mocha.retries(1)"
+        ],
+        "description": "Sets the number of times to retry failed tests."
+    },
+
+    "mocha.rootHooks": {
+        "prefix": "mocha.rootHooks",
+        "body": [ 
+            "mocha.rootHooks(hooks)"
+        ],
+        "description": "Assigns hooks to the root suite."
+    },
+
+    "mocha.run": {
+        "prefix": "mocha.run",
+        "body": [ 
+            "mocha.run(failures => process.exitCode = failures ? 1 : 0)"
+        ],
+        "description": "To run tests multiple times (or to run tests in files that are already in the require cache), make sure to clear them from the cache first!"
+    },
+
+    "mocha.runGlobalSetup": {
+        "prefix": "mocha.runGlobalSetup",
+        "body": [ 
+            "mocha.runGlobalSetup()"
+        ],
+        "description": "Run any global setup fixtures sequentially, if any. This is automatically called by Mocha#run unless the runGlobalSetup option is false. The context object this function resolves with should be consumed by Mocha#runGlobalTeardown."
+    },
+
+    "mocha.runGlobalTeardown": {
+        "prefix": "mocha.runGlobalTeardown",
+        "body": [ 
+            "mocha.runGlobalTeardown()"
+        ],
+        "description": "Run any global teardown fixtures sequentially, if any. This is automatically called by Mocha#run unless the runGlobalTeardown option is false. Should be called with context object returned by Mocha#runGlobalSetup, if applicable."
+    },
+
+    "mocha.timeout": {
+        "prefix": "mocha.timeout",
+        "body": [ 
+            "mocha.timeout(1000)"
+        ],
+        "description": "Sets timeout threshold value."
+    },
+
+    "mocha.ui": {
+        "prefix": "mocha.ui",
+        "body": [ 
+            "mocha.ui('bdd')"
+        ],
+        "description": "Sets test UI name, defaults to 'bdd'."
+    },
+
+    "mocha.unloadFiles": {
+        "prefix": "mocha.unloadFiles",
+        "body": [ 
+            "mocha.unloadFiles()"
+        ],
+        "description": "This allows required files to be 'freshly' reloaded, providing the ability to reuse a Mocha instance programmatically. Note: does not clear ESM module files from the cache."
     }
+
+    
 }
