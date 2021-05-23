@@ -491,7 +491,7 @@
 		"description": "$space-y-base"
 	}
 
-   "$action-sheet-avatar-padding" : {
+	"$action-sheet-avatar-padding" : {
 	"prefix": "$action-sheet-avatar-padding",
 	"body": "$action-sheet-avatar-padding",
 	"description": "set $action-sheet-avatar-padding component with default value"
@@ -1791,5 +1791,6 @@
 	"body": "$z-tooltip",
 	"description": "set $z-tooltip component with default value"
 	},
+
 
 }
