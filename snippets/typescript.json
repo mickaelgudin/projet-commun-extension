@@ -129,5 +129,604 @@
             "})"
         ],
         "description": "complete Meteor class"
-    }
+    },
+
+	"Cypress.Commands" : {
+		"prefix": "Cypress.Commands",
+		"body": "Cypress.Commands",
+		"description": "set Cypress.Commands component with default value"
+	},
+
+	"Cypress.Commands.add(name, options, callbackFn)" : {
+		"prefix": "Cypress.Commands.add(name, options, callbackFn)",
+		"body": "Cypress.Commands.add(name, options, callbackFn)",
+		"description": "set Cypress.Commands.add(name, options, callbackFn) component with default value"
+	},
+
+	"Cypress.Commands.overwrite(name, callbackFn)" : {
+		"prefix": "Cypress.Commands.overwrite(name, callbackFn)",
+		"body": "Cypress.Commands.overwrite(name, callbackFn)",
+		"description": "set Cypress.Commands.overwrite(name, callbackFn) component with default value"
+	},
+
+	"Cypress.Cookies" : {
+		"prefix": "Cypress.Cookies",
+		"body": "Cypress.Cookies",
+		"description": "set Cypress.Cookies component with default value"
+	},
+
+	"Cypress.Cookies.debug(enable, options)" : {
+		"prefix": "Cypress.Cookies.debug(enable, options)",
+		"body": "Cypress.Cookies.debug(enable, options)",
+		"description": "set Cypress.Cookies.debug(enable, options) component with default value"
+	},
+
+	"Cypress.Cookies.preserveOnce(names...)" : {
+		"prefix": "Cypress.Cookies.preserveOnce(names...)",
+		"body": "Cypress.Cookies.preserveOnce(names...)",
+		"description": "set Cypress.Cookies.preserveOnce(names...) component with default value"
+	},
+
+	"Cypress.Cookies.defaults(options)" : {
+		"prefix": "Cypress.Cookies.defaults(options)",
+		"body": "Cypress.Cookies.defaults(options)",
+		"description": "set Cypress.Cookies.defaults(options) component with default value"
+	},
+
+	"Cypress.Screenshot" : {
+		"prefix": "Cypress.Screenshot",
+		"body": "Cypress.Screenshot",
+		"description": "set Cypress.Screenshot component with default value"
+	},
+
+	"Cypress.Screenshot.defaults(options)" : {
+		"prefix": "Cypress.Screenshot.defaults(options)",
+		"body": "Cypress.Screenshot.defaults(options)",
+		"description": "set Cypress.Screenshot.defaults(options) component with default value"
+	},
+
+	"Cypress.SelectorPlayground" : {
+		"prefix": "Cypress.SelectorPlayground",
+		"body": "Cypress.SelectorPlayground",
+		"description": "set Cypress.SelectorPlayground component with default value"
+	},
+
+	"Cypress.SelectorPlayground.defaults(options)" : {
+		"prefix": "Cypress.SelectorPlayground.defaults(options)",
+		"body": "Cypress.SelectorPlayground.defaults(options)",
+		"description": "set Cypress.SelectorPlayground.defaults(options) component with default value"
+	},
+
+	"Cypress.SelectorPlayground.getSelector(element)" : {
+		"prefix": "Cypress.SelectorPlayground.getSelector(element)",
+		"body": "Cypress.SelectorPlayground.getSelector(element)",
+		"description": "set Cypress.SelectorPlayground.getSelector(element) component with default value"
+	},
+
+	"Cypress.Server" : {
+		"prefix": "Cypress.Server",
+		"body": "Cypress.Server",
+		"description": "set Cypress.Server component with default value"
+	},
+
+	"Cypress.Server.defaults(options)" : {
+		"prefix": "Cypress.Server.defaults(options)",
+		"body": "Cypress.Server.defaults(options)",
+		"description": "set Cypress.Server.defaults(options) component with default value"
+	},
+
+	"Cypress.arch" : {
+		"prefix": "Cypress.arch",
+		"body": "Cypress.arch",
+		"description": "set Cypress.arch component with default value"
+	},
+
+	"Cypress.browser" : {
+		"prefix": "Cypress.browser",
+		"body": "Cypress.browser",
+		"description": "set Cypress.browser component with default value"
+	},
+
+	"Cypress.config()" : {
+		"prefix": "Cypress.config()",
+		"body": "Cypress.config()",
+		"description": "set Cypress.config() component with default value"
+	},
+
+	"Cypress.config(name)" : {
+		"prefix": "Cypress.config(name)",
+		"body": "Cypress.config(name)",
+		"description": "set Cypress.config(name) component with default value"
+	},
+
+	"Cypress.config(name, value)" : {
+		"prefix": "Cypress.config(name, value)",
+		"body": "Cypress.config(name, value)",
+		"description": "set Cypress.config(name, value) component with default value"
+	},
+
+	"Cypress.config(object)" : {
+		"prefix": "Cypress.config(object)",
+		"body": "Cypress.config(object)",
+		"description": "set Cypress.config(object) component with default value"
+	},
+
+	"Cypress.dom.isHidden(element)" : {
+		"prefix": "Cypress.dom.isHidden(element)",
+		"body": "Cypress.dom.isHidden(element)",
+		"description": "set Cypress.dom.isHidden(element) component with default value"
+	},
+
+	"Cypress.dom.isAttached(element)" : {
+		"prefix": "Cypress.dom.isAttached(element)",
+		"body": "Cypress.dom.isAttached(element)",
+		"description": "set Cypress.dom.isAttached(element) component with default value"
+	},
+
+	"Cypress.dom.isDescendent(element.parent(), element)" : {
+		"prefix": "Cypress.dom.isDescendent(element.parent(), element)",
+		"body": "Cypress.dom.isDescendent(element.parent(), element)",
+		"description": "set Cypress.dom.isDescendent(element.parent(), element) component with default value"
+	},
+
+	"Cypress.dom.isDetached(element)" : {
+		"prefix": "Cypress.dom.isDetached(element)",
+		"body": "Cypress.dom.isDetached(element)",
+		"description": "set Cypress.dom.isDetached(element) component with default value"
+	},
+
+	"Cypress.dom.isDocument(element)" : {
+		"prefix": "Cypress.dom.isDocument(element)",
+		"body": "Cypress.dom.isDocument(element)",
+		"description": "set Cypress.dom.isDocument(element) component with default value"
+	},
+
+	"Cypress.dom.isDom(element)" : {
+		"prefix": "Cypress.dom.isDom(element)",
+		"body": "Cypress.dom.isDom(element)",
+		"description": "set Cypress.dom.isDom(element) component with default value"
+	},
+
+	"Cypress.dom.isElement(element)" : {
+		"prefix": "Cypress.dom.isElement(element)",
+		"body": "Cypress.dom.isElement(element)",
+		"description": "set Cypress.dom.isElement(element) component with default value"
+	},
+
+	"Cypress.dom.isFocusable(element)" : {
+		"prefix": "Cypress.dom.isFocusable(element)",
+		"body": "Cypress.dom.isFocusable(element)",
+		"description": "set Cypress.dom.isFocusable(element) component with default value"
+	},
+
+	"Cypress.dom.isFocused(element)" : {
+		"prefix": "Cypress.dom.isFocused(element)",
+		"body": "Cypress.dom.isFocused(element)",
+		"description": "set Cypress.dom.isFocused(element) component with default value"
+	},
+
+	"Cypress.dom.isJquery(element)" : {
+		"prefix": "Cypress.dom.isJquery(element)",
+		"body": "Cypress.dom.isJquery(element)",
+		"description": "set Cypress.dom.isJquery(element) component with default value"
+	},
+
+	"Cypress.dom.isScrollable(element)" : {
+		"prefix": "Cypress.dom.isScrollable(element)",
+		"body": "Cypress.dom.isScrollable(element)",
+		"description": "set Cypress.dom.isScrollable(element) component with default value"
+	},
+
+	"Cypress.dom.isVisible(element)" : {
+		"prefix": "Cypress.dom.isVisible(element)",
+		"body": "Cypress.dom.isVisible(element)",
+		"description": "set Cypress.dom.isVisible(element) component with default value"
+	},
+
+	"Cypress.dom.isWindow(element)" : {
+		"prefix": "Cypress.dom.isWindow(element)",
+		"body": "Cypress.dom.isWindow(element)",
+		"description": "set Cypress.dom.isWindow(element) component with default value"
+	},
+
+	"Cypress.dom.unwrap(element)" : {
+		"prefix": "Cypress.dom.unwrap(element)",
+		"body": "Cypress.dom.unwrap(element)",
+		"description": "set Cypress.dom.unwrap(element) component with default value"
+	},
+
+	"Cypress.dom.wrap(element)" : {
+		"prefix": "Cypress.dom.wrap(element)",
+		"body": "Cypress.dom.wrap(element)",
+		"description": "set Cypress.dom.wrap(element) component with default value"
+	},
+
+	"Cypress.env()" : {
+		"prefix": "Cypress.env()",
+		"body": "Cypress.env()",
+		"description": "set Cypress.env() component with default value"
+	},
+
+	"Cypress.env(name)" : {
+		"prefix": "Cypress.env(name)",
+		"body": "Cypress.env(name)",
+		"description": "set Cypress.env(name) component with default value"
+	},
+
+	"Cypress.env(name, value)" : {
+		"prefix": "Cypress.env(name, value)",
+		"body": "Cypress.env(name, value)",
+		"description": "set Cypress.env(name, value) component with default value"
+	},
+
+	"Cypress.env(object)" : {
+		"prefix": "Cypress.env(object)",
+		"body": "Cypress.env(object)",
+		"description": "set Cypress.env(object) component with default value"
+	},
+
+	"Cypress.isBrowser(matcher)" : {
+		"prefix": "Cypress.isBrowser(matcher)",
+		"body": "Cypress.isBrowser(matcher)",
+		"description": "set Cypress.isBrowser(matcher) component with default value"
+	},
+
+	"Cypress.isBrowser(matchers)" : {
+		"prefix": "Cypress.isBrowser(matchers)",
+		"body": "Cypress.isBrowser(matchers)",
+		"description": "set Cypress.isBrowser(matchers) component with default value"
+	},
+
+	"Cypress.isBrowser(filter)" : {
+		"prefix": "Cypress.isBrowser(filter)",
+		"body": "Cypress.isBrowser(filter)",
+		"description": "set Cypress.isBrowser(filter) component with default value"
+	},
+
+	"Cypress.isCy(obj)" : {
+		"prefix": "Cypress.isCy(obj)",
+		"body": "Cypress.isCy(obj)",
+		"description": "set Cypress.isCy(obj) component with default value"
+	},
+
+	"Cypress.log(options)" : {
+		"prefix": "Cypress.log(options)",
+		"body": "Cypress.log(options)",
+		"description": "set Cypress.log(options) component with default value"
+	},
+
+	"Cypress.platform" : {
+		"prefix": "Cypress.platform",
+		"body": "Cypress.platform",
+		"description": "set Cypress.platform component with default value"
+	},
+
+	"Cypress.spec" : {
+		"prefix": "Cypress.spec",
+		"body": "Cypress.spec",
+		"description": "set Cypress.spec component with default value"
+	},
+
+	"Cypress.testingType" : {
+		"prefix": "Cypress.testingType",
+		"body": "Cypress.testingType",
+		"description": "set Cypress.testingType component with default value"
+	},
+
+	"Cypress.version" : {
+		"prefix": "Cypress.version",
+		"body": "Cypress.version",
+		"description": "set Cypress.version component with default value"
+	},
+
+	"sinon.stub()" : {
+		"prefix": "sinon.stub()",
+		"body": "sinon.stub();",
+		"description": "set sinon.stub() component with default value"
+	},
+
+	"sinon.stub().withArgs(arg1[, arg2, ...]);" : {
+		"prefix": "sinon.stub().withArgs(arg1[, arg2, ...]);",
+		"body": "sinon.stub().withArgs(arg1[, arg2, ...]);;",
+		"description": "set sinon.stub().withArgs(arg1[, arg2, ...]); component with default value"
+	},
+
+	"sinon.stub().onCall(n)" : {
+		"prefix": "sinon.stub().onCall(n)",
+		"body": "sinon.stub().onCall(n);",
+		"description": "set sinon.stub().onCall(n) component with default value"
+	},
+
+	"sinon.stub().onFirstCall()" : {
+		"prefix": "sinon.stub().onFirstCall()",
+		"body": "sinon.stub().onFirstCall();",
+		"description": "set sinon.stub().onFirstCall() component with default value"
+	},
+
+	"sinon.stub().onSecondCall()" : {
+		"prefix": "sinon.stub().onSecondCall()",
+		"body": "sinon.stub().onSecondCall();",
+		"description": "set sinon.stub().onSecondCall() component with default value"
+	},
+
+	"sinon.stub().onThirdCall()" : {
+		"prefix": "sinon.stub().onThirdCall()",
+		"body": "sinon.stub().onThirdCall();",
+		"description": "set sinon.stub().onThirdCall() component with default value"
+	},
+
+	"sinon.stub().reset()" : {
+		"prefix": "sinon.stub().reset()",
+		"body": "sinon.stub().reset();",
+		"description": "set sinon.stub().reset() component with default value"
+	},
+
+	"sinon.stub().resetBehavior()" : {
+		"prefix": "sinon.stub().resetBehavior()",
+		"body": "sinon.stub().resetBehavior();",
+		"description": "set sinon.stub().resetBehavior() component with default value"
+	},
+
+	"sinon.stub().resetHistory()" : {
+		"prefix": "sinon.stub().resetHistory()",
+		"body": "sinon.stub().resetHistory();",
+		"description": "set sinon.stub().resetHistory() component with default value"
+	},
+
+	"sinon.stub().callsFake(fakeFunction)" : {
+		"prefix": "sinon.stub().callsFake(fakeFunction)",
+		"body": [ 
+            "sinon.stub(myObj, \"prop\").callsFake(function fakeFunction() {",
+            "\treturn \"bar\";",
+            "});"
+        ],
+		"description": "set sinon.stub().callsFake(fakeFunction) component with default value"
+	},
+
+	"sinon.stub().returns(obj)" : {
+		"prefix": "sinon.stub().returns(obj)",
+		"body": "sinon.stub().returns(obj);",
+		"description": "set sinon.stub().returns(obj) component with default value"
+	},
+
+	"sinon.stub().returnsArg(index)" : {
+		"prefix": "sinon.stub().returnsArg(index)",
+		"body": "sinon.stub().returnsArg(index);",
+		"description": "set sinon.stub().returnsArg(index) component with default value"
+	},
+
+	"sinon.stub().returnsThis()" : {
+		"prefix": "sinon.stub().returnsThis()",
+		"body": "sinon.stub().returnsThis();",
+		"description": "set sinon.stub().returnsThis() component with default value"
+	},
+
+	"sinon.stub().resolves(value)" : {
+		"prefix": "sinon.stub().resolves(value)",
+		"body": "sinon.stub().resolves(value);",
+		"description": "set sinon.stub().resolves(value) component with default value"
+	},
+
+	"sinon.stub().resolvesArg(index)" : {
+		"prefix": "sinon.stub().resolvesArg(index)",
+		"body": "sinon.stub().resolvesArg(index);",
+		"description": "set sinon.stub().resolvesArg(index) component with default value"
+	},
+
+	"sinon.stub().throws(\"name\"[, \"optional message\"])" : {
+		"prefix": "sinon.stub().throws(\"name\"[, \"optional message\"])",
+		"body": "sinon.stub().throws(\"name\"[, \"optional message\"]);",
+		"description": "set sinon.stub().throws(\"name\"[, \"optional message\"]) component with default value"
+	},
+
+	"sinon.stub().throws(obj)" : {
+		"prefix": "sinon.stub().throws(obj)",
+		"body": "sinon.stub().throws(obj);",
+		"description": "set sinon.stub().throws(obj) component with default value"
+	},
+
+	"sinon.stub().throws(funct)" : {
+		"prefix": "sinon.stub().throws(funct)",
+		"body": "sinon.stub().throws(function() { return \"new Object Error\"; })",
+		"description": "set sinon.stub().throws(funct) component with default value"
+	},
+
+	"sinon.stub().throwsArg(index)" : {
+		"prefix": "sinon.stub().throwsArg(index)",
+		"body": "sinon.stub().throwsArg(index);",
+		"description": "set sinon.stub().throwsArg(index) component with default value"
+	},
+
+	"sinon.stub().rejects()" : {
+		"prefix": "sinon.stub().rejects()",
+		"body": "sinon.stub().rejects();",
+		"description": "set sinon.stub().rejects() component with default value"
+	},
+
+	"sinon.stub().rejects(\"TypeError\")" : {
+		"prefix": "sinon.stub().rejects(\"TypeError\")",
+		"body": "sinon.stub().rejects(\"TypeError\");",
+		"description": "set sinon.stub().rejects(\"TypeError\") component with default value"
+	},
+
+	"sinon.stub().rejects(value)" : {
+		"prefix": "sinon.stub().rejects(value)",
+		"body": "sinon.stub().rejects(value);",
+		"description": "set sinon.stub().rejects(value) component with default value"
+	},
+
+	"sinon.stub().callsArg(index)" : {
+		"prefix": "sinon.stub().callsArg(index)",
+		"body": "sinon.stub().callsArg(index);",
+		"description": "set sinon.stub().callsArg(index) component with default value"
+	},
+
+	"sinon.stub().callThrough()" : {
+		"prefix": "sinon.stub().callThrough()",
+		"body": "sinon.stub().callThrough();",
+		"description": "set sinon.stub().callThrough() component with default value"
+	},
+
+	"sinon.stub().callThroughWithNew()" : {
+		"prefix": "sinon.stub().callThroughWithNew()",
+		"body": "sinon.stub().callThroughWithNew();",
+		"description": "set sinon.stub().callThroughWithNew() component with default value"
+	},
+
+	"sinon.stub().callsArgOn(index, context)" : {
+		"prefix": "sinon.stub().callsArgOn(index, context)",
+		"body": "sinon.stub().callsArgOn(index, context);",
+		"description": "set sinon.stub().callsArgOn(index, context) component with default value"
+	},
+
+	"sinon.stub().callsArgWith(index, arg1, arg2, ...)" : {
+		"prefix": "sinon.stub().callsArgWith(index, arg1, arg2, ...)",
+		"body": "sinon.stub().callsArgWith(index, arg1, arg2, ...);",
+		"description": "set sinon.stub().callsArgWith(index, arg1, arg2, ...) component with default value"
+	},
+
+	"sinon.stub().callsArgOnWith(index, context, arg1, arg2, ...)" : {
+		"prefix": "sinon.stub().callsArgOnWith(index, context, arg1, arg2, ...)",
+		"body": "sinon.stub().callsArgOnWith(index, context, arg1, arg2, ...);",
+		"description": "set sinon.stub().callsArgOnWith(index, context, arg1, arg2, ...) component with default value"
+	},
+
+	"sinon.stub().usingPromise(promiseLibrary)" : {
+		"prefix": "sinon.stub().usingPromise(promiseLibrary)",
+		"body": "sinon.stub().usingPromise(promiseLibrary);",
+		"description": "set sinon.stub().usingPromise(promiseLibrary) component with default value"
+	},
+
+	"sinon.stub().yields([arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yields([arg1, arg2, ...])",
+		"body": "sinon.stub().yields([arg1, arg2, ...]);",
+		"description": "set sinon.stub().yields([arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsRight([arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsRight([arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsRight([arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsRight([arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsOn(context, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsOn(context, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsOn(context, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsOn(context, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsTo(property, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsTo(property, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsTo(property, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsTo(property, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsToOn(property, context, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsToOn(property, context, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsToOn(property, context, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsToOn(property, context, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yield([arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yield([arg1, arg2, ...])",
+		"body": "sinon.stub().yield([arg1, arg2, ...]);",
+		"description": "set sinon.stub().yield([arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldTo(callback, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldTo(callback, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldTo(callback, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldTo(callback, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().callArg(argNum)" : {
+		"prefix": "sinon.stub().callArg(argNum)",
+		"body": "sinon.stub().callArg(argNum);",
+		"description": "set sinon.stub().callArg(argNum) component with default value"
+	},
+
+	"sinon.stub().callArgWith(argNum, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().callArgWith(argNum, [arg1, arg2, ...])",
+		"body": "sinon.stub().callArgWith(argNum, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().callArgWith(argNum, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().callsArgAsync(index)" : {
+		"prefix": "sinon.stub().callsArgAsync(index)",
+		"body": "sinon.stub().callsArgAsync(index);",
+		"description": "set sinon.stub().callsArgAsync(index) component with default value"
+	},
+
+	"sinon.stub().callsArgOnAsync(index, context);" : {
+		"prefix": "sinon.stub().callsArgOnAsync(index, context);",
+		"body": "sinon.stub().callsArgOnAsync(index, context);;",
+		"description": "set sinon.stub().callsArgOnAsync(index, context); component with default value"
+	},
+
+	"sinon.stub().callsArgWithAsync(index, arg1, arg2, ...)" : {
+		"prefix": "sinon.stub().callsArgWithAsync(index, arg1, arg2, ...)",
+		"body": "sinon.stub().callsArgWithAsync(index, arg1, arg2, ...);",
+		"description": "set sinon.stub().callsArgWithAsync(index, arg1, arg2, ...) component with default value"
+	},
+
+	"sinon.stub().callsArgOnWithAsync(index, context, arg1, arg2, ...)" : {
+		"prefix": "sinon.stub().callsArgOnWithAsync(index, context, arg1, arg2, ...)",
+		"body": "sinon.stub().callsArgOnWithAsync(index, context, arg1, arg2, ...);",
+		"description": "set sinon.stub().callsArgOnWithAsync(index, context, arg1, arg2, ...) component with default value"
+	},
+
+	"sinon.stub().yieldsAsync([arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsAsync([arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsAsync([arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsAsync([arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsOnAsync(context, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsOnAsync(context, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsOnAsync(context, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsOnAsync(context, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsToAsync(property, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsToAsync(property, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsToAsync(property, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsToAsync(property, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsToOnAsync(property, context, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsToOnAsync(property, context, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsToOnAsync(property, context, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsToOnAsync(property, context, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.addBehavior(name, fn)" : {
+		"prefix": "sinon.addBehavior(name, fn)",
+		"body": "sinon.addBehavior(name, fn);",
+		"description": "set sinon.addBehavior(name, fn) component with default value"
+	},
+
+	"sinon.stub().get(getterFn)" : {
+		"prefix": "sinon.stub().get(getterFn)",
+		"body": "sinon.stub().get(getterFn);",
+		"description": "set sinon.stub().get(getterFn) component with default value"
+	},
+
+	"sinon.stub().set(setterFn)" : {
+		"prefix": "sinon.stub().set(setterFn)",
+		"body": "sinon.stub().set(setterFn);",
+		"description": "set sinon.stub().set(setterFn) component with default value"
+	},
+
+	"sinon.stub().value(newVal)" : {
+		"prefix": "sinon.stub().value(newVal)",
+		"body": "sinon.stub().value(newVal);",
+		"description": "set sinon.stub().value(newVal) component with default value"
+	},
+
+	"sinon.stub().wrappedMethod" : {
+		"prefix": "sinon.stub().wrappedMethod",
+		"body": "sinon.stub().wrappedMethod;",
+		"description": "set sinon.stub().wrappedMethod component with default value"
+	}
+
 }
