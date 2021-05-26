@@ -492,9 +492,9 @@
 		"description": "$space-y-base"
 	},
 
-	 "redifine-variable": {
+	 "redefine stylus variable": {
 		"prefix": "redifine stylus var",
-		"body": "$variable ?= newValue",
+		"body": "\\$variable ?= newValue",
 		"description": "Redifine the value of a stylus variable"
 	},
 
@@ -1770,6 +1770,6 @@
 	"prefix": "$z-tooltip",
 	"body": "\\$z-tooltip",
 	"description": "set $z-tooltip component with default value"
-	},
+	}
 
-		}
+}
