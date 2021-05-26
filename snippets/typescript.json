@@ -369,7 +369,7 @@
     "mocha.reporter": {
         "prefix": "mocha.reporter",
         "body": [ 
-            "mocha.reporter('xunit', { output: '/path/to/testspec.xunit.xml' }) {"
+            "mocha.reporter('xunit', { output: '/path/to/testspec.xunit.xml' })"
         ],
         "description": "Sets reporter to reporter, defaults to 'spec'."
     },
@@ -436,7 +436,232 @@
             "mocha.unloadFiles()"
         ],
         "description": "This allows required files to be 'freshly' reloaded, providing the ability to reuse a Mocha instance programmatically. Note: does not clear ESM module files from the cache."
+    },
+
+    "assert": {
+        "prefix": "assert(expression, message)",
+        "body": [
+            "assert('foo' !== 'bar', 'foo is not bar')"
+        ],
+        "description": "Write your own test expressions."
+    },
+
+    "assert.fail": {
+        "prefix": "assert.fail(actual, expected, [message], [operator])",
+        "body": [
+            "assert.fail(1, 2, 'custom error message', '>')"
+        ],
+        "description": "Throw a failure. Node.js assert module-compatible."
+    },
+
+    "assert.isOk": {
+        "prefix": "assert.isOk(object, [message])",
+        "body": [
+            "assert.isOk('everything', 'everything is ok')"
+
+        ],
+        "description": "Asserts that object is truthy."
+    },
+
+    "assert.isNotOk": {
+        "prefix": "assert.isNotOk(object, [message])",
+        "body": [
+            "assert.isNotOk('everything', 'this will fail')"
+        ],
+        "description": "Asserts that object is falsy."
+    },
+
+    "assert.equal": {
+        "prefix": "assert.equal(actual, expected, [message])",
+        "body": [
+            "assert.equal(3, '3', '== coerces values to strings')"
+        ],
+        "description": "Asserts non-strict equality (==) of actual and expected."
+    },
+
+    "assert.notEqual": {
+        "prefix": "assert.notEqual(actual, expected, [message])",
+        "body": [
+            "assert.notEqual(3, 4, 'these numbers are not equal')"
+        ],
+        "description": "Asserts non-strict inequality (!=) of actual and expected."
+    },
+
+    "assert.strictEqual": {
+        "prefix": "assert.strictEqual(actual, expected, [message])",
+        "body": [
+            "assert.strictEqual(true, true, 'these booleans are strictly equal')"
+        ],
+        "description": "Asserts strict equality (===) of actual and expected."
+    },
+
+    "assert.notStrictEqual": {
+        "prefix": "assert.notStrictEqual(actual, expected, [message])",
+        "body": [
+            "assert.notStrictEqual(3, '3', 'no coercion for strict equality')"
+        ],
+        "description": "Asserts strict inequality (!==) of actual and expected."
+    },
+
+    "assert.deepEqual": {
+        "prefix": "assert.deepEqual(actual, expected, [message])",
+        "body": [
+            "assert.deepEqual({ tea: 'green' }, { tea: 'green' })"
+        ],
+        "description": "Asserts that actual is deeply equal to expected."
+    },
+
+    "assert.notDeepEqual": {
+        "prefix": "assert.notDeepEqual(actual, expected, [message])",
+        "body": [
+            "assert.notDeepEqual({ tea: 'green' }, { tea: 'jasmine' })"
+        ],
+        "description": "Assert that actual is not deeply equal to expected."
+    },
+
+    "assert.isAbove": {
+        "prefix": "assert.isAbove(valueToCheck, valueToBeAbove, [message])",
+        "body": [
+            "assert.isAbove(5, 2, '5 is strictly greater than 2')"
+        ],
+        "description": "Asserts valueToCheck is strictly greater than (>) valueToBeAbove."
+    },
+
+    "assert.isAtLeast": {
+        "prefix": "assert.isAtLeast(valueToCheck, valueToBeAtLeast, [message])",
+        "body": [
+            "assert.isAtLeast(5, 2, '5 is greater or equal to 2')"
+        ],
+        "description": "Asserts valueToCheck is greater than or equal to (>=) valueToBeAtLeast."
+    },
+
+    "assert.isBelow": {
+        "prefix": "assert.isBelow(valueToCheck, valueToBeBelow, [message])",
+        "body": [
+            "assert.isBelow(3, 6, '3 is strictly less than 6')"
+        ],
+        "description": "Asserts valueToCheck is strictly less than (<) valueToBeBelow."
+    },
+
+    "assert.isAtMost": {
+        "prefix": "assert.isAtMost(valueToCheck, valueToBeAtMost, [message])",
+        "body": [
+            "assert.isAtMost(3, 6, '3 is less than or equal to 6')"
+        ],
+        "description": "Asserts valueToCheck is less than or equal to (<=) valueToBeAtMost."
+    },
+
+    "assert.isTrue": {
+        "prefix": "assert.isTrue(value, [message])",
+        "body": [
+            "assert.isTrue(true, 'it is true')"
+        ],
+        "description": "Asserts that value is true."
+    },
+
+    "assert.isFalse": {
+        "prefix": "assert.isFalse(value, [message])",
+        "body": [
+            "assert.isTrue(true, 'it is false');"
+        ],
+        "description": "Asserts that value is false."
+    },
+
+    "assert.isNull": {
+        "prefix": "assert.isNull(value, [message])",
+        "body": [
+            "assert.isNull(err, 'there was no error')"
+        ],
+        "description": "Asserts that value is null."
+    },
+
+    "assert.isNaN": {
+        "prefix": "assert.isNaN",
+        "body": [
+            "assert.isNaN(NaN, 'NaN is NaN') "
+        ],
+        "description": "Asserts that value is NaN."
+    },
+
+    "assert.exists": {
+        "prefix": "assert.exists",
+        "body": [
+            "assert.exists(foo, 'foo is neither `null` nor `undefined`')"
+        ],
+        "description": "Asserts that the target is neither null nor undefined."
+    },
+
+    "assert.isDefined": {
+        "prefix": "assert.isDefined(value, [message])",
+        "body": [
+            "assert.isDefined(foo, 'foo has been defined')"
+        ],
+        "description": "Write your own test expressions."
+    },
+
+    "assert.isFunction": {
+        "prefix": "assert.isFunction(value, [message])",
+        "body": [
+            "assert.isFunction(getFoo, 'we got foo')"
+        ],
+        "description": "Asserts that value is a function."
+    },
+
+    "assert.isObject": {
+        "prefix": "assert.isObject(value, [message])",
+        "body": [
+            "assert.isObject(selection, 'selection is an object')"
+        ],
+        "description": "Asserts that value is an object of type ‘Object’ (as revealed by Object.prototype.toString). The assertion does not match subclassed objects."
+    },
+
+    "assert.isArray": {
+        "prefix": "assert.isArray(value, [message])",
+        "body": [
+            "assert.isArray(menu, 'what kind of tea do we want?')"
+        ],
+        "description": "Asserts that value is an array."
+    },
+
+    "assert.isString": {
+        "prefix": "assert.isString(value, [message])",
+        "body": [
+            "assert.isString('string', 'is string')"
+        ],
+        "description": "Asserts that value is a string."
+    },
+
+    "assert.isNumber": {
+        "prefix": "assert.isNumber(value, [message])",
+        "body": [
+            "assert.isNumber(2, 'how many?')"
+        ],
+        "description": "Asserts that value is a number."
+    },
+
+    "assert.isFinite": {
+        "prefix": "assert.isFinite(value, [message])",
+        "body": [
+            "assert.isFinite(cups, 'how many cups')"
+        ],
+        "description": "Asserts that value is a finite number. Unlike .isNumber, this will fail for NaN and Infinity."
+    },
+
+    "assert.isBoolean": {
+        "prefix": "assert.isBoolean(value, [message])",
+        "body": [
+            "assert.isBoolean(true, 'it is a boolean')"
+        ],
+        "description": "Write your own test expressions."
+    },
+
+    "assert.instanceOf": {
+        "prefix": "assert.instanceOf(object, constructor, [message])",
+        "body": [
+            "assert.instanceOf(foo, Bar, 'chai is an instance of bar')"
+        ],
+        "description": "Write your own test expressions."
     }
 
-    
+
 }
