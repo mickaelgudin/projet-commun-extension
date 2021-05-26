@@ -1069,10 +1069,8 @@
         "prefix": "should.fail(1, 2, 'custom error message', '>');",
         "body": "should.fail(1, 2, 'custom error message', '>');",
         "description": "set should.fail(1, 2, 'custom error message', '>'); component with default value"
-        }
-
-
-=======
+        },
+        
 	"Cypress.Commands" : {
 		"prefix": "Cypress.Commands",
 		"body": "Cypress.Commands",
