@@ -655,13 +655,421 @@
         "description": "Write your own test expressions."
     },
 
-    "assert.instanceOf": {
-        "prefix": "assert.instanceOf(object, constructor, [message])",
-        "body": [
-            "assert.instanceOf(foo, Bar, 'chai is an instance of bar')"
-        ],
-        "description": "Write your own test expressions."
-    }
+    "expect(function () {}).to.not.throw();" : {
+        "prefix": "expect(function () {}).to.not.throw();",
+        "body": "expect(function () {}).to.not.throw();",
+        "description": "set expect(function () {}).to.not.throw(); component with default value"
+    },
+
+    "expect({a: 1}).to.not.have.property('b');" : {
+        "prefix": "expect({a: 1}).to.not.have.property('b');",
+        "body": "expect({a: 1}).to.not.have.property('b');",
+        "description": "set expect({a: 1}).to.not.have.property('b'); component with default value"
+    },
+
+    "expect([1, 2]).to.be.an('array').that.does.not.include(3);" : {
+        "prefix": "expect([1, 2]).to.be.an('array').that.does.not.include(3);",
+        "body": "expect([1, 2]).to.be.an('array').that.does.not.include(3);",
+        "description": "set expect([1, 2]).to.be.an('array').that.does.not.include(3); component with default value"
+    },
+
+    "expect({a: 1}).to.deep.equal({a: 1});" : {
+        "prefix": "expect({a: 1}).to.deep.equal({a: 1});",
+        "body": "expect({a: 1}).to.deep.equal({a: 1});",
+        "description": "set expect({a: 1}).to.deep.equal({a: 1}); component with default value"
+    },
+    "expect([{a: 1}]).to.deep.include({a: 1})" : {
+        "prefix": "expect([{a: 1}]).to.deep.include({a: 1})",
+        "body": "expect([{a: 1}]).to.deep.include({a: 1})",
+        "description": "set expect([{a: 1}]).to.deep.include({a: 1}) component with default value"
+    },
+    "expect({x: {a: 1}}).to.deep.include({x: {a: 1}});" : {
+        "prefix": "expect({x: {a: 1}}).to.deep.include({x: {a: 1}});",
+        "body": "expect({x: {a: 1}}).to.deep.include({x: {a: 1}});",
+        "description": "set expect({x: {a: 1}}).to.deep.include({x: {a: 1}}); component with default value"
+    },
+    "expect([{a: 1}]).to.have.deep.members([{a: 1}]);" : {
+        "prefix": "expect([{a: 1}]).to.have.deep.members([{a: 1}]);",
+        "body": "expect([{a: 1}]).to.have.deep.members([{a: 1}]);",
+        "description": "set expect([{a: 1}]).to.have.deep.members([{a: 1}]); component with default value"
+    },
+    "expect(new Set([{a: 1}])).to.have.deep.keys([{a: 1}]);" : {
+        "prefix": "expect(new Set([{a: 1}])).to.have.deep.keys([{a: 1}]);",
+        "body": "expect(new Set([{a: 1}])).to.have.deep.keys([{a: 1}]);",
+        "description": "set expect(new Set([{a: 1}])).to.have.deep.keys([{a: 1}]); component with default value"
+    },
+    "expect({x: {a: 1}}).to.have.deep.property('x', {a: 1});" : {
+        "prefix": "expect({x: {a: 1}}).to.have.deep.property('x', {a: 1});",
+        "body": "expect({x: {a: 1}}).to.have.deep.property('x', {a: 1});",
+        "description": "set expect({x: {a: 1}}).to.have.deep.property('x', {a: 1}); component with default value"
+    },
+    "expect({a: {b: ['x', 'y']}}).to.have.nested.property('a.b[1]');" : {
+        "prefix": "expect({a: {b: ['x', 'y']}}).to.have.nested.property('a.b[1]');",
+        "body": "expect({a: {b: ['x', 'y']}}).to.have.nested.property('a.b[1]');",
+        "description": "set expect({a: {b: ['x', 'y']}}).to.have.nested.property('a.b[1]'); component with default value"
+    },
+    "expect({a: {b: ['x', 'y']}}).to.nested.include({'a.b[1]': 'y'});" : {
+        "prefix": "expect({a: {b: ['x', 'y']}}).to.nested.include({'a.b[1]': 'y'});",
+        "body": "expect({a: {b: ['x', 'y']}}).to.nested.include({'a.b[1]': 'y'});",
+        "description": "set expect({a: {b: ['x', 'y']}}).to.nested.include({'a.b[1]': 'y'}); component with default value"
+    },
+    "expect({a: 1}).to.have.own.property('a');" : {
+        "prefix": "expect({a: 1}).to.have.own.property('a');",
+        "body": "expect({a: 1}).to.have.own.property('a');",
+        "description": "set expect({a: 1}).to.have.own.property('a'); component with default value"
+    },
+    "expect({a: 1}).to.not.have.own.property('b');" : {
+        "prefix": "expect({a: 1}).to.not.have.own.property('b');",
+        "body": "expect({a: 1}).to.not.have.own.property('b');",
+        "description": "set expect({a: 1}).to.not.have.own.property('b'); component with default value"
+    },
+    "expect([1, 2]).to.have.ordered.members([1, 2]).but.not.have.ordered.members([2, 1]);" : {
+        "prefix": "expect([1, 2]).to.have.ordered.members([1, 2]).but.not.have.ordered.members([2, 1]);",
+        "body": "expect([1, 2]).to.have.ordered.members([1, 2]).but.not.have.ordered.members([2, 1]);",
+        "description": "set expect([1, 2]).to.have.ordered.members([1, 2]).but.not.have.ordered.members([2, 1]); component with default value"
+    },
+    "expect({a: 1, b: 2}).to.not.have.any.keys('c', 'd');" : {
+        "prefix": "expect({a: 1, b: 2}).to.not.have.any.keys('c', 'd');",
+        "body": "expect({a: 1, b: 2}).to.not.have.any.keys('c', 'd');",
+        "description": "set expect({a: 1, b: 2}).to.not.have.any.keys('c', 'd'); component with default value"
+    },
+    "expect({a: 1, b: 2}).to.have.all.keys('a', 'b');" : {
+        "prefix": "expect({a: 1, b: 2}).to.have.all.keys('a', 'b');",
+        "body": "expect({a: 1, b: 2}).to.have.all.keys('a', 'b');",
+        "description": "set expect({a: 1, b: 2}).to.have.all.keys('a', 'b'); component with default value"
+    },
+    "expect('foo').to.be.a('string');" : {
+        "prefix": "expect('foo').to.be.a('string');",
+        "body": "expect('foo').to.be.a('string');",
+        "description": "set expect('foo').to.be.a('string'); component with default value"
+    },
+    "expect({a: 1}).to.be.an('object');" : {
+        "prefix": "expect({a: 1}).to.be.an('object');",
+        "body": "expect({a: 1}).to.be.an('object');",
+        "description": "set expect({a: 1}).to.be.an('object'); component with default value"
+    },
+    "expect(null).to.be.a('null');" : {
+        "prefix": "expect(null).to.be.a('null');",
+        "body": "expect(null).to.be.a('null');",
+        "description": "set expect(null).to.be.a('null'); component with default value"
+    },
+        "expect(undefined).to.be.an('undefined');" : {
+        "prefix": "expect(undefined).to.be.an('undefined');",
+        "body": "expect(undefined).to.be.an('undefined');",
+        "description": "set expect(undefined).to.be.an('undefined'); component with default value"
+        },
+        "expect(new Error).to.be.an('error');" : {
+        "prefix": "expect(new Error).to.be.an('error');",
+        "body": "expect(new Error).to.be.an('error');",
+        "description": "set expect(new Error).to.be.an('error'); component with default value"
+        },
+        "expect(Promise.resolve()).to.be.a('promise');" : {
+        "prefix": "expect(Promise.resolve()).to.be.a('promise');",
+        "body": "expect(Promise.resolve()).to.be.a('promise');",
+        "description": "set expect(Promise.resolve()).to.be.a('promise'); component with default value"
+        },
+        "expect(new Float32Array).to.be.a('float32array');" : {
+        "prefix": "expect(new Float32Array).to.be.a('float32array');",
+        "body": "expect(new Float32Array).to.be.a('float32array');",
+        "description": "set expect(new Float32Array).to.be.a('float32array'); component with default value"
+        },
+        "expect(Symbol()).to.be.a('symbol');" : {
+        "prefix": "expect(Symbol()).to.be.a('symbol');",
+        "body": "expect(Symbol()).to.be.a('symbol');",
+        "description": "set expect(Symbol()).to.be.a('symbol'); component with default value"
+        },
+        "expect('foobar').to.include('foo');" : {
+        "prefix": "expect('foobar').to.include('foo');",
+        "body": "expect('foobar').to.include('foo');",
+        "description": "set expect('foobar').to.include('foo'); component with default value"
+        },
+        "expect([1, 2, 3]).to.be.an('array').that.includes(2);" : {
+        "prefix": "expect([1, 2, 3]).to.be.an('array').that.includes(2);",
+        "body": "expect([1, 2, 3]).to.be.an('array').that.includes(2);",
+        "description": "set expect([1, 2, 3]).to.be.an('array').that.includes(2); component with default value"
+        },
+        "expect(1).to.be.ok;" : {
+        "prefix": "expect(1).to.be.ok;",
+        "body": "expect(1).to.be.ok;",
+        "description": "set expect(1).to.be.ok; component with default value"
+        },
+        "expect(false).to.not.be.ok;" : {
+        "prefix": "expect(false).to.not.be.ok;",
+        "body": "expect(false).to.not.be.ok;",
+        "description": "set expect(false).to.not.be.ok; component with default value"
+        },
+        "expect(true).to.be.true;" : {
+        "prefix": "expect(true).to.be.true;",
+        "body": "expect(true).to.be.true;",
+        "description": "set expect(true).to.be.true; component with default value"
+        },
+        "expect(false).to.be.false;" : {
+        "prefix": "expect(false).to.be.false;",
+        "body": "expect(false).to.be.false;",
+        "description": "set expect(false).to.be.false; component with default value"
+        },
+        "expect(null).to.be.null;" : {
+        "prefix": "expect(null).to.be.null;",
+        "body": "expect(null).to.be.null;",
+        "description": "set expect(null).to.be.null; component with default value"
+        },
+        "expect(undefined).to.be.undefined;" : {
+        "prefix": "expect(undefined).to.be.undefined;",
+        "body": "expect(undefined).to.be.undefined;",
+        "description": "set expect(undefined).to.be.undefined; component with default value"
+        },
+        "expect(NaN).to.be.NaN;" : {
+        "prefix": "expect(NaN).to.be.NaN;",
+        "body": "expect(NaN).to.be.NaN;",
+        "description": "set expect(NaN).to.be.NaN; component with default value"
+        },
+        "expect(1).to.exist;" : {
+        "prefix": "expect(1).to.exist;",
+        "body": "expect(1).to.exist;",
+        "description": "set expect(1).to.exist; component with default value"
+        },
+        "expect(null).to.not.exist;" : {
+        "prefix": "expect(null).to.not.exist;",
+        "body": "expect(null).to.not.exist;",
+        "description": "set expect(null).to.not.exist; component with default value"
+        },
+        "expect('').to.be.empty;" : {
+        "prefix": "expect('').to.be.empty;",
+        "body": "expect('').to.be.empty;",
+        "description": "set expect('').to.be.empty; component with default value"
+        },
+        "expect(new Map()).to.be.empty;" : {
+        "prefix": "expect(new Map()).to.be.empty;",
+        "body": "expect(new Map()).to.be.empty;",
+        "description": "set expect(new Map()).to.be.empty; component with default value"
+        },
+        "expect(arguments).to.be.arguments;" : {
+        "prefix": "expect(arguments).to.be.arguments;",
+        "body": "expect(arguments).to.be.arguments;",
+        "description": "set expect(arguments).to.be.arguments; component with default value"
+        },
+        "expect('foo').to.equal('foo');" : {
+        "prefix": "expect('foo').to.equal('foo');",
+        "body": "expect('foo').to.equal('foo');",
+        "description": "set expect('foo').to.equal('foo'); component with default value"
+        },
+        "expect({a: 1}).to.not.equal({a: 1});" : {
+        "prefix": "expect({a: 1}).to.not.equal({a: 1});",
+        "body": "expect({a: 1}).to.not.equal({a: 1});",
+        "description": "set expect({a: 1}).to.not.equal({a: 1}); component with default value"
+        },
+        "expect({a: 1}).to.eql({a: 1});" : {
+        "prefix": "expect({a: 1}).to.eql({a: 1});",
+        "body": "expect({a: 1}).to.eql({a: 1});",
+        "description": "set expect({a: 1}).to.eql({a: 1}); component with default value"
+        },
+        "expect(1).to.not.be.above(2);" : {
+        "prefix": "expect(1).to.not.be.above(2);",
+        "body": "expect(1).to.not.be.above(2);",
+        "description": "set expect(1).to.not.be.above(2); component with default value"
+        },
+
+        "expect(2).to.be.at.least(1);" : {
+        "prefix": "expect(2).to.be.at.least(1);",
+        "body": "expect(2).to.be.at.least(1);",
+        "description": "set expect(2).to.be.at.least(1); component with default value"
+        },
+        "expect('foo').to.have.lengthOf.at.least(2);" : {
+        "prefix": "expect('foo').to.have.lengthOf.at.least(2);",
+        "body": "expect('foo').to.have.lengthOf.at.least(2);",
+        "description": "set expect('foo').to.have.lengthOf.at.least(2); component with default value"
+        },
+        "expect(1).to.be.below(2);" : {
+        "prefix": "expect(1).to.be.below(2);",
+        "body": "expect(1).to.be.below(2);",
+        "description": "set expect(1).to.be.below(2); component with default value"
+        },
+        "expect('foo').to.have.lengthOf.below(4);" : {
+        "prefix": "expect('foo').to.have.lengthOf.below(4);",
+        "body": "expect('foo').to.have.lengthOf.below(4);",
+        "description": "set expect('foo').to.have.lengthOf.below(4); component with default value"
+        },
+        "expect(1).to.be.at.most(1);" : {
+        "prefix": "expect(1).to.be.at.most(1);",
+        "body": "expect(1).to.be.at.most(1);",
+        "description": "set expect(1).to.be.at.most(1); component with default value"
+        },
+        "expect('foo').to.have.lengthOf.at.most(4);" : {
+        "prefix": "expect('foo').to.have.lengthOf.at.most(4);",
+        "body": "expect('foo').to.have.lengthOf.at.most(4);",
+        "description": "set expect('foo').to.have.lengthOf.at.most(4); component with default value"
+        },
+        "expect(2).to.be.within(1, 3);" : {
+        "prefix": "expect(2).to.be.within(1, 3);",
+        "body": "expect(2).to.be.within(1, 3);",
+        "description": "set expect(2).to.be.within(1, 3); component with default value"
+        },
+        "expect([1, 2, 3]).to.have.lengthOf.within(2, 4);" : {
+        "prefix": "expect([1, 2, 3]).to.have.lengthOf.within(2, 4);",
+        "body": "expect([1, 2, 3]).to.have.lengthOf.within(2, 4);",
+        "description": "set expect([1, 2, 3]).to.have.lengthOf.within(2, 4); component with default value"
+        },
+        "expect(new Cat()).to.be.an.instanceof(Cat);" : {
+        "prefix": "expect(new Cat()).to.be.an.instanceof(Cat);",
+        "body": "expect(new Cat()).to.be.an.instanceof(Cat);",
+        "description": "set expect(new Cat()).to.be.an.instanceof(Cat); component with default value"
+        },
+        "expect({a: 1}).to.not.be.an.instanceof(Array);" : {
+        "prefix": "expect({a: 1}).to.not.be.an.instanceof(Array);",
+        "body": "expect({a: 1}).to.not.be.an.instanceof(Array);",
+        "description": "set expect({a: 1}).to.not.be.an.instanceof(Array); component with default value"
+        },
+        "expect({a: 1}).to.have.property('a');" : {
+        "prefix": "expect({a: 1}).to.have.property('a');",
+        "body": "expect({a: 1}).to.have.property('a');",
+        "description": "set expect({a: 1}).to.have.property('a'); component with default value"
+        },
+        "expect({x: {a: 1}}).to.not.have.property('x', {a: 1});" : {
+        "prefix": "expect({x: {a: 1}}).to.not.have.property('x', {a: 1});",
+        "body": "expect({x: {a: 1}}).to.not.have.property('x', {a: 1});",
+        "description": "set expect({x: {a: 1}}).to.not.have.property('x', {a: 1}); component with default value"
+        },
+        "expect({a: 1}).to.have.ownPropertyDescriptor('a');" : {
+        "prefix": "expect({a: 1}).to.have.ownPropertyDescriptor('a');",
+        "body": "expect({a: 1}).to.have.ownPropertyDescriptor('a');",
+        "description": "set expect({a: 1}).to.have.ownPropertyDescriptor('a'); component with default value"
+        },
+        "expect([1, 2, 3]).to.have.lengthOf(3);" : {
+        "prefix": "expect([1, 2, 3]).to.have.lengthOf(3);",
+        "body": "expect([1, 2, 3]).to.have.lengthOf(3);",
+        "description": "set expect([1, 2, 3]).to.have.lengthOf(3); component with default value"
+        },
+        "expect(new Set([1, 2, 3])).to.have.lengthOf(3);" : {
+        "prefix": "expect(new Set([1, 2, 3])).to.have.lengthOf(3);",
+        "body": "expect(new Set([1, 2, 3])).to.have.lengthOf(3);",
+        "description": "set expect(new Set([1, 2, 3])).to.have.lengthOf(3); component with default value"
+        },
+        "expect('foobar').to.not.match(/taco/);" : {
+        "prefix": "expect('foobar').to.not.match(/taco/);",
+        "body": "expect('foobar').to.not.match(/taco/);",
+        "description": "set expect('foobar').to.not.match(/taco/); component with default value"
+        },
+        "expect('foobar').to.have.string('bar');" : {
+        "prefix": "expect('foobar').to.have.string('bar');",
+        "body": "expect('foobar').to.have.string('bar');",
+        "description": "set expect('foobar').to.have.string('bar'); component with default value"
+        },
+        "expect('foobar').to.not.have.string('taco');" : {
+        "prefix": "expect('foobar').to.not.have.string('taco');",
+        "body": "expect('foobar').to.not.have.string('taco');",
+        "description": "set expect('foobar').to.not.have.string('taco'); component with default value"
+        },
+        "expect(['x', 'y']).to.have.all.keys(0, 1);" : {
+        "prefix": "expect(['x', 'y']).to.have.all.keys(0, 1);",
+        "body": "expect(['x', 'y']).to.have.all.keys(0, 1);",
+        "description": "set expect(['x', 'y']).to.have.all.keys(0, 1); component with default value"
+        },
+        "expect(new Map([['a', 1], ['b', 2]])).to.have.all.keys('a', 'b');" : {
+        "prefix": "expect(new Map([['a', 1], ['b', 2]])).to.have.all.keys('a', 'b');",
+        "body": "expect(new Map([['a', 1], ['b', 2]])).to.have.all.keys('a', 'b');",
+        "description": "set expect(new Map([['a', 1], ['b', 2]])).to.have.all.keys('a', 'b'); component with default value"
+        },
+        "expect(badFn).to.throw();" : {
+        "prefix": "expect(badFn).to.throw();",
+        "body": "expect(badFn).to.throw();",
+        "description": "set expect(badFn).to.throw(); component with default value"
+        },
+        "expect(new Cat()).to.respondTo('meow');" : {
+        "prefix": "expect(new Cat()).to.respondTo('meow');",
+        "body": "expect(new Cat()).to.respondTo('meow');",
+        "description": "set expect(new Cat()).to.respondTo('meow'); component with default value"
+        },
+        "expect(Cat).itself.to.respondTo('hiss').but.not.respondTo('meow');" : {
+        "prefix": "expect(Cat).itself.to.respondTo('hiss').but.not.respondTo('meow');",
+        "body": "expect(Cat).itself.to.respondTo('hiss').but.not.respondTo('meow');",
+        "description": "set expect(Cat).itself.to.respondTo('hiss').but.not.respondTo('meow'); component with default value"
+        },
+        "expect(1).to.satisfy(function(num) { return num > 0; });" : {
+        "prefix": "expect(1).to.satisfy(function(num) { return num > 0; });",
+        "body": "expect(1).to.satisfy(function(num) { return num > 0; });",
+        "description": "set expect(1).to.satisfy(function(num) { return num > 0; }); component with default value"
+        },
+        "expect(1.5).to.be.closeTo(1, 0.5);" : {
+        "prefix": "expect(1.5).to.be.closeTo(1, 0.5);",
+        "body": "expect(1.5).to.be.closeTo(1, 0.5);",
+        "description": "set expect(1.5).to.be.closeTo(1, 0.5); component with default value"
+        },
+        "expect(1.5).to.not.be.closeTo(3, 1);" : {
+        "prefix": "expect(1.5).to.not.be.closeTo(3, 1);",
+        "body": "expect(1.5).to.not.be.closeTo(3, 1);",
+        "description": "set expect(1.5).to.not.be.closeTo(3, 1); component with default value"
+        },
+        "expect([1, 2, 3]).to.have.members([2, 1, 3]);" : {
+        "prefix": "expect([1, 2, 3]).to.have.members([2, 1, 3]);",
+        "body": "expect([1, 2, 3]).to.have.members([2, 1, 3]);",
+        "description": "set expect([1, 2, 3]).to.have.members([2, 1, 3]); component with default value"
+        },
+        "expect(1).to.be.oneOf([1, 2, 3]);" : {
+        "prefix": "expect(1).to.be.oneOf([1, 2, 3]);",
+        "body": "expect(1).to.be.oneOf([1, 2, 3]);",
+        "description": "set expect(1).to.be.oneOf([1, 2, 3]); component with default value"
+        },
+        "expect('Today is rainy').to.not.contain.oneOf(['sunny', 'cloudy'])" : {
+        "prefix": "expect('Today is rainy').to.not.contain.oneOf(['sunny', 'cloudy'])",
+        "body": "expect('Today is rainy').to.not.contain.oneOf(['sunny', 'cloudy'])",
+        "description": "set expect('Today is rainy').to.not.contain.oneOf(['sunny', 'cloudy']) component with default value"
+        },
+        "expect(addDot).to.change(getDots);" : {
+        "prefix": "expect(addDot).to.change(getDots);",
+        "body": "expect(addDot).to.change(getDots);",
+        "description": "set expect(addDot).to.change(getDots); component with default value"
+        },
+        "expect(addTwo).to.increase(getVal).by(2);" : {
+        "prefix": "expect(addTwo).to.increase(getVal).by(2);",
+        "body": "expect(addTwo).to.increase(getVal).by(2);",
+        "description": "set expect(addTwo).to.increase(getVal).by(2); component with default value"
+        },
+        "expect(subtractTwo).to.decrease(getVal).by(2);" : {
+        "prefix": "expect(subtractTwo).to.decrease(getVal).by(2);",
+        "body": "expect(subtractTwo).to.decrease(getVal).by(2);",
+        "description": "set expect(subtractTwo).to.decrease(getVal).by(2); component with default value"
+        },
+        "expect({a: 1}).to.be.extensible;" : {
+        "prefix": "expect({a: 1}).to.be.extensible;",
+        "body": "expect({a: 1}).to.be.extensible;",
+        "description": "set expect({a: 1}).to.be.extensible; component with default value"
+        },
+        "expect(sealedObject).to.not.be.extensible;" : {
+        "prefix": "expect(sealedObject).to.not.be.extensible;",
+        "body": "expect(sealedObject).to.not.be.extensible;",
+        "description": "set expect(sealedObject).to.not.be.extensible; component with default value"
+        },
+        "expect(sealedObject).to.be.sealed;" : {
+        "prefix": "expect(sealedObject).to.be.sealed;",
+        "body": "expect(sealedObject).to.be.sealed;",
+        "description": "set expect(sealedObject).to.be.sealed; component with default value"
+        },
+        "expect({a: 1}).to.not.be.sealed;" : {
+        "prefix": "expect({a: 1}).to.not.be.sealed;",
+        "body": "expect({a: 1}).to.not.be.sealed;",
+        "description": "set expect({a: 1}).to.not.be.sealed; component with default value"
+        },
+        "expect(frozenObject).to.be.frozen;" : {
+        "prefix": "expect(frozenObject).to.be.frozen;",
+        "body": "expect(frozenObject).to.be.frozen;",
+        "description": "set expect(frozenObject).to.be.frozen; component with default value"
+        },
+        "expect(1).to.be.finite;" : {
+        "prefix": "expect(1).to.be.finite;",
+        "body": "expect(1).to.be.finite;",
+        "description": "set expect(1).to.be.finite; component with default value"
+        },
+        "expect.fail(1, 2, 'custom error message', '>');" : {
+        "prefix": "expect.fail(1, 2, 'custom error message', '>');",
+        "body": "expect.fail(1, 2, 'custom error message', '>');",
+        "description": "set expect.fail(1, 2, 'custom error message', '>'); component with default value"
+        },
+        "should.fail(1, 2, 'custom error message', '>');" : {
+        "prefix": "should.fail(1, 2, 'custom error message', '>');",
+        "body": "should.fail(1, 2, 'custom error message', '>');",
+        "description": "set should.fail(1, 2, 'custom error message', '>'); component with default value"
+        }
+
 
 
 }
