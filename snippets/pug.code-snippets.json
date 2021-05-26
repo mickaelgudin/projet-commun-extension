@@ -920,6 +920,644 @@
     "prefix": "method",
     "body": "{{ method() }}",
     "description": "set string interpolation {{ method() }} for method"
-  }
+  },
 
+
+
+  "fullscreen" : {
+    "prefix": "fullscreen",
+    "body": "fullscreen",
+    "description": "set fullscreen component with default value"
+    },
+    "fixed" : {
+    "prefix": "fixed",
+    "body": "fixed",
+    "description": "set fixed component with default value"
+    },
+    "properties" : {
+    "prefix": "properties",
+    "body": "properties",
+    "description": "set properties component with default value"
+    },
+    "fixed-center" : {
+    "prefix": "fixed-center",
+    "body": "fixed-center",
+    "description": "set fixed-center component with default value"
+    },
+    "absolute" : {
+    "prefix": "absolute",
+    "body": "absolute",
+    "description": "set absolute component with default value"
+    },
+    "absolute-center" : {
+    "prefix": "absolute-center",
+    "body": "absolute-center",
+    "description": "set absolute-center component with default value"
+    },
+    "fixed-top" : {
+    "prefix": "fixed-top",
+    "body": "fixed-top",
+    "description": "set fixed-top component with default value"
+    },
+    "absolute-top" : {
+    "prefix": "absolute-top",
+    "body": "absolute-top",
+    "description": "set absolute-top component with default value"
+    },
+    "fixed-right" : {
+    "prefix": "fixed-right",
+    "body": "fixed-right",
+    "description": "set fixed-right component with default value"
+    },
+    "absolute-right" : {
+    "prefix": "absolute-right",
+    "body": "absolute-right",
+    "description": "set absolute-right component with default value"
+    },
+    "fixed-bottom" : {
+    "prefix": "fixed-bottom",
+    "body": "fixed-bottom",
+    "description": "set fixed-bottom component with default value"
+    },
+    "absolute-bottom" : {
+    "prefix": "absolute-bottom",
+    "body": "absolute-bottom",
+    "description": "set absolute-bottom component with default value"
+    },
+    "fixed-left" : {
+    "prefix": "fixed-left",
+    "body": "fixed-left",
+    "description": "set fixed-left component with default value"
+    },
+    "absolute-left" : {
+    "prefix": "absolute-left",
+    "body": "absolute-left",
+    "description": "set absolute-left component with default value"
+    },
+    "fixed-top-left" : {
+    "prefix": "fixed-top-left",
+    "body": "fixed-top-left",
+    "description": "set fixed-top-left component with default value"
+    },
+    "absolute-top-left" : {
+    "prefix": "absolute-top-left",
+    "body": "absolute-top-left",
+    "description": "set absolute-top-left component with default value"
+    },
+    "fixed-top-right" : {
+    "prefix": "fixed-top-right",
+    "body": "fixed-top-right",
+    "description": "set fixed-top-right component with default value"
+    },
+    "absolute-top-right" : {
+    "prefix": "absolute-top-right",
+    "body": "absolute-top-right",
+    "description": "set absolute-top-right component with default value"
+    },
+    "fixed-bottom-left" : {
+    "prefix": "fixed-bottom-left",
+    "body": "fixed-bottom-left",
+    "description": "set fixed-bottom-left component with default value"
+    },
+    "absolute-bottom-left" : {
+    "prefix": "absolute-bottom-left",
+    "body": "absolute-bottom-left",
+    "description": "set absolute-bottom-left component with default value"
+    },
+    "fixed-bottom-right" : {
+    "prefix": "fixed-bottom-right",
+    "body": "fixed-bottom-right",
+    "description": "set fixed-bottom-right component with default value"
+    },
+    "absolute-bottom-right" : {
+    "prefix": "absolute-bottom-right",
+    "body": "absolute-bottom-right",
+    "description": "set absolute-bottom-right component with default value"
+    },
+    "fixed-full" : {
+    "prefix": "fixed-full",
+    "body": "fixed-full",
+    "description": "set fixed-full component with default value"
+    },
+    "absolute-full" : {
+    "prefix": "absolute-full",
+    "body": "absolute-full",
+    "description": "set absolute-full component with default value"
+    },
+    "float-left" : {
+      "prefix": "float-left",
+      "body": "float-left",
+      "description": "set float-left component with default value"
+      },
+      "float-right" : {
+      "prefix": "float-right",
+      "body": "float-right",
+      "description": "set float-right component with default value"
+      },
+      "on-left" : {
+      "prefix": "on-left",
+      "body": "on-left",
+      "description": "set on-left component with default value"
+      },
+      "on-right" : {
+      "prefix": "on-right",
+      "body": "on-right",
+      "description": "set on-right component with default value"
+      },
+      "vertical-top" : {
+      "prefix": "vertical-top",
+      "body": "vertical-top",
+      "description": "set vertical-top component with default value"
+      },
+      "vertical-middle" : {
+      "prefix": "vertical-middle",
+      "body": "vertical-middle",
+      "description": "set vertical-middle component with default value"
+      },
+      "vertical-bottom" : {
+      "prefix": "vertical-bottom",
+      "body": "vertical-bottom",
+      "description": "set vertical-bottom component with default value"
+      },
+      "no-shadow" : {
+      "prefix": "no-shadow",
+      "body": "no-shadow",
+      "description": "set no-shadow component with default value"
+      },
+      "inset-shadow" : {
+      "prefix": "inset-shadow",
+      "body": "inset-shadow",
+      "description": "set inset-shadow component with default value"
+      },
+      "shadow-1" : {
+      "prefix": "shadow-1",
+      "body": "shadow-1",
+      "description": "set shadow-1 component with default value"
+      },
+      "hoverable" : {
+      "prefix": "hoverable",
+      "body": "hoverable",
+      "description": "set hoverable component with default value"
+      },
+      "hoverable-1" : {
+      "prefix": "hoverable-1",
+      "body": "hoverable-1",
+      "description": "set hoverable-1 component with default value"
+      },
+      "shadow-2" : {
+      "prefix": "shadow-2",
+      "body": "shadow-2",
+      "description": "set shadow-2 component with default value"
+      },
+      "hoverable-2" : {
+      "prefix": "hoverable-2",
+      "body": "hoverable-2",
+      "description": "set hoverable-2 component with default value"
+      },
+      "shadow-3" : {
+      "prefix": "shadow-3",
+      "body": "shadow-3",
+      "description": "set shadow-3 component with default value"
+      },
+      "hoverable-3" : {
+      "prefix": "hoverable-3",
+      "body": "hoverable-3",
+      "description": "set hoverable-3 component with default value"
+      },
+      "shadow-4" : {
+      "prefix": "shadow-4",
+      "body": "shadow-4",
+      "description": "set shadow-4 component with default value"
+      },
+      "hoverable-4" : {
+      "prefix": "hoverable-4",
+      "body": "hoverable-4",
+      "description": "set hoverable-4 component with default value"
+      },
+      "shadow-5" : {
+      "prefix": "shadow-5",
+      "body": "shadow-5",
+      "description": "set shadow-5 component with default value"
+      },
+      "hoverable-5" : {
+      "prefix": "hoverable-5",
+      "body": "hoverable-5",
+      "description": "set hoverable-5 component with default value"
+      },
+      "shadow-transition" : {
+      "prefix": "shadow-transition",
+      "body": "shadow-transition",
+      "description": "set shadow-transition component with default value"
+      },
+      "shadow-up-1" : {
+      "prefix": "shadow-up-1",
+      "body": "shadow-up-1",
+      "description": "set shadow-up-1 component with default value"
+      },
+      "hoverable-up" : {
+      "prefix": "hoverable-up",
+      "body": "hoverable-up",
+      "description": "set hoverable-up component with default value"
+      },
+      "hoverable-up-1" : {
+      "prefix": "hoverable-up-1",
+      "body": "hoverable-up-1",
+      "description": "set hoverable-up-1 component with default value"
+      },
+      "shadow-up-2" : {
+      "prefix": "shadow-up-2",
+      "body": "shadow-up-2",
+      "description": "set shadow-up-2 component with default value"
+      },
+      "hoverable-up-2" : {
+      "prefix": "hoverable-up-2",
+      "body": "hoverable-up-2",
+      "description": "set hoverable-up-2 component with default value"
+      },
+      "shadow-up-3" : {
+      "prefix": "shadow-up-3",
+      "body": "shadow-up-3",
+      "description": "set shadow-up-3 component with default value"
+      },
+      "hoverable-up-3" : {
+      "prefix": "hoverable-up-3",
+      "body": "hoverable-up-3",
+      "description": "set hoverable-up-3 component with default value"
+      },
+      "shadow-up-4" : {
+      "prefix": "shadow-up-4",
+      "body": "shadow-up-4",
+      "description": "set shadow-up-4 component with default value"
+      },
+      "hoverable-up-4" : {
+      "prefix": "hoverable-up-4",
+      "body": "hoverable-up-4",
+      "description": "set hoverable-up-4 component with default value"
+      },
+      "shadow-up-5" : {
+      "prefix": "shadow-up-5",
+      "body": "shadow-up-5",
+      "description": "set shadow-up-5 component with default value"
+      },
+      "hoverable-up-5" : {
+      "prefix": "hoverable-up-5",
+      "body": "hoverable-up-5",
+      "description": "set hoverable-up-5 component with default value"
+      },
+      "disabled" : {
+      "prefix": "disabled",
+      "body": "disabled",
+      "description": "set disabled component with default value"
+      },
+      "hidden" : {
+      "prefix": "hidden",
+      "body": "hidden",
+      "description": "set hidden component with default value"
+      },
+      "invisible" : {
+      "prefix": "invisible",
+      "body": "invisible",
+      "description": "set invisible component with default value"
+      },
+      "transparent" : {
+      "prefix": "transparent",
+      "body": "transparent",
+      "description": "set transparent component with default value"
+      },
+      "light-dimmed" : {
+      "prefix": "light-dimmed",
+      "body": "light-dimmed",
+      "description": "set light-dimmed component with default value"
+      },
+      "ellipsis" : {
+      "prefix": "ellipsis",
+      "body": "ellipsis",
+      "description": "set ellipsis component with default value"
+      },
+      "ellipsis-2-lines" : {
+      "prefix": "ellipsis-2-lines",
+      "body": "ellipsis-2-lines",
+      "description": "set ellipsis-2-lines component with default value"
+      },
+      "ellipsis-3-lines" : {
+      "prefix": "ellipsis-3-lines",
+      "body": "ellipsis-3-lines",
+      "description": "set ellipsis-3-lines component with default value"
+      },
+      "z-top" : {
+      "prefix": "z-top",
+      "body": "z-top",
+      "description": "set z-top component with default value"
+      },
+      "z-max" : {
+      "prefix": "z-max",
+      "body": "z-max",
+      "description": "set z-max component with default value"
+      },
+      "xs" : {
+      "prefix": "xs",
+      "body": "xs",
+      "description": "set xs component with default value"
+      },
+      "sm" : {
+      "prefix": "sm",
+      "body": "sm",
+      "description": "set sm component with default value"
+      },
+      "md" : {
+      "prefix": "md",
+      "body": "md",
+      "description": "set md component with default value"
+      },
+      "lg" : {
+      "prefix": "lg",
+      "body": "lg",
+      "description": "set lg component with default value"
+      },
+      "xl" : {
+      "prefix": "xl",
+      "body": "xl",
+      "description": "set xl component with default value"
+      },
+      "desktop-only" : {
+      "prefix": "desktop-only",
+      "body": "desktop-only",
+      "description": "set desktop-only component with default value"
+      },
+      "mobile-only" : {
+      "prefix": "mobile-only",
+      "body": "mobile-only",
+      "description": "set mobile-only component with default value"
+      },
+      "native-mobile-only" : {
+      "prefix": "native-mobile-only",
+      "body": "native-mobile-only",
+      "description": "set native-mobile-only component with default value"
+      },
+      "cordova-only" : {
+      "prefix": "cordova-only",
+      "body": "cordova-only",
+      "description": "set cordova-only component with default value"
+      },
+      "capacitor-only" : {
+      "prefix": "capacitor-only",
+      "body": "capacitor-only",
+      "description": "set capacitor-only component with default value"
+      },
+      "electron-only" : {
+      "prefix": "electron-only",
+      "body": "electron-only",
+      "description": "set electron-only component with default value"
+      },
+      "touch-only" : {
+      "prefix": "touch-only",
+      "body": "touch-only",
+      "description": "set touch-only component with default value"
+      },
+      "platform-ios-only" : {
+      "prefix": "platform-ios-only",
+      "body": "platform-ios-only",
+      "description": "set platform-ios-only component with default value"
+      },
+      "platform-android-only" : {
+      "prefix": "platform-android-only",
+      "body": "platform-android-only",
+      "description": "set platform-android-only component with default value"
+      },
+      "within-iframe-only" : {
+      "prefix": "within-iframe-only",
+      "body": "within-iframe-only",
+      "description": "set within-iframe-only component with default value"
+      },
+      "desktop-hide" : {
+        "prefix": "desktop-hide",
+        "body": "desktop-hide",
+        "description": "set desktop-hide component with default value"
+        },
+        "mobile-hide" : {
+        "prefix": "mobile-hide",
+        "body": "mobile-hide",
+        "description": "set mobile-hide component with default value"
+        },
+        "native-mobile-hide" : {
+        "prefix": "native-mobile-hide",
+        "body": "native-mobile-hide",
+        "description": "set native-mobile-hide component with default value"
+        },
+        "cordova-hide" : {
+        "prefix": "cordova-hide",
+        "body": "cordova-hide",
+        "description": "set cordova-hide component with default value"
+        },
+        "capacitor-hide" : {
+        "prefix": "capacitor-hide",
+        "body": "capacitor-hide",
+        "description": "set capacitor-hide component with default value"
+        },
+        "electron-hide" : {
+        "prefix": "electron-hide",
+        "body": "electron-hide",
+        "description": "set electron-hide component with default value"
+        },
+        "touch-hide" : {
+        "prefix": "touch-hide",
+        "body": "touch-hide",
+        "description": "set touch-hide component with default value"
+        },
+        "platform-ios-hide" : {
+        "prefix": "platform-ios-hide",
+        "body": "platform-ios-hide",
+        "description": "set platform-ios-hide component with default value"
+        },
+        "platform-android-hide" : {
+        "prefix": "platform-android-hide",
+        "body": "platform-android-hide",
+        "description": "set platform-android-hide component with default value"
+        },
+        "within-iframe-hide" : {
+        "prefix": "within-iframe-hide",
+        "body": "within-iframe-hide",
+        "description": "set within-iframe-hide component with default value"
+        },
+        "orientation-portrait" : {
+        "prefix": "orientation-portrait",
+        "body": "orientation-portrait",
+        "description": "set orientation-portrait component with default value"
+        },
+        "orientation-landscape" : {
+        "prefix": "orientation-landscape",
+        "body": "orientation-landscape",
+        "description": "set orientation-landscape component with default value"
+        },
+        "print-only" : {
+        "prefix": "print-only",
+        "body": "print-only",
+        "description": "set print-only component with default value"
+        },
+        "print-hide" : {
+        "prefix": "print-hide",
+        "body": "print-hide",
+        "description": "set print-hide component with default value"
+        },
+        "text-right" : {
+          "prefix": "text-right",
+          "body": "text-right",
+          "description": "set text-right component with default value"
+          },
+          "text-left" : {
+          "prefix": "text-left",
+          "body": "text-left",
+          "description": "set text-left component with default value"
+          },
+          "text-center" : {
+          "prefix": "text-center",
+          "body": "text-center",
+          "description": "set text-center component with default value"
+          },
+          "text-justify" : {
+          "prefix": "text-justify",
+          "body": "text-justify",
+          "description": "set text-justify component with default value"
+          },
+          "text-bold" : {
+          "prefix": "text-bold",
+          "body": "text-bold",
+          "description": "set text-bold component with default value"
+          },
+          "text-italic" : {
+          "prefix": "text-italic",
+          "body": "text-italic",
+          "description": "set text-italic component with default value"
+          },
+          "text-no-wrap" : {
+          "prefix": "text-no-wrap",
+          "body": "text-no-wrap",
+          "description": "set text-no-wrap component with default value"
+          },
+          "text-strike" : {
+          "prefix": "text-strike",
+          "body": "text-strike",
+          "description": "set text-strike component with default value"
+          },
+          "text-uppercase" : {
+          "prefix": "text-uppercase",
+          "body": "text-uppercase",
+          "description": "set text-uppercase component with default value"
+          },
+          "text-lowercase" : {
+          "prefix": "text-lowercase",
+          "body": "text-lowercase",
+          "description": "set text-lowercase component with default value"
+          },
+          "text-capitalize" : {
+          "prefix": "text-capitalize",
+          "body": "text-capitalize",
+          "description": "set text-capitalize component with default value"
+          },
+          "non-selectable" : {
+          "prefix": "non-selectable",
+          "body": "non-selectable",
+          "description": "set non-selectable component with default value"
+          },
+          "scrollplatforms" : {
+          "prefix": "scrollplatforms",
+          "body": "scrollplatforms",
+          "description": "set scrollplatforms component with default value"
+          },
+          "no-scroll" : {
+          "prefix": "no-scroll",
+          "body": "no-scroll",
+          "description": "set no-scroll component with default value"
+          },
+          "no-pointer-events" : {
+          "prefix": "no-pointer-events",
+          "body": "no-pointer-events",
+          "description": "set no-pointer-events component with default value"
+          },
+          "all-pointer-events" : {
+          "prefix": "all-pointer-events",
+          "body": "all-pointer-events",
+          "description": "set all-pointer-events component with default value"
+          },
+          "cursor-pointer" : {
+          "prefix": "cursor-pointer",
+          "body": "cursor-pointer",
+          "description": "set cursor-pointer component with default value"
+          },
+          "fit" : {
+          "prefix": "fit",
+          "body": "fit",
+          "description": "set fit component with default value"
+          },
+          "full-height" : {
+          "prefix": "full-height",
+          "body": "full-height",
+          "description": "set full-height component with default value"
+          },
+          "full-width" : {
+          "prefix": "full-width",
+          "body": "full-width",
+          "description": "set full-width component with default value"
+          },
+          "window-height" : {
+          "prefix": "window-height",
+          "body": "window-height",
+          "description": "set window-height component with default value"
+          },
+          "window-width" : {
+          "prefix": "window-width",
+          "body": "window-width",
+          "description": "set window-width component with default value"
+          },
+          "block" : {
+          "prefix": "block",
+          "body": "block",
+          "description": "set block component with default value"
+          },
+          "rotate-90" : {
+          "prefix": "rotate-90",
+          "body": "rotate-90",
+          "description": "set rotate-90 component with default value"
+          },
+          "rotate-180" : {
+          "prefix": "rotate-180",
+          "body": "rotate-180",
+          "description": "set rotate-180 component with default value"
+          },
+          "rotate-270" : {
+          "prefix": "rotate-270",
+          "body": "rotate-270",
+          "description": "set rotate-270 component with default value"
+          },
+          "flip-horizontal" : {
+          "prefix": "flip-horizontal",
+          "body": "flip-horizontal",
+          "description": "set flip-horizontal component with default value"
+          },
+          "flip-vertical" : {
+          "prefix": "flip-vertical",
+          "body": "flip-vertical",
+          "description": "set flip-vertical component with default value"
+          },
+          "no-border" : {
+          "prefix": "no-border",
+          "body": "no-border",
+          "description": "set no-border component with default value"
+          },
+          "round-borders" : {
+          "prefix": "round-borders",
+          "body": "round-borders",
+          "description": "set round-borders component with default value"
+          },
+          "no-margin" : {
+          "prefix": "no-margin",
+          "body": "no-margin",
+          "description": "set no-margin component with default value"
+          },
+          "no-padding" : {
+          "prefix": "no-padding",
+          "body": "no-padding",
+          "description": "set no-padding component with default value"
+          }
 }
+
