@@ -40,3 +40,19 @@ export function getLanguage(textDocument: TextDocument, text: string, m: RegExpE
 
 	return '';
 }
+
+/**
+ * construct reg : (reg1)|(reg2) for all elements in regExArr
+ * @param regExArr array containing all regs to concat
+ * @returns string regex contrusted as in the description
+ */
+export function generateRegEx(regExArr: string[]): string {
+	let regEx:string = '';
+
+	regExArr.forEach(function(e) {
+		regEx += '(' + e + ')|';
+	});
+	regEx = regEx.slice(0, -1);
+
+	return regEx;
+}

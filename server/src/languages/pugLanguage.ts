@@ -1,16 +1,9 @@
+import { generateRegEx } from '../utils';
 
 export default class PugLanguage{
+	//get regex for quasar elements
 	static getQuasarReg(): string {
-		let regEx:string = '(q-)(';
-		//construct reg : (element1)|(element2)
-		let regExArr:string[] = PugLanguage.getQuasarRegElements(); 
-		regExArr.forEach(function(e) {
-			regEx += '(' + e + ')|';
-		});
-		regEx = regEx.slice(0, -1);
-		regEx += ')';
-
-		return regEx;
+		return '(q-)(' + generateRegEx(PugLanguage.getQuasarRegElements()) + ')';
 	}
 
 	static getQuasarRegElements(): string[] {
@@ -21,7 +14,7 @@ export default class PugLanguage{
 			'bann?e?r?',  //q-banner
 			'bar?', //q-bar
 			'bre?a?d?c?r?u?m?b?s?', //q-breadcrumbs
-			//'(btn?-?)((gr?o?u?p?)|(dr?o?p?d?o?w?n?)|(to?g?g?l?e?))?)', //q-btn, q-btn-group, q-btn-dropdown, q-toggle
+			'(btn?-?)((gr?o?u?p?)|(dr?o?p?d?o?w?n?)|(to?g?g?l?e?))?', //q-btn, q-btn-group, q-btn-dropdown, q-toggle
 			'chec?k?b?o?x?', //q-checkbox
 			'col?o?r?', //q-color
 			'card', //q-card
@@ -76,16 +69,9 @@ export default class PugLanguage{
 		return '(svg?)|(rect?)|(circl?e?)|(linearGra?d?i?e?n?t?)|(polygo?n?)|(ellips?e?)';
 	}
 
+	//get regex html and vue elements
 	static getHtmlAndVueReg() {
-		let regEx:string = '';
-		//construct reg : (element1)|(element2)
-		let regExArr:string[] = PugLanguage.getHtmlAndVueRegElements(); 
-		regExArr.forEach(function(e) {
-			regEx += '(' + e + ')|';
-		});
-		regEx = regEx.slice(0, -1);
-
-		return regEx;
+		return generateRegEx(PugLanguage.getHtmlAndVueRegElements() );
 	}
 
 	//setting regex for each element of html and vue languages
