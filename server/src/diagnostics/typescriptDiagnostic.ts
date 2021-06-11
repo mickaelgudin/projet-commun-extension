@@ -3,6 +3,8 @@ import {
 	DiagnosticSeverity
 } from 'vscode-languageserver/node';
 
+import {parse, ParseResult} from '../syntaxes/typescriptParser'
+
 import {
 	TextDocument
 } from 'vscode-languageserver-textdocument';
@@ -15,8 +17,6 @@ export default class TypeScriptDiagnosticHandler {
 	launchDiagnosticTypescript(text:string, maxNumberOfProblems: number, textDocument: TextDocument, problems: number,
 		diagnostics: Diagnostic[]
 		) {
-		const allowedVuePropertyDecorators: string[] = TypeScriptLanguage.getVueDecorators();
-		const allowedVuePropertyDecoratorsLowerCase = allowedVuePropertyDecorators.map(el => el.toLowerCase());
 	
 		let pattern = RegExp(TypeScriptLanguage.getVueDecoratorRegex(), 'gi');
 		let m = null;
@@ -25,7 +25,7 @@ export default class TypeScriptDiagnosticHandler {
 			let currentLanguage: string = getLanguage(textDocument, text, m);
 	
 			if(currentLanguage === 'vue-typescript') {
-				this.diagnosticVuePropertyDecotor(allowedVuePropertyDecoratorsLowerCase, allowedVuePropertyDecorators, diagnostics, textDocument, m);
+				this.diagnosticVuePropertyDecotor(diagnostics, textDocument, m);
 			}
 		}
 	}
@@ -47,30 +47,13 @@ export default class TypeScriptDiagnosticHandler {
 	}
 
 	//diagnostic for vue decorator annotations
-	diagnosticVuePropertyDecotor(allowedVuePropertyDecoratorsLowerCase: string[], 
-														allowedVuePropertyDecorators: string[], 
-														diagnostics: Diagnostic[],
-														textDocument: TextDocument,
-														m: RegExpExecArray
-														) {
-		if(!allowedVuePropertyDecoratorsLowerCase.includes(m[0].toLowerCase() ) ){
-			let decoratorsStartingWith = allowedVuePropertyDecorators.filter(e => {
-				return m!=null ? e.toLowerCase().startsWith(m[0].toLowerCase() ) : false;
-			});
+	diagnosticVuePropertyDecotor(diagnostics: Diagnostic[], textDocument: TextDocument, m: RegExpExecArray) {
+		let results:ParseResult = parse(m[0]);
 
-			if(decoratorsStartingWith.length > 0 ) {
-				diagnostics.push(
-					createDiagnostic(DiagnosticSeverity.Warning, textDocument, m, 
-						'Vue property decorator should be one of the follwing : '+decoratorsStartingWith.join(', ')
-					)
-				);
-			}
-		} else if( !allowedVuePropertyDecorators.includes(m[0]) 
-					&& allowedVuePropertyDecoratorsLowerCase.includes(m[0].toLowerCase()) ){
-
+		if(results.errs.length > 0) {
 			diagnostics.push(
 				createDiagnostic(DiagnosticSeverity.Warning, textDocument, m, 
-					'Vue property decorator should be respect case(refers to the documentation)'
+					'This vue property decorator doesn\'t exist or is mispelled'
 				)
 			);
 		}

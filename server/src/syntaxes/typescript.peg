@@ -1,0 +1,10 @@
+element := vueDecorator
+vueDecorator := 'Mixins' | propDecorator | modelDecorator | watchDecorator | provideDecorator | injectDecorator | emitDecorator | refDecorator | componentDecorator
+propDecorator := '@Prop'$ | '@PropSync'$
+modelDecorator := '@Model'$ | '@ModelSync'$ | '@VModel'
+watchDecorator := '@Watch'
+provideDecorator := '@Provide'$ | '@ProvideReactive'$
+injectDecorator := '@Inject'$ | '@InjectReactive'$
+emitDecorator := '@Emit'
+refDecorator := '@Ref'
+componentDecorator := '@Component'
