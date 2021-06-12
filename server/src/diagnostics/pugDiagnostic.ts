@@ -7,9 +7,12 @@ import {
 	TextDocument
 } from 'vscode-languageserver-textdocument';
 
-import {createDiagnostic, getLanguage} from '../utils';
+import {createDiagnostic, getLanguage, createDiagnosticIfHasErrors} from '../utils';
 import PugLanguage from '../languages/pugLanguage';
 import TypeScriptDiagnosticHandler from './typescriptDiagnostic';
+import {parse, ParseResult} from '../syntaxes/svgParser'
+import {QuasarParser, ParseResultQuasar} from '../syntaxes/quasarParser'
+import {HtmlAndVueParser, ParseResultHtmlAndVue} from '../syntaxes/HtmlAndVueParser'
 
 export default class PugDiagnosticHandler {
 	tsDiagnosticHandler: TypeScriptDiagnosticHandler = new TypeScriptDiagnosticHandler();
@@ -18,58 +21,36 @@ export default class PugDiagnosticHandler {
 		diagnostics: Diagnostic[]) {
 		let pattern = RegExp(PugLanguage.getQuasarReg(), 'gi');
 		let m: RegExpExecArray | null;
-
-		let allowedComponents: string[] = PugLanguage.getQuasarElements();
-
-		//QUASAR elements DIAGNOSTIC - VUE TEMPLATE PUG AND PUG FILE
+		
+		//QUASAR DIAGNOSTIC
 		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
 			if(m[0].length < 3 ) continue; //excluding if not in pug template
 
-			let currentLanguage: string = getLanguage(textDocument, text, m);
-
-			if(currentLanguage === 'jade' || currentLanguage === 'vue-jade') {
-				this.doDiagnostic(textDocument, allowedComponents, m, diagnostics);
-			} else if(currentLanguage === 'vue-typescript' && allowedComponents.includes(m[0] ) ) {
-				//typescript shouldn't contain pug elements (only import are allowed so we focus only on lowercase scenario)
-				this.tsDiagnosticHandler.diagnosticPresencePugElement(allowedComponents, diagnostics, textDocument, m);
-			}
-
+			this.doQuasarComponentsDiagnostic(m, textDocument, text, diagnostics);
 			problems = diagnostics.length;
 		}
 
-		//SVG elements DIAGNOSTIC - VUE TEMPLATE PUG AND PUG FILE
+		//SVG COMPONENTS DIAGNOSTIC
 		pattern = RegExp(PugLanguage.getSvgReg(), 'gi');
-		allowedComponents = PugLanguage.getSvgElements();
 		//diagnostic svg in pug file and template pug in vue file
 		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
-			if(m[0].length <= 1 ) continue; //excluding if not in pug template
+			if(m[0].length <= 1 ) continue;
 
-			let currentLanguage: string = getLanguage(textDocument, text, m);
-			if(currentLanguage === 'jade' || currentLanguage === 'vue-jade') {
-				this.doDiagnostic(textDocument, allowedComponents, m, diagnostics);
-			} 
-
+			this.doSvgComponentsDiagnostic(m, textDocument, text, diagnostics);
 			problems = diagnostics.length;
 		}
 
-		//HTML AND VUE ELEMENTS DIAGNOSTIC - VUE TEMPLATE PUG AND PUG FILE
+		//HTML AND VUE ELEMENTS DIAGNOSTIC
 		pattern = RegExp(PugLanguage.getHtmlAndVueReg(), 'gi');
-		allowedComponents = PugLanguage.getHtmlAndVueElements();
-		//diagnostic svg in pug file and template pug in vue file
 		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
 			if(m[0].length <= 1 ) continue; //excluding if not in pug template
 
-			let currentLanguage: string = getLanguage(textDocument, text, m);
-			if(currentLanguage === 'jade' || currentLanguage === 'vue-jade') {
-				this.doDiagnostic(textDocument, allowedComponents, m, diagnostics);
-			} 
-
+			this.doHmlAndVueComponentsDiagnostic(m, textDocument, text, diagnostics);
 			problems = diagnostics.length;
 		}
 
-		//String interpolation
+		//String interpolation DIAGNOSTIC
 		pattern = RegExp(PugLanguage.getStringInterpolationRegex(), 'gi');
-		
 		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
 			if(m[0].length <= 1 ) continue; //excluding if not in pug template
 
@@ -89,37 +70,51 @@ export default class PugDiagnosticHandler {
 		
 	}
 
+	doQuasarComponentsDiagnostic(m:RegExpExecArray, textDocument:TextDocument, text:string, diagnostics: Diagnostic[]) {
+		let currentLanguage: string = getLanguage(textDocument, text, m);
 
-	doDiagnostic(textDocument: TextDocument, alloweComponents: string[], m: RegExpExecArray, diagnostics: Diagnostic[]) {
+		let quasarParser:QuasarParser = new QuasarParser(m[0]);
+		let results:ParseResultQuasar = quasarParser.parse();
+		let message:string = '';
 
-
-		//should be lowercase
-		if( !alloweComponents.includes(m[0]) && alloweComponents.includes(m[0].toLowerCase()) ) {
-			diagnostics.push(
-				createDiagnostic(DiagnosticSeverity.Information, textDocument, m, `${m[0]} should be lowercase.`)
-			);
+		if(currentLanguage === 'jade' || currentLanguage === 'vue-jade') {
+			message = 'This quasar component doesn\'t exist or is mispelled';
+		} 
+		else if(currentLanguage === 'vue-typescript' ) {
+			message = 'This quasar component should be written in the template';
 		}
 
-		//components starting with the match exist but component is not written properly
-		else if(!alloweComponents.includes(m[0].toLowerCase() ) ) {
-			let componentsStartingWith = this.getComponentStartingWithMatch(m[0], alloweComponents);
-
-			if(componentsStartingWith.length > 0) {
-				diagnostics.push(
-					createDiagnostic(DiagnosticSeverity.Warning, 
-									textDocument, m, 
-									`${m[0]} should be one of the following : ${componentsStartingWith.join(', ')}`)
-				);
-			}
-		}
-
-		return diagnostics;
+		createDiagnosticIfHasErrors(results.errs.length, 
+									textDocument, 
+									m, 
+									message, 
+									diagnostics);
 	}
 
-	getComponentStartingWithMatch(match: string, components: string[]): string[] {
-		return components.filter((comp) => { 
-			return comp.startsWith(match.toLowerCase());
-		});
+	doSvgComponentsDiagnostic(m:RegExpExecArray, textDocument:TextDocument, text:string, diagnostics: Diagnostic[]) {
+		let currentLanguage: string = getLanguage(textDocument, text, m);
+		if(currentLanguage === 'jade' || currentLanguage === 'vue-jade') {
+			let results:ParseResult = parse(m[0]);
+
+			createDiagnosticIfHasErrors(results.errs.length, 
+										textDocument, 
+										m, 
+										'This svg component doesn\'t exist or is mispelled', 
+										diagnostics);
+		} 
 	}
 
+	doHmlAndVueComponentsDiagnostic(m:RegExpExecArray, textDocument:TextDocument, text:string, diagnostics: Diagnostic[]) {
+		let currentLanguage: string = getLanguage(textDocument, text, m);
+		if(currentLanguage === 'jade' || currentLanguage === 'vue-jade') {
+			let htmlVueParser:HtmlAndVueParser = new HtmlAndVueParser(m[0]);
+			let results:ParseResultHtmlAndVue = htmlVueParser.parse();
+
+			createDiagnosticIfHasErrors(results.errs.length, 
+										textDocument, 
+										m, 
+										'This html or vue element doesn\'t exist or is mispelled', 
+										diagnostics);
+		} 
+	}
 }
