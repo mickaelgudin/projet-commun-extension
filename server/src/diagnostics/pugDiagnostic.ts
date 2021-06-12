@@ -22,7 +22,7 @@ export default class PugDiagnosticHandler {
 		let pattern = RegExp(PugLanguage.getQuasarReg(), 'gi');
 		let m: RegExpExecArray | null;
 		
-		//QUASAR DIAGNOSTIC
+		//QUASAR COMPONENTS DIAGNOSTIC
 		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
 			if(m[0].length < 3 ) continue; //excluding if not in pug template
 
@@ -64,7 +64,6 @@ export default class PugDiagnosticHandler {
 					);
 				}
 			} 
-
 			problems = diagnostics.length;
 		}
 		

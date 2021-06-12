@@ -9,7 +9,7 @@ import {
 	TextDocument
 } from 'vscode-languageserver-textdocument';
 
-import {createDiagnostic, getLanguage} from '../utils';
+import {createDiagnostic, getLanguage, createDiagnosticIfHasErrors} from '../utils';
 import TypeScriptLanguage from '../languages/typescriptLanguage'
 
 
@@ -20,42 +20,19 @@ export default class TypeScriptDiagnosticHandler {
 	
 		let pattern = RegExp(TypeScriptLanguage.getVueDecoratorRegex(), 'gi');
 		let m = null;
-		//diagnostic script ts vue
+		//diagnostic vue property decorator
 		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
 			let currentLanguage: string = getLanguage(textDocument, text, m);
 	
 			if(currentLanguage === 'vue-typescript') {
-				this.diagnosticVuePropertyDecotor(diagnostics, textDocument, m);
+				let results:ParseResult = parse(m[0]);
+
+				createDiagnosticIfHasErrors(results.errs.length, 
+					textDocument, 
+					m, 
+					'This vue property decorator doesn\'t exist or is mispelled', 
+					diagnostics);
 			}
-		}
-	}
-
-
-	//typescript shouldn't contain pug elements (only import are allowed so we focus only on lowercase scenario)
-	diagnosticPresencePugElement(allowedPugComponents: string[], 
-										diagnostics: Diagnostic[],
-										textDocument: TextDocument,
-										m: RegExpExecArray
-										) {
-		if(allowedPugComponents.includes(m[0]) ) {
-			diagnostics.push(
-					createDiagnostic(DiagnosticSeverity.Warning, textDocument, m, 
-					'Don\'t use pug elements outside the template your are currently in typescript script '
-					)
-			);
-		}
-	}
-
-	//diagnostic for vue decorator annotations
-	diagnosticVuePropertyDecotor(diagnostics: Diagnostic[], textDocument: TextDocument, m: RegExpExecArray) {
-		let results:ParseResult = parse(m[0]);
-
-		if(results.errs.length > 0) {
-			diagnostics.push(
-				createDiagnostic(DiagnosticSeverity.Warning, textDocument, m, 
-					'This vue property decorator doesn\'t exist or is mispelled'
-				)
-			);
 		}
 	}
 }
