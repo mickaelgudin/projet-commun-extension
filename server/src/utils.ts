@@ -20,6 +20,16 @@ export function createDiagnostic(type: DiagnosticSeverity, textDocument: TextDoc
 	};
 }
 
+export function createDiagnosticIfHasErrors(errorsSize:Number, textDocument:TextDocument, m:RegExpExecArray, message:string, diagnostics: Diagnostic[]) {
+	if(errorsSize > 0) {
+		diagnostics.push(
+			createDiagnostic(DiagnosticSeverity.Warning, textDocument, m, 
+				message
+			)
+		);
+	}	
+}
+
 export function getLanguage(textDocument: TextDocument, text: string, m: RegExpExecArray ): string {
 	if(textDocument.languageId == 'jade' || textDocument.languageId == 'stylus') {
 		return textDocument.languageId;
