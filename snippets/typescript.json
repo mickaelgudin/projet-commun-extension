@@ -117,6 +117,7 @@
         ],
         "description": "complete Meteor class"
     },
+    
 
     "VueRouter": {
         "prefix": "VueRouter",
@@ -129,5 +130,1544 @@
             "})"
         ],
         "description": "complete Meteor class"
-    }
+    },
+
+
+    "mocha.slow": {
+        "prefix": "mocha.slow",
+        "body": [ 
+            "mocha.slow(500)"
+        ],
+        "description": "Sets slowness threshold value."
+    },
+
+    "mocha.addFile": {
+        "prefix": "mocha.addFile",
+        "body": [ 
+            "mocha.addFile('path')"
+        ],
+        "description": "Adds file to be loaded for execution."
+    },
+
+    "mocha.allowUncaught": {
+        "prefix": "mocha.allowUncaught",
+        "body": [ 
+            "mocha.allowUncaught(true)"
+        ],
+        "description": "Enables or disables uncaught errors to propagate."
+    },
+
+    "mocha.asyncOnly": {
+        "prefix": "mocha.asyncOnly",
+        "body": [ 
+            "mocha.asyncOnly(true)"
+        ],
+        "description": "Forces all tests to either accept a done callback or return a promise."
+    },
+
+    "mocha.bail": {
+        "prefix": "mocha.bail",
+        "body": [ 
+            "mocha.bail(true)"
+        ],
+        "description": "Enables or disables bailing on the first failure."
+    },
+
+    "mocha.checkLeaks": {
+        "prefix": "mocha.checkLeaks",
+        "body": [ 
+            "mocha.checkLeaks(true)"
+        ],
+        "description": "Enables or disables checking for global variables leaked while running tests."
+    },
+
+    "mocha.color": {
+        "prefix": "mocha.color",
+        "body": [ 
+            "mocha.color(true)"
+        ],
+        "description": "Enables or disables TTY color output by screen-oriented reporters."
+    },
+
+    "mocha.delay": {
+        "prefix": "mocha.delay",
+        "body": [ 
+            "mocha.delay()"
+        ],
+        "description": "Delays root suite execution."
+    },
+
+    "mocha.diff": {
+        "prefix": "mocha.diff",
+        "body": [ 
+            "mocha.diff(true)"
+        ],
+        "description": "Enables or disables reporter to include diff in test failure output."
+    },
+
+    "mocha.dispose": {
+        "prefix": "mocha.dispose",
+        "body": [ 
+            "mocha.dispose()"
+        ],
+        "description": "Manually dispose this mocha instance. Mark this instance as disposed and unable to run more tests."
+    },
+
+    "mocha.enableGlobalSetup": {
+        "prefix": "mocha.enableGlobalSetup",
+        "body": [ 
+            "mocha.enableGlobalSetup(true)"
+        ],
+        "description": "Toggle execution of any global setup fixture(s)"
+    },
+
+    "mocha.enableGlobalTeardown": {
+        "prefix": "mocha.enableGlobalTeardown",
+        "body": [ 
+            "mocha.enableGlobalTeardown(true)"
+        ],
+        "description": "Toggle execution of any global teardown fixture(s)"
+    },
+
+    "mocha.fgrep": {
+        "prefix": "mocha.fgrep",
+        "body": [ 
+            "mocha.fgrep('foo.')"
+        ],
+        "description": "Sets grep filter after escaping RegExp special characters."
+    },
+
+    "mocha.forbidOnly": {
+        "prefix": "mocha.forbidOnly",
+        "body": [ 
+            "mocha.forbidOnly(true)"
+        ],
+        "description": "Causes tests marked only to fail the suite."
+    },
+
+    "mocha.forbidPending": {
+        "prefix": "mocha.forbidPending",
+        "body": [ 
+            "mocha.forbidPending(true)"
+        ],
+        "description": "Causes pending tests and tests marked skip to fail the suite."
+    },
+
+    "mocha.fullTrace": {
+        "prefix": "mocha.fullTrace",
+        "body": [ 
+            "mocha.fullTrace(true)"
+        ],
+        "description": "Displays full stack trace upon test failure."
+    },
+
+    "mocha.global": {
+        "prefix": "mocha.global",
+        "body": [ 
+            "mocha.global(['jQuery', 'MyLib'])"
+        ],
+        "description": "Specifies whitelist of variable names to be expected in global scope."
+    },
+
+    "mocha.globalSetup": {
+        "prefix": "mocha.globalSetup",
+        "body": [ 
+            "mocha.globalSetup(setupFns = [])"
+        ],
+        "description": "Configures one or more global setup fixtures. If given no parameters, unsets any previously-set fixtures.        "
+    },
+
+    "mocha.globalTeardown": {
+        "prefix": "mocha.globalTeardown",
+        "body": [ 
+            "mocha.globalTeardown(teardownFns = [])"
+        ],
+        "description": "Configures one or more global teardown fixtures. If given no parameters, unsets any previously-set fixtures."
+    },
+
+    "mocha.grep": {
+        "prefix": "mocha.grep",
+        "body": [ 
+            "mocha.grep(/match/i)"
+        ],
+        "description": "Sets grep filter used to select specific tests for execution."
+    },
+
+    "mocha.growl": {
+        "prefix": "mocha.growl",
+        "body": [ 
+            "mocha.growl()"
+        ],
+        "description": "Enables desktop notification support if prerequisite software installed."
+    },
+
+    "mocha.hasGlobalSetupFixtures": {
+        "prefix": "mocha.hasGlobalSetupFixtures",
+        "body": [ 
+            "mocha.hasGlobalSetupFixtures()"
+        ],
+        "description": "Returns true if one or more global setup fixtures have been supplied."
+    },
+
+    "mocha.hasGlobalTeardownFixtures": {
+        "prefix": "mocha.hasGlobalTeardownFixtures",
+        "body": [ 
+            "mocha.hasGlobalTeardownFixtures()"
+        ],
+        "description": "Returns true if one or more global teardown fixtures have been supplied."
+    },
+
+    "mocha.inlineDiffs": {
+        "prefix": "mocha.inlineDiffs",
+        "body": [ 
+            "mocha.inlineDiffs(true)"
+        ],
+        "description": "Enables or disables reporter to use inline diffs (rather than +/-) in test failure output."
+    },
+
+    "mocha.invert": {
+        "prefix": "mocha.invert",
+        "body": [ 
+            "mocha.invert()"
+        ],
+        "description": "Inverts grep matches."
+    },
+
+    "mocha.lazyLoadFiles": {
+        "prefix": "mocha.lazyLoadFiles",
+        "body": [ 
+            "mocha.lazyLoadFiles(true)"
+        ],
+        "description": "Disables implicit call to Mocha#loadFiles in Mocha#run. This setting is used by watch mode, parallel mode, and for loading ESM files."
+    },
+
+    "mocha.loadFilesAsync": {
+        "prefix": "mocha.loadFilesAsync",
+        "body": [ 
+            "mocha.loadFilesAsync()",
+            "\t.then(() => mocha.run(failures => process.exitCode = failures ? 1 : 0))",
+            "\t.catch(() => process.exitCode = 1);"
+        ],
+        "description": "The implementation relies on Node's require and import to execute the test interface functions and will be subject to its cache. Supports both CJS and ESM modules."
+    },
+
+    "mocha.noHighlighting": {
+        "prefix": "mocha.noHighlighting()",
+        "body": [ 
+            "mocha.noHighlighting()"
+        ],
+        "description": "Disables syntax highlighting (in browser)."
+    },
+
+    "mocha.parallelMode": {
+        "prefix": "mocha.parallelMode",
+        "body": [ 
+            "mocha.parallelMode(true)"
+        ],
+        "description": "Toggles parallel mode."
+    },
+
+    "mocha.reporter": {
+        "prefix": "mocha.reporter",
+        "body": [ 
+            "mocha.reporter('xunit', { output: '/path/to/testspec.xunit.xml' })"
+        ],
+        "description": "Sets reporter to reporter, defaults to 'spec'."
+    },
+
+    "mocha.retries": {
+        "prefix": "mocha.retries",
+        "body": [ 
+            "mocha.retries(1)"
+        ],
+        "description": "Sets the number of times to retry failed tests."
+    },
+
+    "mocha.rootHooks": {
+        "prefix": "mocha.rootHooks",
+        "body": [ 
+            "mocha.rootHooks(hooks)"
+        ],
+        "description": "Assigns hooks to the root suite."
+    },
+
+    "mocha.run": {
+        "prefix": "mocha.run",
+        "body": [ 
+            "mocha.run(failures => process.exitCode = failures ? 1 : 0)"
+        ],
+        "description": "To run tests multiple times (or to run tests in files that are already in the require cache), make sure to clear them from the cache first!"
+    },
+
+    "mocha.runGlobalSetup": {
+        "prefix": "mocha.runGlobalSetup",
+        "body": [ 
+            "mocha.runGlobalSetup()"
+        ],
+        "description": "Run any global setup fixtures sequentially, if any. This is automatically called by Mocha#run unless the runGlobalSetup option is false. The context object this function resolves with should be consumed by Mocha#runGlobalTeardown."
+    },
+
+    "mocha.runGlobalTeardown": {
+        "prefix": "mocha.runGlobalTeardown",
+        "body": [ 
+            "mocha.runGlobalTeardown()"
+        ],
+        "description": "Run any global teardown fixtures sequentially, if any. This is automatically called by Mocha#run unless the runGlobalTeardown option is false. Should be called with context object returned by Mocha#runGlobalSetup, if applicable."
+    },
+
+    "mocha.timeout": {
+        "prefix": "mocha.timeout",
+        "body": [ 
+            "mocha.timeout(1000)"
+        ],
+        "description": "Sets timeout threshold value."
+    },
+
+    "mocha.ui": {
+        "prefix": "mocha.ui",
+        "body": [ 
+            "mocha.ui('bdd')"
+        ],
+        "description": "Sets test UI name, defaults to 'bdd'."
+    },
+
+    "mocha.unloadFiles": {
+        "prefix": "mocha.unloadFiles",
+        "body": [ 
+            "mocha.unloadFiles()"
+        ],
+        "description": "This allows required files to be 'freshly' reloaded, providing the ability to reuse a Mocha instance programmatically. Note: does not clear ESM module files from the cache."
+    },
+
+    "assert": {
+        "prefix": "assert(expression, message)",
+        "body": [
+            "assert('foo' !== 'bar', 'foo is not bar')"
+        ],
+        "description": "Write your own test expressions."
+    },
+
+    "assert.fail": {
+        "prefix": "assert.fail(actual, expected, [message], [operator])",
+        "body": [
+            "assert.fail(1, 2, 'custom error message', '>')"
+        ],
+        "description": "Throw a failure. Node.js assert module-compatible."
+    },
+
+    "assert.isOk": {
+        "prefix": "assert.isOk(object, [message])",
+        "body": [
+            "assert.isOk('everything', 'everything is ok')"
+
+        ],
+        "description": "Asserts that object is truthy."
+    },
+
+    "assert.isNotOk": {
+        "prefix": "assert.isNotOk(object, [message])",
+        "body": [
+            "assert.isNotOk('everything', 'this will fail')"
+        ],
+        "description": "Asserts that object is falsy."
+    },
+
+    "assert.equal": {
+        "prefix": "assert.equal(actual, expected, [message])",
+        "body": [
+            "assert.equal(3, '3', '== coerces values to strings')"
+        ],
+        "description": "Asserts non-strict equality (==) of actual and expected."
+    },
+
+    "assert.notEqual": {
+        "prefix": "assert.notEqual(actual, expected, [message])",
+        "body": [
+            "assert.notEqual(3, 4, 'these numbers are not equal')"
+        ],
+        "description": "Asserts non-strict inequality (!=) of actual and expected."
+    },
+
+    "assert.strictEqual": {
+        "prefix": "assert.strictEqual(actual, expected, [message])",
+        "body": [
+            "assert.strictEqual(true, true, 'these booleans are strictly equal')"
+        ],
+        "description": "Asserts strict equality (===) of actual and expected."
+    },
+
+    "assert.notStrictEqual": {
+        "prefix": "assert.notStrictEqual(actual, expected, [message])",
+        "body": [
+            "assert.notStrictEqual(3, '3', 'no coercion for strict equality')"
+        ],
+        "description": "Asserts strict inequality (!==) of actual and expected."
+    },
+
+    "assert.deepEqual": {
+        "prefix": "assert.deepEqual(actual, expected, [message])",
+        "body": [
+            "assert.deepEqual({ tea: 'green' }, { tea: 'green' })"
+        ],
+        "description": "Asserts that actual is deeply equal to expected."
+    },
+
+    "assert.notDeepEqual": {
+        "prefix": "assert.notDeepEqual(actual, expected, [message])",
+        "body": [
+            "assert.notDeepEqual({ tea: 'green' }, { tea: 'jasmine' })"
+        ],
+        "description": "Assert that actual is not deeply equal to expected."
+    },
+
+    "assert.isAbove": {
+        "prefix": "assert.isAbove(valueToCheck, valueToBeAbove, [message])",
+        "body": [
+            "assert.isAbove(5, 2, '5 is strictly greater than 2')"
+        ],
+        "description": "Asserts valueToCheck is strictly greater than (>) valueToBeAbove."
+    },
+
+    "assert.isAtLeast": {
+        "prefix": "assert.isAtLeast(valueToCheck, valueToBeAtLeast, [message])",
+        "body": [
+            "assert.isAtLeast(5, 2, '5 is greater or equal to 2')"
+        ],
+        "description": "Asserts valueToCheck is greater than or equal to (>=) valueToBeAtLeast."
+    },
+
+    "assert.isBelow": {
+        "prefix": "assert.isBelow(valueToCheck, valueToBeBelow, [message])",
+        "body": [
+            "assert.isBelow(3, 6, '3 is strictly less than 6')"
+        ],
+        "description": "Asserts valueToCheck is strictly less than (<) valueToBeBelow."
+    },
+
+    "assert.isAtMost": {
+        "prefix": "assert.isAtMost(valueToCheck, valueToBeAtMost, [message])",
+        "body": [
+            "assert.isAtMost(3, 6, '3 is less than or equal to 6')"
+        ],
+        "description": "Asserts valueToCheck is less than or equal to (<=) valueToBeAtMost."
+    },
+
+    "assert.isTrue": {
+        "prefix": "assert.isTrue(value, [message])",
+        "body": [
+            "assert.isTrue(true, 'it is true')"
+        ],
+        "description": "Asserts that value is true."
+    },
+
+    "assert.isFalse": {
+        "prefix": "assert.isFalse(value, [message])",
+        "body": [
+            "assert.isTrue(true, 'it is false');"
+        ],
+        "description": "Asserts that value is false."
+    },
+
+    "assert.isNull": {
+        "prefix": "assert.isNull(value, [message])",
+        "body": [
+            "assert.isNull(err, 'there was no error')"
+        ],
+        "description": "Asserts that value is null."
+    },
+
+    "assert.isNaN": {
+        "prefix": "assert.isNaN",
+        "body": [
+            "assert.isNaN(NaN, 'NaN is NaN') "
+        ],
+        "description": "Asserts that value is NaN."
+    },
+
+    "assert.exists": {
+        "prefix": "assert.exists",
+        "body": [
+            "assert.exists(foo, 'foo is neither `null` nor `undefined`')"
+        ],
+        "description": "Asserts that the target is neither null nor undefined."
+    },
+
+    "assert.isDefined": {
+        "prefix": "assert.isDefined(value, [message])",
+        "body": [
+            "assert.isDefined(foo, 'foo has been defined')"
+        ],
+        "description": "Write your own test expressions."
+    },
+
+    "assert.isFunction": {
+        "prefix": "assert.isFunction(value, [message])",
+        "body": [
+            "assert.isFunction(getFoo, 'we got foo')"
+        ],
+        "description": "Asserts that value is a function."
+    },
+
+    "assert.isObject": {
+        "prefix": "assert.isObject(value, [message])",
+        "body": [
+            "assert.isObject(selection, 'selection is an object')"
+        ],
+        "description": "Asserts that value is an object of type ‘Object’ (as revealed by Object.prototype.toString). The assertion does not match subclassed objects."
+    },
+
+    "assert.isArray": {
+        "prefix": "assert.isArray(value, [message])",
+        "body": [
+            "assert.isArray(menu, 'what kind of tea do we want?')"
+        ],
+        "description": "Asserts that value is an array."
+    },
+
+    "assert.isString": {
+        "prefix": "assert.isString(value, [message])",
+        "body": [
+            "assert.isString('string', 'is string')"
+        ],
+        "description": "Asserts that value is a string."
+    },
+
+    "assert.isNumber": {
+        "prefix": "assert.isNumber(value, [message])",
+        "body": [
+            "assert.isNumber(2, 'how many?')"
+        ],
+        "description": "Asserts that value is a number."
+    },
+
+    "assert.isFinite": {
+        "prefix": "assert.isFinite(value, [message])",
+        "body": [
+            "assert.isFinite(cups, 'how many cups')"
+        ],
+        "description": "Asserts that value is a finite number. Unlike .isNumber, this will fail for NaN and Infinity."
+    },
+
+    "assert.isBoolean": {
+        "prefix": "assert.isBoolean(value, [message])",
+        "body": [
+            "assert.isBoolean(true, 'it is a boolean')"
+        ],
+        "description": "Write your own test expressions."
+    },
+
+    "expect(function () {}).to.not.throw();" : {
+        "prefix": "expect(function () {}).to.not.throw();",
+        "body": "expect(function () {}).to.not.throw();",
+        "description": "set expect(function () {}).to.not.throw(); component with default value"
+    },
+
+    "expect({a: 1}).to.not.have.property('b');" : {
+        "prefix": "expect({a: 1}).to.not.have.property('b');",
+        "body": "expect({a: 1}).to.not.have.property('b');",
+        "description": "set expect({a: 1}).to.not.have.property('b'); component with default value"
+    },
+
+    "expect([1, 2]).to.be.an('array').that.does.not.include(3);" : {
+        "prefix": "expect([1, 2]).to.be.an('array').that.does.not.include(3);",
+        "body": "expect([1, 2]).to.be.an('array').that.does.not.include(3);",
+        "description": "set expect([1, 2]).to.be.an('array').that.does.not.include(3); component with default value"
+    },
+
+    "expect({a: 1}).to.deep.equal({a: 1});" : {
+        "prefix": "expect({a: 1}).to.deep.equal({a: 1});",
+        "body": "expect({a: 1}).to.deep.equal({a: 1});",
+        "description": "set expect({a: 1}).to.deep.equal({a: 1}); component with default value"
+    },
+    "expect([{a: 1}]).to.deep.include({a: 1})" : {
+        "prefix": "expect([{a: 1}]).to.deep.include({a: 1})",
+        "body": "expect([{a: 1}]).to.deep.include({a: 1})",
+        "description": "set expect([{a: 1}]).to.deep.include({a: 1}) component with default value"
+    },
+    "expect({x: {a: 1}}).to.deep.include({x: {a: 1}});" : {
+        "prefix": "expect({x: {a: 1}}).to.deep.include({x: {a: 1}});",
+        "body": "expect({x: {a: 1}}).to.deep.include({x: {a: 1}});",
+        "description": "set expect({x: {a: 1}}).to.deep.include({x: {a: 1}}); component with default value"
+    },
+    "expect([{a: 1}]).to.have.deep.members([{a: 1}]);" : {
+        "prefix": "expect([{a: 1}]).to.have.deep.members([{a: 1}]);",
+        "body": "expect([{a: 1}]).to.have.deep.members([{a: 1}]);",
+        "description": "set expect([{a: 1}]).to.have.deep.members([{a: 1}]); component with default value"
+    },
+    "expect(new Set([{a: 1}])).to.have.deep.keys([{a: 1}]);" : {
+        "prefix": "expect(new Set([{a: 1}])).to.have.deep.keys([{a: 1}]);",
+        "body": "expect(new Set([{a: 1}])).to.have.deep.keys([{a: 1}]);",
+        "description": "set expect(new Set([{a: 1}])).to.have.deep.keys([{a: 1}]); component with default value"
+    },
+    "expect({x: {a: 1}}).to.have.deep.property('x', {a: 1});" : {
+        "prefix": "expect({x: {a: 1}}).to.have.deep.property('x', {a: 1});",
+        "body": "expect({x: {a: 1}}).to.have.deep.property('x', {a: 1});",
+        "description": "set expect({x: {a: 1}}).to.have.deep.property('x', {a: 1}); component with default value"
+    },
+    "expect({a: {b: ['x', 'y']}}).to.have.nested.property('a.b[1]');" : {
+        "prefix": "expect({a: {b: ['x', 'y']}}).to.have.nested.property('a.b[1]');",
+        "body": "expect({a: {b: ['x', 'y']}}).to.have.nested.property('a.b[1]');",
+        "description": "set expect({a: {b: ['x', 'y']}}).to.have.nested.property('a.b[1]'); component with default value"
+    },
+    "expect({a: {b: ['x', 'y']}}).to.nested.include({'a.b[1]': 'y'});" : {
+        "prefix": "expect({a: {b: ['x', 'y']}}).to.nested.include({'a.b[1]': 'y'});",
+        "body": "expect({a: {b: ['x', 'y']}}).to.nested.include({'a.b[1]': 'y'});",
+        "description": "set expect({a: {b: ['x', 'y']}}).to.nested.include({'a.b[1]': 'y'}); component with default value"
+    },
+    "expect({a: 1}).to.have.own.property('a');" : {
+        "prefix": "expect({a: 1}).to.have.own.property('a');",
+        "body": "expect({a: 1}).to.have.own.property('a');",
+        "description": "set expect({a: 1}).to.have.own.property('a'); component with default value"
+    },
+    "expect({a: 1}).to.not.have.own.property('b');" : {
+        "prefix": "expect({a: 1}).to.not.have.own.property('b');",
+        "body": "expect({a: 1}).to.not.have.own.property('b');",
+        "description": "set expect({a: 1}).to.not.have.own.property('b'); component with default value"
+    },
+    "expect([1, 2]).to.have.ordered.members([1, 2]).but.not.have.ordered.members([2, 1]);" : {
+        "prefix": "expect([1, 2]).to.have.ordered.members([1, 2]).but.not.have.ordered.members([2, 1]);",
+        "body": "expect([1, 2]).to.have.ordered.members([1, 2]).but.not.have.ordered.members([2, 1]);",
+        "description": "set expect([1, 2]).to.have.ordered.members([1, 2]).but.not.have.ordered.members([2, 1]); component with default value"
+    },
+    "expect({a: 1, b: 2}).to.not.have.any.keys('c', 'd');" : {
+        "prefix": "expect({a: 1, b: 2}).to.not.have.any.keys('c', 'd');",
+        "body": "expect({a: 1, b: 2}).to.not.have.any.keys('c', 'd');",
+        "description": "set expect({a: 1, b: 2}).to.not.have.any.keys('c', 'd'); component with default value"
+    },
+    "expect({a: 1, b: 2}).to.have.all.keys('a', 'b');" : {
+        "prefix": "expect({a: 1, b: 2}).to.have.all.keys('a', 'b');",
+        "body": "expect({a: 1, b: 2}).to.have.all.keys('a', 'b');",
+        "description": "set expect({a: 1, b: 2}).to.have.all.keys('a', 'b'); component with default value"
+    },
+    "expect('foo').to.be.a('string');" : {
+        "prefix": "expect('foo').to.be.a('string');",
+        "body": "expect('foo').to.be.a('string');",
+        "description": "set expect('foo').to.be.a('string'); component with default value"
+    },
+    "expect({a: 1}).to.be.an('object');" : {
+        "prefix": "expect({a: 1}).to.be.an('object');",
+        "body": "expect({a: 1}).to.be.an('object');",
+        "description": "set expect({a: 1}).to.be.an('object'); component with default value"
+    },
+    "expect(null).to.be.a('null');" : {
+        "prefix": "expect(null).to.be.a('null');",
+        "body": "expect(null).to.be.a('null');",
+        "description": "set expect(null).to.be.a('null'); component with default value"
+    },
+        "expect(undefined).to.be.an('undefined');" : {
+        "prefix": "expect(undefined).to.be.an('undefined');",
+        "body": "expect(undefined).to.be.an('undefined');",
+        "description": "set expect(undefined).to.be.an('undefined'); component with default value"
+        },
+        "expect(new Error).to.be.an('error');" : {
+        "prefix": "expect(new Error).to.be.an('error');",
+        "body": "expect(new Error).to.be.an('error');",
+        "description": "set expect(new Error).to.be.an('error'); component with default value"
+        },
+        "expect(Promise.resolve()).to.be.a('promise');" : {
+        "prefix": "expect(Promise.resolve()).to.be.a('promise');",
+        "body": "expect(Promise.resolve()).to.be.a('promise');",
+        "description": "set expect(Promise.resolve()).to.be.a('promise'); component with default value"
+        },
+        "expect(new Float32Array).to.be.a('float32array');" : {
+        "prefix": "expect(new Float32Array).to.be.a('float32array');",
+        "body": "expect(new Float32Array).to.be.a('float32array');",
+        "description": "set expect(new Float32Array).to.be.a('float32array'); component with default value"
+        },
+        "expect(Symbol()).to.be.a('symbol');" : {
+        "prefix": "expect(Symbol()).to.be.a('symbol');",
+        "body": "expect(Symbol()).to.be.a('symbol');",
+        "description": "set expect(Symbol()).to.be.a('symbol'); component with default value"
+        },
+        "expect('foobar').to.include('foo');" : {
+        "prefix": "expect('foobar').to.include('foo');",
+        "body": "expect('foobar').to.include('foo');",
+        "description": "set expect('foobar').to.include('foo'); component with default value"
+        },
+        "expect([1, 2, 3]).to.be.an('array').that.includes(2);" : {
+        "prefix": "expect([1, 2, 3]).to.be.an('array').that.includes(2);",
+        "body": "expect([1, 2, 3]).to.be.an('array').that.includes(2);",
+        "description": "set expect([1, 2, 3]).to.be.an('array').that.includes(2); component with default value"
+        },
+        "expect(1).to.be.ok;" : {
+        "prefix": "expect(1).to.be.ok;",
+        "body": "expect(1).to.be.ok;",
+        "description": "set expect(1).to.be.ok; component with default value"
+        },
+        "expect(false).to.not.be.ok;" : {
+        "prefix": "expect(false).to.not.be.ok;",
+        "body": "expect(false).to.not.be.ok;",
+        "description": "set expect(false).to.not.be.ok; component with default value"
+        },
+        "expect(true).to.be.true;" : {
+        "prefix": "expect(true).to.be.true;",
+        "body": "expect(true).to.be.true;",
+        "description": "set expect(true).to.be.true; component with default value"
+        },
+        "expect(false).to.be.false;" : {
+        "prefix": "expect(false).to.be.false;",
+        "body": "expect(false).to.be.false;",
+        "description": "set expect(false).to.be.false; component with default value"
+        },
+        "expect(null).to.be.null;" : {
+        "prefix": "expect(null).to.be.null;",
+        "body": "expect(null).to.be.null;",
+        "description": "set expect(null).to.be.null; component with default value"
+        },
+        "expect(undefined).to.be.undefined;" : {
+        "prefix": "expect(undefined).to.be.undefined;",
+        "body": "expect(undefined).to.be.undefined;",
+        "description": "set expect(undefined).to.be.undefined; component with default value"
+        },
+        "expect(NaN).to.be.NaN;" : {
+        "prefix": "expect(NaN).to.be.NaN;",
+        "body": "expect(NaN).to.be.NaN;",
+        "description": "set expect(NaN).to.be.NaN; component with default value"
+        },
+        "expect(1).to.exist;" : {
+        "prefix": "expect(1).to.exist;",
+        "body": "expect(1).to.exist;",
+        "description": "set expect(1).to.exist; component with default value"
+        },
+        "expect(null).to.not.exist;" : {
+        "prefix": "expect(null).to.not.exist;",
+        "body": "expect(null).to.not.exist;",
+        "description": "set expect(null).to.not.exist; component with default value"
+        },
+        "expect('').to.be.empty;" : {
+        "prefix": "expect('').to.be.empty;",
+        "body": "expect('').to.be.empty;",
+        "description": "set expect('').to.be.empty; component with default value"
+        },
+        "expect(new Map()).to.be.empty;" : {
+        "prefix": "expect(new Map()).to.be.empty;",
+        "body": "expect(new Map()).to.be.empty;",
+        "description": "set expect(new Map()).to.be.empty; component with default value"
+        },
+        "expect(arguments).to.be.arguments;" : {
+        "prefix": "expect(arguments).to.be.arguments;",
+        "body": "expect(arguments).to.be.arguments;",
+        "description": "set expect(arguments).to.be.arguments; component with default value"
+        },
+        "expect('foo').to.equal('foo');" : {
+        "prefix": "expect('foo').to.equal('foo');",
+        "body": "expect('foo').to.equal('foo');",
+        "description": "set expect('foo').to.equal('foo'); component with default value"
+        },
+        "expect({a: 1}).to.not.equal({a: 1});" : {
+        "prefix": "expect({a: 1}).to.not.equal({a: 1});",
+        "body": "expect({a: 1}).to.not.equal({a: 1});",
+        "description": "set expect({a: 1}).to.not.equal({a: 1}); component with default value"
+        },
+        "expect({a: 1}).to.eql({a: 1});" : {
+        "prefix": "expect({a: 1}).to.eql({a: 1});",
+        "body": "expect({a: 1}).to.eql({a: 1});",
+        "description": "set expect({a: 1}).to.eql({a: 1}); component with default value"
+        },
+        "expect(1).to.not.be.above(2);" : {
+        "prefix": "expect(1).to.not.be.above(2);",
+        "body": "expect(1).to.not.be.above(2);",
+        "description": "set expect(1).to.not.be.above(2); component with default value"
+        },
+
+        "expect(2).to.be.at.least(1);" : {
+        "prefix": "expect(2).to.be.at.least(1);",
+        "body": "expect(2).to.be.at.least(1);",
+        "description": "set expect(2).to.be.at.least(1); component with default value"
+        },
+        "expect('foo').to.have.lengthOf.at.least(2);" : {
+        "prefix": "expect('foo').to.have.lengthOf.at.least(2);",
+        "body": "expect('foo').to.have.lengthOf.at.least(2);",
+        "description": "set expect('foo').to.have.lengthOf.at.least(2); component with default value"
+        },
+        "expect(1).to.be.below(2);" : {
+        "prefix": "expect(1).to.be.below(2);",
+        "body": "expect(1).to.be.below(2);",
+        "description": "set expect(1).to.be.below(2); component with default value"
+        },
+        "expect('foo').to.have.lengthOf.below(4);" : {
+        "prefix": "expect('foo').to.have.lengthOf.below(4);",
+        "body": "expect('foo').to.have.lengthOf.below(4);",
+        "description": "set expect('foo').to.have.lengthOf.below(4); component with default value"
+        },
+        "expect(1).to.be.at.most(1);" : {
+        "prefix": "expect(1).to.be.at.most(1);",
+        "body": "expect(1).to.be.at.most(1);",
+        "description": "set expect(1).to.be.at.most(1); component with default value"
+        },
+        "expect('foo').to.have.lengthOf.at.most(4);" : {
+        "prefix": "expect('foo').to.have.lengthOf.at.most(4);",
+        "body": "expect('foo').to.have.lengthOf.at.most(4);",
+        "description": "set expect('foo').to.have.lengthOf.at.most(4); component with default value"
+        },
+        "expect(2).to.be.within(1, 3);" : {
+        "prefix": "expect(2).to.be.within(1, 3);",
+        "body": "expect(2).to.be.within(1, 3);",
+        "description": "set expect(2).to.be.within(1, 3); component with default value"
+        },
+        "expect([1, 2, 3]).to.have.lengthOf.within(2, 4);" : {
+        "prefix": "expect([1, 2, 3]).to.have.lengthOf.within(2, 4);",
+        "body": "expect([1, 2, 3]).to.have.lengthOf.within(2, 4);",
+        "description": "set expect([1, 2, 3]).to.have.lengthOf.within(2, 4); component with default value"
+        },
+        "expect(new Cat()).to.be.an.instanceof(Cat);" : {
+        "prefix": "expect(new Cat()).to.be.an.instanceof(Cat);",
+        "body": "expect(new Cat()).to.be.an.instanceof(Cat);",
+        "description": "set expect(new Cat()).to.be.an.instanceof(Cat); component with default value"
+        },
+        "expect({a: 1}).to.not.be.an.instanceof(Array);" : {
+        "prefix": "expect({a: 1}).to.not.be.an.instanceof(Array);",
+        "body": "expect({a: 1}).to.not.be.an.instanceof(Array);",
+        "description": "set expect({a: 1}).to.not.be.an.instanceof(Array); component with default value"
+        },
+        "expect({a: 1}).to.have.property('a');" : {
+        "prefix": "expect({a: 1}).to.have.property('a');",
+        "body": "expect({a: 1}).to.have.property('a');",
+        "description": "set expect({a: 1}).to.have.property('a'); component with default value"
+        },
+        "expect({x: {a: 1}}).to.not.have.property('x', {a: 1});" : {
+        "prefix": "expect({x: {a: 1}}).to.not.have.property('x', {a: 1});",
+        "body": "expect({x: {a: 1}}).to.not.have.property('x', {a: 1});",
+        "description": "set expect({x: {a: 1}}).to.not.have.property('x', {a: 1}); component with default value"
+        },
+        "expect({a: 1}).to.have.ownPropertyDescriptor('a');" : {
+        "prefix": "expect({a: 1}).to.have.ownPropertyDescriptor('a');",
+        "body": "expect({a: 1}).to.have.ownPropertyDescriptor('a');",
+        "description": "set expect({a: 1}).to.have.ownPropertyDescriptor('a'); component with default value"
+        },
+        "expect([1, 2, 3]).to.have.lengthOf(3);" : {
+        "prefix": "expect([1, 2, 3]).to.have.lengthOf(3);",
+        "body": "expect([1, 2, 3]).to.have.lengthOf(3);",
+        "description": "set expect([1, 2, 3]).to.have.lengthOf(3); component with default value"
+        },
+        "expect(new Set([1, 2, 3])).to.have.lengthOf(3);" : {
+        "prefix": "expect(new Set([1, 2, 3])).to.have.lengthOf(3);",
+        "body": "expect(new Set([1, 2, 3])).to.have.lengthOf(3);",
+        "description": "set expect(new Set([1, 2, 3])).to.have.lengthOf(3); component with default value"
+        },
+        "expect('foobar').to.not.match(/taco/);" : {
+        "prefix": "expect('foobar').to.not.match(/taco/);",
+        "body": "expect('foobar').to.not.match(/taco/);",
+        "description": "set expect('foobar').to.not.match(/taco/); component with default value"
+        },
+        "expect('foobar').to.have.string('bar');" : {
+        "prefix": "expect('foobar').to.have.string('bar');",
+        "body": "expect('foobar').to.have.string('bar');",
+        "description": "set expect('foobar').to.have.string('bar'); component with default value"
+        },
+        "expect('foobar').to.not.have.string('taco');" : {
+        "prefix": "expect('foobar').to.not.have.string('taco');",
+        "body": "expect('foobar').to.not.have.string('taco');",
+        "description": "set expect('foobar').to.not.have.string('taco'); component with default value"
+        },
+        "expect(['x', 'y']).to.have.all.keys(0, 1);" : {
+        "prefix": "expect(['x', 'y']).to.have.all.keys(0, 1);",
+        "body": "expect(['x', 'y']).to.have.all.keys(0, 1);",
+        "description": "set expect(['x', 'y']).to.have.all.keys(0, 1); component with default value"
+        },
+        "expect(new Map([['a', 1], ['b', 2]])).to.have.all.keys('a', 'b');" : {
+        "prefix": "expect(new Map([['a', 1], ['b', 2]])).to.have.all.keys('a', 'b');",
+        "body": "expect(new Map([['a', 1], ['b', 2]])).to.have.all.keys('a', 'b');",
+        "description": "set expect(new Map([['a', 1], ['b', 2]])).to.have.all.keys('a', 'b'); component with default value"
+        },
+        "expect(badFn).to.throw();" : {
+        "prefix": "expect(badFn).to.throw();",
+        "body": "expect(badFn).to.throw();",
+        "description": "set expect(badFn).to.throw(); component with default value"
+        },
+        "expect(new Cat()).to.respondTo('meow');" : {
+        "prefix": "expect(new Cat()).to.respondTo('meow');",
+        "body": "expect(new Cat()).to.respondTo('meow');",
+        "description": "set expect(new Cat()).to.respondTo('meow'); component with default value"
+        },
+        "expect(Cat).itself.to.respondTo('hiss').but.not.respondTo('meow');" : {
+        "prefix": "expect(Cat).itself.to.respondTo('hiss').but.not.respondTo('meow');",
+        "body": "expect(Cat).itself.to.respondTo('hiss').but.not.respondTo('meow');",
+        "description": "set expect(Cat).itself.to.respondTo('hiss').but.not.respondTo('meow'); component with default value"
+        },
+        "expect(1).to.satisfy(function(num) { return num > 0; });" : {
+        "prefix": "expect(1).to.satisfy(function(num) { return num > 0; });",
+        "body": "expect(1).to.satisfy(function(num) { return num > 0; });",
+        "description": "set expect(1).to.satisfy(function(num) { return num > 0; }); component with default value"
+        },
+        "expect(1.5).to.be.closeTo(1, 0.5);" : {
+        "prefix": "expect(1.5).to.be.closeTo(1, 0.5);",
+        "body": "expect(1.5).to.be.closeTo(1, 0.5);",
+        "description": "set expect(1.5).to.be.closeTo(1, 0.5); component with default value"
+        },
+        "expect(1.5).to.not.be.closeTo(3, 1);" : {
+        "prefix": "expect(1.5).to.not.be.closeTo(3, 1);",
+        "body": "expect(1.5).to.not.be.closeTo(3, 1);",
+        "description": "set expect(1.5).to.not.be.closeTo(3, 1); component with default value"
+        },
+        "expect([1, 2, 3]).to.have.members([2, 1, 3]);" : {
+        "prefix": "expect([1, 2, 3]).to.have.members([2, 1, 3]);",
+        "body": "expect([1, 2, 3]).to.have.members([2, 1, 3]);",
+        "description": "set expect([1, 2, 3]).to.have.members([2, 1, 3]); component with default value"
+        },
+        "expect(1).to.be.oneOf([1, 2, 3]);" : {
+        "prefix": "expect(1).to.be.oneOf([1, 2, 3]);",
+        "body": "expect(1).to.be.oneOf([1, 2, 3]);",
+        "description": "set expect(1).to.be.oneOf([1, 2, 3]); component with default value"
+        },
+        "expect('Today is rainy').to.not.contain.oneOf(['sunny', 'cloudy'])" : {
+        "prefix": "expect('Today is rainy').to.not.contain.oneOf(['sunny', 'cloudy'])",
+        "body": "expect('Today is rainy').to.not.contain.oneOf(['sunny', 'cloudy'])",
+        "description": "set expect('Today is rainy').to.not.contain.oneOf(['sunny', 'cloudy']) component with default value"
+        },
+        "expect(addDot).to.change(getDots);" : {
+        "prefix": "expect(addDot).to.change(getDots);",
+        "body": "expect(addDot).to.change(getDots);",
+        "description": "set expect(addDot).to.change(getDots); component with default value"
+        },
+        "expect(addTwo).to.increase(getVal).by(2);" : {
+        "prefix": "expect(addTwo).to.increase(getVal).by(2);",
+        "body": "expect(addTwo).to.increase(getVal).by(2);",
+        "description": "set expect(addTwo).to.increase(getVal).by(2); component with default value"
+        },
+        "expect(subtractTwo).to.decrease(getVal).by(2);" : {
+        "prefix": "expect(subtractTwo).to.decrease(getVal).by(2);",
+        "body": "expect(subtractTwo).to.decrease(getVal).by(2);",
+        "description": "set expect(subtractTwo).to.decrease(getVal).by(2); component with default value"
+        },
+        "expect({a: 1}).to.be.extensible;" : {
+        "prefix": "expect({a: 1}).to.be.extensible;",
+        "body": "expect({a: 1}).to.be.extensible;",
+        "description": "set expect({a: 1}).to.be.extensible; component with default value"
+        },
+        "expect(sealedObject).to.not.be.extensible;" : {
+        "prefix": "expect(sealedObject).to.not.be.extensible;",
+        "body": "expect(sealedObject).to.not.be.extensible;",
+        "description": "set expect(sealedObject).to.not.be.extensible; component with default value"
+        },
+        "expect(sealedObject).to.be.sealed;" : {
+        "prefix": "expect(sealedObject).to.be.sealed;",
+        "body": "expect(sealedObject).to.be.sealed;",
+        "description": "set expect(sealedObject).to.be.sealed; component with default value"
+        },
+        "expect({a: 1}).to.not.be.sealed;" : {
+        "prefix": "expect({a: 1}).to.not.be.sealed;",
+        "body": "expect({a: 1}).to.not.be.sealed;",
+        "description": "set expect({a: 1}).to.not.be.sealed; component with default value"
+        },
+        "expect(frozenObject).to.be.frozen;" : {
+        "prefix": "expect(frozenObject).to.be.frozen;",
+        "body": "expect(frozenObject).to.be.frozen;",
+        "description": "set expect(frozenObject).to.be.frozen; component with default value"
+        },
+        "expect(1).to.be.finite;" : {
+        "prefix": "expect(1).to.be.finite;",
+        "body": "expect(1).to.be.finite;",
+        "description": "set expect(1).to.be.finite; component with default value"
+        },
+        "expect.fail(1, 2, 'custom error message', '>');" : {
+        "prefix": "expect.fail(1, 2, 'custom error message', '>');",
+        "body": "expect.fail(1, 2, 'custom error message', '>');",
+        "description": "set expect.fail(1, 2, 'custom error message', '>'); component with default value"
+        },
+        "should.fail(1, 2, 'custom error message', '>');" : {
+        "prefix": "should.fail(1, 2, 'custom error message', '>');",
+        "body": "should.fail(1, 2, 'custom error message', '>');",
+        "description": "set should.fail(1, 2, 'custom error message', '>'); component with default value"
+        },
+        
+	"Cypress.Commands" : {
+		"prefix": "Cypress.Commands",
+		"body": "Cypress.Commands",
+		"description": "set Cypress.Commands component with default value"
+	},
+
+	"Cypress.Commands.add(name, options, callbackFn)" : {
+		"prefix": "Cypress.Commands.add(name, options, callbackFn)",
+		"body": "Cypress.Commands.add(name, options, callbackFn)",
+		"description": "set Cypress.Commands.add(name, options, callbackFn) component with default value"
+	},
+
+	"Cypress.Commands.overwrite(name, callbackFn)" : {
+		"prefix": "Cypress.Commands.overwrite(name, callbackFn)",
+		"body": "Cypress.Commands.overwrite(name, callbackFn)",
+		"description": "set Cypress.Commands.overwrite(name, callbackFn) component with default value"
+	},
+
+	"Cypress.Cookies" : {
+		"prefix": "Cypress.Cookies",
+		"body": "Cypress.Cookies",
+		"description": "set Cypress.Cookies component with default value"
+	},
+
+	"Cypress.Cookies.debug(enable, options)" : {
+		"prefix": "Cypress.Cookies.debug(enable, options)",
+		"body": "Cypress.Cookies.debug(enable, options)",
+		"description": "set Cypress.Cookies.debug(enable, options) component with default value"
+	},
+
+	"Cypress.Cookies.preserveOnce(names...)" : {
+		"prefix": "Cypress.Cookies.preserveOnce(names...)",
+		"body": "Cypress.Cookies.preserveOnce(names...)",
+		"description": "set Cypress.Cookies.preserveOnce(names...) component with default value"
+	},
+
+	"Cypress.Cookies.defaults(options)" : {
+		"prefix": "Cypress.Cookies.defaults(options)",
+		"body": "Cypress.Cookies.defaults(options)",
+		"description": "set Cypress.Cookies.defaults(options) component with default value"
+	},
+
+	"Cypress.Screenshot" : {
+		"prefix": "Cypress.Screenshot",
+		"body": "Cypress.Screenshot",
+		"description": "set Cypress.Screenshot component with default value"
+	},
+
+	"Cypress.Screenshot.defaults(options)" : {
+		"prefix": "Cypress.Screenshot.defaults(options)",
+		"body": "Cypress.Screenshot.defaults(options)",
+		"description": "set Cypress.Screenshot.defaults(options) component with default value"
+	},
+
+	"Cypress.SelectorPlayground" : {
+		"prefix": "Cypress.SelectorPlayground",
+		"body": "Cypress.SelectorPlayground",
+		"description": "set Cypress.SelectorPlayground component with default value"
+	},
+
+	"Cypress.SelectorPlayground.defaults(options)" : {
+		"prefix": "Cypress.SelectorPlayground.defaults(options)",
+		"body": "Cypress.SelectorPlayground.defaults(options)",
+		"description": "set Cypress.SelectorPlayground.defaults(options) component with default value"
+	},
+
+	"Cypress.SelectorPlayground.getSelector(element)" : {
+		"prefix": "Cypress.SelectorPlayground.getSelector(element)",
+		"body": "Cypress.SelectorPlayground.getSelector(element)",
+		"description": "set Cypress.SelectorPlayground.getSelector(element) component with default value"
+	},
+
+	"Cypress.Server" : {
+		"prefix": "Cypress.Server",
+		"body": "Cypress.Server",
+		"description": "set Cypress.Server component with default value"
+	},
+
+	"Cypress.Server.defaults(options)" : {
+		"prefix": "Cypress.Server.defaults(options)",
+		"body": "Cypress.Server.defaults(options)",
+		"description": "set Cypress.Server.defaults(options) component with default value"
+	},
+
+	"Cypress.arch" : {
+		"prefix": "Cypress.arch",
+		"body": "Cypress.arch",
+		"description": "set Cypress.arch component with default value"
+	},
+
+	"Cypress.browser" : {
+		"prefix": "Cypress.browser",
+		"body": "Cypress.browser",
+		"description": "set Cypress.browser component with default value"
+	},
+
+	"Cypress.config()" : {
+		"prefix": "Cypress.config()",
+		"body": "Cypress.config()",
+		"description": "set Cypress.config() component with default value"
+	},
+
+	"Cypress.config(name)" : {
+		"prefix": "Cypress.config(name)",
+		"body": "Cypress.config(name)",
+		"description": "set Cypress.config(name) component with default value"
+	},
+
+	"Cypress.config(name, value)" : {
+		"prefix": "Cypress.config(name, value)",
+		"body": "Cypress.config(name, value)",
+		"description": "set Cypress.config(name, value) component with default value"
+	},
+
+	"Cypress.config(object)" : {
+		"prefix": "Cypress.config(object)",
+		"body": "Cypress.config(object)",
+		"description": "set Cypress.config(object) component with default value"
+	},
+
+	"Cypress.dom.isHidden(element)" : {
+		"prefix": "Cypress.dom.isHidden(element)",
+		"body": "Cypress.dom.isHidden(element)",
+		"description": "set Cypress.dom.isHidden(element) component with default value"
+	},
+
+	"Cypress.dom.isAttached(element)" : {
+		"prefix": "Cypress.dom.isAttached(element)",
+		"body": "Cypress.dom.isAttached(element)",
+		"description": "set Cypress.dom.isAttached(element) component with default value"
+	},
+
+	"Cypress.dom.isDescendent(element.parent(), element)" : {
+		"prefix": "Cypress.dom.isDescendent(element.parent(), element)",
+		"body": "Cypress.dom.isDescendent(element.parent(), element)",
+		"description": "set Cypress.dom.isDescendent(element.parent(), element) component with default value"
+	},
+
+	"Cypress.dom.isDetached(element)" : {
+		"prefix": "Cypress.dom.isDetached(element)",
+		"body": "Cypress.dom.isDetached(element)",
+		"description": "set Cypress.dom.isDetached(element) component with default value"
+	},
+
+	"Cypress.dom.isDocument(element)" : {
+		"prefix": "Cypress.dom.isDocument(element)",
+		"body": "Cypress.dom.isDocument(element)",
+		"description": "set Cypress.dom.isDocument(element) component with default value"
+	},
+
+	"Cypress.dom.isDom(element)" : {
+		"prefix": "Cypress.dom.isDom(element)",
+		"body": "Cypress.dom.isDom(element)",
+		"description": "set Cypress.dom.isDom(element) component with default value"
+	},
+
+	"Cypress.dom.isElement(element)" : {
+		"prefix": "Cypress.dom.isElement(element)",
+		"body": "Cypress.dom.isElement(element)",
+		"description": "set Cypress.dom.isElement(element) component with default value"
+	},
+
+	"Cypress.dom.isFocusable(element)" : {
+		"prefix": "Cypress.dom.isFocusable(element)",
+		"body": "Cypress.dom.isFocusable(element)",
+		"description": "set Cypress.dom.isFocusable(element) component with default value"
+	},
+
+	"Cypress.dom.isFocused(element)" : {
+		"prefix": "Cypress.dom.isFocused(element)",
+		"body": "Cypress.dom.isFocused(element)",
+		"description": "set Cypress.dom.isFocused(element) component with default value"
+	},
+
+	"Cypress.dom.isJquery(element)" : {
+		"prefix": "Cypress.dom.isJquery(element)",
+		"body": "Cypress.dom.isJquery(element)",
+		"description": "set Cypress.dom.isJquery(element) component with default value"
+	},
+
+	"Cypress.dom.isScrollable(element)" : {
+		"prefix": "Cypress.dom.isScrollable(element)",
+		"body": "Cypress.dom.isScrollable(element)",
+		"description": "set Cypress.dom.isScrollable(element) component with default value"
+	},
+
+	"Cypress.dom.isVisible(element)" : {
+		"prefix": "Cypress.dom.isVisible(element)",
+		"body": "Cypress.dom.isVisible(element)",
+		"description": "set Cypress.dom.isVisible(element) component with default value"
+	},
+
+	"Cypress.dom.isWindow(element)" : {
+		"prefix": "Cypress.dom.isWindow(element)",
+		"body": "Cypress.dom.isWindow(element)",
+		"description": "set Cypress.dom.isWindow(element) component with default value"
+	},
+
+	"Cypress.dom.unwrap(element)" : {
+		"prefix": "Cypress.dom.unwrap(element)",
+		"body": "Cypress.dom.unwrap(element)",
+		"description": "set Cypress.dom.unwrap(element) component with default value"
+	},
+
+	"Cypress.dom.wrap(element)" : {
+		"prefix": "Cypress.dom.wrap(element)",
+		"body": "Cypress.dom.wrap(element)",
+		"description": "set Cypress.dom.wrap(element) component with default value"
+	},
+
+	"Cypress.env()" : {
+		"prefix": "Cypress.env()",
+		"body": "Cypress.env()",
+		"description": "set Cypress.env() component with default value"
+	},
+
+	"Cypress.env(name)" : {
+		"prefix": "Cypress.env(name)",
+		"body": "Cypress.env(name)",
+		"description": "set Cypress.env(name) component with default value"
+	},
+
+	"Cypress.env(name, value)" : {
+		"prefix": "Cypress.env(name, value)",
+		"body": "Cypress.env(name, value)",
+		"description": "set Cypress.env(name, value) component with default value"
+	},
+
+	"Cypress.env(object)" : {
+		"prefix": "Cypress.env(object)",
+		"body": "Cypress.env(object)",
+		"description": "set Cypress.env(object) component with default value"
+	},
+
+	"Cypress.isBrowser(matcher)" : {
+		"prefix": "Cypress.isBrowser(matcher)",
+		"body": "Cypress.isBrowser(matcher)",
+		"description": "set Cypress.isBrowser(matcher) component with default value"
+	},
+
+	"Cypress.isBrowser(matchers)" : {
+		"prefix": "Cypress.isBrowser(matchers)",
+		"body": "Cypress.isBrowser(matchers)",
+		"description": "set Cypress.isBrowser(matchers) component with default value"
+	},
+
+	"Cypress.isBrowser(filter)" : {
+		"prefix": "Cypress.isBrowser(filter)",
+		"body": "Cypress.isBrowser(filter)",
+		"description": "set Cypress.isBrowser(filter) component with default value"
+	},
+
+	"Cypress.isCy(obj)" : {
+		"prefix": "Cypress.isCy(obj)",
+		"body": "Cypress.isCy(obj)",
+		"description": "set Cypress.isCy(obj) component with default value"
+	},
+
+	"Cypress.log(options)" : {
+		"prefix": "Cypress.log(options)",
+		"body": "Cypress.log(options)",
+		"description": "set Cypress.log(options) component with default value"
+	},
+
+	"Cypress.platform" : {
+		"prefix": "Cypress.platform",
+		"body": "Cypress.platform",
+		"description": "set Cypress.platform component with default value"
+	},
+
+	"Cypress.spec" : {
+		"prefix": "Cypress.spec",
+		"body": "Cypress.spec",
+		"description": "set Cypress.spec component with default value"
+	},
+
+	"Cypress.testingType" : {
+		"prefix": "Cypress.testingType",
+		"body": "Cypress.testingType",
+		"description": "set Cypress.testingType component with default value"
+	},
+
+	"Cypress.version" : {
+		"prefix": "Cypress.version",
+		"body": "Cypress.version",
+		"description": "set Cypress.version component with default value"
+	},
+
+	"sinon.stub()" : {
+		"prefix": "sinon.stub()",
+		"body": "sinon.stub();",
+		"description": "set sinon.stub() component with default value"
+	},
+
+	"sinon.stub().withArgs(arg1[, arg2, ...]);" : {
+		"prefix": "sinon.stub().withArgs(arg1[, arg2, ...]);",
+		"body": "sinon.stub().withArgs(arg1[, arg2, ...]);;",
+		"description": "set sinon.stub().withArgs(arg1[, arg2, ...]); component with default value"
+	},
+
+	"sinon.stub().onCall(n)" : {
+		"prefix": "sinon.stub().onCall(n)",
+		"body": "sinon.stub().onCall(n);",
+		"description": "set sinon.stub().onCall(n) component with default value"
+	},
+
+	"sinon.stub().onFirstCall()" : {
+		"prefix": "sinon.stub().onFirstCall()",
+		"body": "sinon.stub().onFirstCall();",
+		"description": "set sinon.stub().onFirstCall() component with default value"
+	},
+
+	"sinon.stub().onSecondCall()" : {
+		"prefix": "sinon.stub().onSecondCall()",
+		"body": "sinon.stub().onSecondCall();",
+		"description": "set sinon.stub().onSecondCall() component with default value"
+	},
+
+	"sinon.stub().onThirdCall()" : {
+		"prefix": "sinon.stub().onThirdCall()",
+		"body": "sinon.stub().onThirdCall();",
+		"description": "set sinon.stub().onThirdCall() component with default value"
+	},
+
+	"sinon.stub().reset()" : {
+		"prefix": "sinon.stub().reset()",
+		"body": "sinon.stub().reset();",
+		"description": "set sinon.stub().reset() component with default value"
+	},
+
+	"sinon.stub().resetBehavior()" : {
+		"prefix": "sinon.stub().resetBehavior()",
+		"body": "sinon.stub().resetBehavior();",
+		"description": "set sinon.stub().resetBehavior() component with default value"
+	},
+
+	"sinon.stub().resetHistory()" : {
+		"prefix": "sinon.stub().resetHistory()",
+		"body": "sinon.stub().resetHistory();",
+		"description": "set sinon.stub().resetHistory() component with default value"
+	},
+
+	"sinon.stub().callsFake(fakeFunction)" : {
+		"prefix": "sinon.stub().callsFake(fakeFunction)",
+		"body": [ 
+            "sinon.stub(myObj, \"prop\").callsFake(function fakeFunction() {",
+            "\treturn \"bar\";",
+            "});"
+        ],
+		"description": "set sinon.stub().callsFake(fakeFunction) component with default value"
+	},
+
+	"sinon.stub().returns(obj)" : {
+		"prefix": "sinon.stub().returns(obj)",
+		"body": "sinon.stub().returns(obj);",
+		"description": "set sinon.stub().returns(obj) component with default value"
+	},
+
+	"sinon.stub().returnsArg(index)" : {
+		"prefix": "sinon.stub().returnsArg(index)",
+		"body": "sinon.stub().returnsArg(index);",
+		"description": "set sinon.stub().returnsArg(index) component with default value"
+	},
+
+	"sinon.stub().returnsThis()" : {
+		"prefix": "sinon.stub().returnsThis()",
+		"body": "sinon.stub().returnsThis();",
+		"description": "set sinon.stub().returnsThis() component with default value"
+	},
+
+	"sinon.stub().resolves(value)" : {
+		"prefix": "sinon.stub().resolves(value)",
+		"body": "sinon.stub().resolves(value);",
+		"description": "set sinon.stub().resolves(value) component with default value"
+	},
+
+	"sinon.stub().resolvesArg(index)" : {
+		"prefix": "sinon.stub().resolvesArg(index)",
+		"body": "sinon.stub().resolvesArg(index);",
+		"description": "set sinon.stub().resolvesArg(index) component with default value"
+	},
+
+	"sinon.stub().throws(\"name\"[, \"optional message\"])" : {
+		"prefix": "sinon.stub().throws(\"name\"[, \"optional message\"])",
+		"body": "sinon.stub().throws(\"name\"[, \"optional message\"]);",
+		"description": "set sinon.stub().throws(\"name\"[, \"optional message\"]) component with default value"
+	},
+
+	"sinon.stub().throws(obj)" : {
+		"prefix": "sinon.stub().throws(obj)",
+		"body": "sinon.stub().throws(obj);",
+		"description": "set sinon.stub().throws(obj) component with default value"
+	},
+
+	"sinon.stub().throws(funct)" : {
+		"prefix": "sinon.stub().throws(funct)",
+		"body": "sinon.stub().throws(function() { return \"new Object Error\"; })",
+		"description": "set sinon.stub().throws(funct) component with default value"
+	},
+
+	"sinon.stub().throwsArg(index)" : {
+		"prefix": "sinon.stub().throwsArg(index)",
+		"body": "sinon.stub().throwsArg(index);",
+		"description": "set sinon.stub().throwsArg(index) component with default value"
+	},
+
+	"sinon.stub().rejects()" : {
+		"prefix": "sinon.stub().rejects()",
+		"body": "sinon.stub().rejects();",
+		"description": "set sinon.stub().rejects() component with default value"
+	},
+
+	"sinon.stub().rejects(\"TypeError\")" : {
+		"prefix": "sinon.stub().rejects(\"TypeError\")",
+		"body": "sinon.stub().rejects(\"TypeError\");",
+		"description": "set sinon.stub().rejects(\"TypeError\") component with default value"
+	},
+
+	"sinon.stub().rejects(value)" : {
+		"prefix": "sinon.stub().rejects(value)",
+		"body": "sinon.stub().rejects(value);",
+		"description": "set sinon.stub().rejects(value) component with default value"
+	},
+
+	"sinon.stub().callsArg(index)" : {
+		"prefix": "sinon.stub().callsArg(index)",
+		"body": "sinon.stub().callsArg(index);",
+		"description": "set sinon.stub().callsArg(index) component with default value"
+	},
+
+	"sinon.stub().callThrough()" : {
+		"prefix": "sinon.stub().callThrough()",
+		"body": "sinon.stub().callThrough();",
+		"description": "set sinon.stub().callThrough() component with default value"
+	},
+
+	"sinon.stub().callThroughWithNew()" : {
+		"prefix": "sinon.stub().callThroughWithNew()",
+		"body": "sinon.stub().callThroughWithNew();",
+		"description": "set sinon.stub().callThroughWithNew() component with default value"
+	},
+
+	"sinon.stub().callsArgOn(index, context)" : {
+		"prefix": "sinon.stub().callsArgOn(index, context)",
+		"body": "sinon.stub().callsArgOn(index, context);",
+		"description": "set sinon.stub().callsArgOn(index, context) component with default value"
+	},
+
+	"sinon.stub().callsArgWith(index, arg1, arg2, ...)" : {
+		"prefix": "sinon.stub().callsArgWith(index, arg1, arg2, ...)",
+		"body": "sinon.stub().callsArgWith(index, arg1, arg2, ...);",
+		"description": "set sinon.stub().callsArgWith(index, arg1, arg2, ...) component with default value"
+	},
+
+	"sinon.stub().callsArgOnWith(index, context, arg1, arg2, ...)" : {
+		"prefix": "sinon.stub().callsArgOnWith(index, context, arg1, arg2, ...)",
+		"body": "sinon.stub().callsArgOnWith(index, context, arg1, arg2, ...);",
+		"description": "set sinon.stub().callsArgOnWith(index, context, arg1, arg2, ...) component with default value"
+	},
+
+	"sinon.stub().usingPromise(promiseLibrary)" : {
+		"prefix": "sinon.stub().usingPromise(promiseLibrary)",
+		"body": "sinon.stub().usingPromise(promiseLibrary);",
+		"description": "set sinon.stub().usingPromise(promiseLibrary) component with default value"
+	},
+
+	"sinon.stub().yields([arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yields([arg1, arg2, ...])",
+		"body": "sinon.stub().yields([arg1, arg2, ...]);",
+		"description": "set sinon.stub().yields([arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsRight([arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsRight([arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsRight([arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsRight([arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsOn(context, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsOn(context, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsOn(context, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsOn(context, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsTo(property, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsTo(property, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsTo(property, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsTo(property, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsToOn(property, context, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsToOn(property, context, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsToOn(property, context, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsToOn(property, context, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yield([arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yield([arg1, arg2, ...])",
+		"body": "sinon.stub().yield([arg1, arg2, ...]);",
+		"description": "set sinon.stub().yield([arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldTo(callback, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldTo(callback, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldTo(callback, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldTo(callback, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().callArg(argNum)" : {
+		"prefix": "sinon.stub().callArg(argNum)",
+		"body": "sinon.stub().callArg(argNum);",
+		"description": "set sinon.stub().callArg(argNum) component with default value"
+	},
+
+	"sinon.stub().callArgWith(argNum, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().callArgWith(argNum, [arg1, arg2, ...])",
+		"body": "sinon.stub().callArgWith(argNum, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().callArgWith(argNum, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().callsArgAsync(index)" : {
+		"prefix": "sinon.stub().callsArgAsync(index)",
+		"body": "sinon.stub().callsArgAsync(index);",
+		"description": "set sinon.stub().callsArgAsync(index) component with default value"
+	},
+
+	"sinon.stub().callsArgOnAsync(index, context);" : {
+		"prefix": "sinon.stub().callsArgOnAsync(index, context);",
+		"body": "sinon.stub().callsArgOnAsync(index, context);;",
+		"description": "set sinon.stub().callsArgOnAsync(index, context); component with default value"
+	},
+
+	"sinon.stub().callsArgWithAsync(index, arg1, arg2, ...)" : {
+		"prefix": "sinon.stub().callsArgWithAsync(index, arg1, arg2, ...)",
+		"body": "sinon.stub().callsArgWithAsync(index, arg1, arg2, ...);",
+		"description": "set sinon.stub().callsArgWithAsync(index, arg1, arg2, ...) component with default value"
+	},
+
+	"sinon.stub().callsArgOnWithAsync(index, context, arg1, arg2, ...)" : {
+		"prefix": "sinon.stub().callsArgOnWithAsync(index, context, arg1, arg2, ...)",
+		"body": "sinon.stub().callsArgOnWithAsync(index, context, arg1, arg2, ...);",
+		"description": "set sinon.stub().callsArgOnWithAsync(index, context, arg1, arg2, ...) component with default value"
+	},
+
+	"sinon.stub().yieldsAsync([arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsAsync([arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsAsync([arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsAsync([arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsOnAsync(context, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsOnAsync(context, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsOnAsync(context, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsOnAsync(context, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsToAsync(property, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsToAsync(property, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsToAsync(property, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsToAsync(property, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.stub().yieldsToOnAsync(property, context, [arg1, arg2, ...])" : {
+		"prefix": "sinon.stub().yieldsToOnAsync(property, context, [arg1, arg2, ...])",
+		"body": "sinon.stub().yieldsToOnAsync(property, context, [arg1, arg2, ...]);",
+		"description": "set sinon.stub().yieldsToOnAsync(property, context, [arg1, arg2, ...]) component with default value"
+	},
+
+	"sinon.addBehavior(name, fn)" : {
+		"prefix": "sinon.addBehavior(name, fn)",
+		"body": "sinon.addBehavior(name, fn);",
+		"description": "set sinon.addBehavior(name, fn) component with default value"
+	},
+
+	"sinon.stub().get(getterFn)" : {
+		"prefix": "sinon.stub().get(getterFn)",
+		"body": "sinon.stub().get(getterFn);",
+		"description": "set sinon.stub().get(getterFn) component with default value"
+	},
+
+	"sinon.stub().set(setterFn)" : {
+		"prefix": "sinon.stub().set(setterFn)",
+		"body": "sinon.stub().set(setterFn);",
+		"description": "set sinon.stub().set(setterFn) component with default value"
+	},
+
+	"sinon.stub().value(newVal)" : {
+		"prefix": "sinon.stub().value(newVal)",
+		"body": "sinon.stub().value(newVal);",
+		"description": "set sinon.stub().value(newVal) component with default value"
+	},
+
+	"sinon.stub().wrappedMethod" : {
+		"prefix": "sinon.stub().wrappedMethod",
+		"body": "sinon.stub().wrappedMethod;",
+		"description": "set sinon.stub().wrappedMethod component with default value"
+	}
+
+
 }

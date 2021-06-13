@@ -473,6 +473,7 @@
 		"description": "e.g. flex-grow 2"
 	},
 
+
 	"$space-base": {
 		"prefix": "$space-base",
 		"body": "\\$space-base",
@@ -489,6 +490,1286 @@
 		"prefix": "$space-y-base",
 		"body": "\\$space-y-base",
 		"description": "$space-y-base"
+	},
+
+	 "redefine stylus variable": {
+		"prefix": "redifine stylus var",
+		"body": "\\$variable ?= newValue",
+		"description": "Redifine the value of a stylus variable"
+	},
+
+	"$action-sheet-avatar-padding" : {
+	"prefix": "$action-sheet-avatar-padding",
+	"body": "\\$action-sheet-avatar-padding",
+	"description": "set $action-sheet-avatar-padding component with default value"
+	},
+
+	"$action-sheet-background" : {
+	"prefix": "$action-sheet-background",
+	"body": "\\$action-sheet-background",
+	"description": "set $action-sheet-background component with default value"
+	},
+
+	"$action-sheet-border-radius" : {
+	"prefix": "$action-sheet-border-radius",
+	"body": "\\$action-sheet-border-radius",
+	"description": "set $action-sheet-border-radius component with default value"
+	},
+
+	"$action-sheet-font-size" : {
+	"prefix": "$action-sheet-font-size",
+	"body": "\\$action-sheet-font-size",
+	"description": "set $action-sheet-font-size component with default value"
+	},
+
+	"$action-sheet-hover-background" : {
+	"prefix": "$action-sheet-hover-background",
+	"body": "\\$action-sheet-hover-background",
+	"description": "set $action-sheet-hover-background component with default value"
+	},
+
+	"$action-sheet-margin-bottom" : {
+	"prefix": "$action-sheet-margin-bottom",
+	"body": "\\$action-sheet-margin-bottom",
+	"description": "set $action-sheet-margin-bottom component with default value"
+	},
+
+	"$action-sheet-max-width" : {
+	"prefix": "$action-sheet-max-width",
+	"body": "\\$action-sheet-max-width",
+	"description": "set $action-sheet-max-width component with default value"
+	},
+
+	"$backdrop-background" : {
+	"prefix": "$backdrop-background",
+	"body": "\\$backdrop-background",
+	"description": "set $backdrop-background component with default value"
+	},
+	
+	"$backdrop-opacity" : {
+	"prefix": "$backdrop-opacity",
+	"body": "\\$backdrop-opacity",
+	"description": "set $backdrop-opacity component with default value"
+	},
+	"$breadcrumb-active" : {
+	"prefix": "$breadcrumb-active",
+	"body": "\\$breadcrumb-active",
+	"description": "set $breadcrumb-active component with default value"
+	},
+	"$breadcrumb-height" : {
+	"prefix": "$breadcrumb-height",
+	"body": "\\$breadcrumb-height",
+	"description": "set $breadcrumb-height component with default value"
+	},
+	"$breadcrumb-hover" : {
+	"prefix": "$breadcrumb-hover",
+	"body": "\\$breadcrumb-hover",
+	"description": "set $breadcrumb-hover component with default value"
+	},
+	"$breadcrumb-primary" : {
+	"prefix": "$breadcrumb-primary",
+	"body": "\\$breadcrumb-primary",
+	"description": "set $breadcrumb-primary component with default value"
+	},
+	"$breadcrumb-radius" : {
+	"prefix": "$breadcrumb-radius",
+	"body": "\\$breadcrumb-radius",
+	"description": "set $breadcrumb-radius component with default value"
+	},
+	"$breadcrumb-secondary" : {
+	"prefix": "$breadcrumb-secondary",
+	"body": "\\$breadcrumb-secondary",
+	"description": "set $breadcrumb-secondary component with default value"
+	},
+	"$breadcrumb-separator" : {
+	"prefix": "$breadcrumb-separator",
+	"body": "\\$breadcrumb-separator",
+	"description": "set $breadcrumb-separator component with default value"
+	},
+	"$button-big-circular-size" : {
+	"prefix": "$button-big-circular-size",
+	"body": "\\$button-big-circular-size",
+	"description": "set $button-big-circular-size component with default value"
+	},
+	"$button-big-font-size" : {
+	"prefix": "$button-big-font-size",
+	"body": "\\$button-big-font-size",
+	"description": "set $button-big-font-size component with default value"
+	},
+	"$button-big-icon-size" : {
+	"prefix": "$button-big-icon-size",
+	"body": "\\$button-big-icon-size",
+	"description": "set $button-big-icon-size component with default value"
+	},
+	"$button-big-min-height" : {
+	"prefix": "$button-big-min-height",
+	"body": "\\$button-big-min-height",
+	"description": "set $button-big-min-height component with default value"
+	},
+	"$button-big-padding" : {
+	"prefix": "$button-big-padding",
+	"body": "\\$button-big-padding",
+	"description": "set $button-big-padding component with default value"
+	},
+	"$button-border-radius" : {
+	"prefix": "$button-border-radius",
+	"body": "\\$button-border-radius",
+	"description": "set $button-border-radius component with default value"
+	},
+	"$button-box-shadow" : {
+	"prefix": "$button-box-shadow",
+	"body": "\\$button-box-shadow",
+	"description": "set $button-box-shadow component with default value"
+	},
+	"$button-circular-size" : {
+	"prefix": "$button-circular-size",
+	"body": "\\$button-circular-size",
+	"description": "set $button-circular-size component with default value"
+	},
+	"$button-font-size" : {
+	"prefix": "$button-font-size",
+	"body": "\\$button-font-size",
+	"description": "set $button-font-size component with default value"
+	},
+	"$button-font-weight" : {
+	"prefix": "$button-font-weight",
+	"body": "\\$button-font-weight",
+	"description": "set $button-font-weight component with default value"
+	},
+	"$button-icon-size" : {
+	"prefix": "$button-icon-size",
+	"body": "\\$button-icon-size",
+	"description": "set $button-icon-size component with default value"
+	},
+	"$button-margin" : {
+	"prefix": "$button-margin",
+	"body": "\\$button-margin",
+	"description": "set $button-margin component with default value"
+	},
+	"$button-min-height" : {
+	"prefix": "$button-min-height",
+	"body": "\\$button-min-height",
+	"description": "set $button-min-height component with default value"
+	},
+	"$button-padding" : {
+	"prefix": "$button-padding",
+	"body": "\\$button-padding",
+	"description": "set $button-padding component with default value"
+	},
+	"$button-small-circular-size" : {
+	"prefix": "$button-small-circular-size",
+	"body": "\\$button-small-circular-size",
+	"description": "set $button-small-circular-size component with default value"
+	},
+	"$button-small-font-size" : {
+	"prefix": "$button-small-font-size",
+	"body": "\\$button-small-font-size",
+	"description": "set $button-small-font-size component with default value"
+	},
+	"$button-small-icon-size" : {
+	"prefix": "$button-small-icon-size",
+	"body": "\\$button-small-icon-size",
+	"description": "set $button-small-icon-size component with default value"
+	},
+	"$button-small-min-height" : {
+	"prefix": "$button-small-min-height",
+	"body": "\\$button-small-min-height",
+	"description": "set $button-small-min-height component with default value"
+	},
+	"$button-small-padding" : {
+	"prefix": "$button-small-padding",
+	"body": "\\$button-small-padding",
+	"description": "set $button-small-padding component with default value"
+	},
+	"$button-text-transform" : {
+	"prefix": "$button-text-transform",
+	"body": "\\$button-text-transform",
+	"description": "set $button-text-transform component with default value"
+	},
+	"$card-border-radius" : {
+	"prefix": "$card-border-radius",
+	"body": "\\$card-border-radius",
+	"description": "set $card-border-radius component with default value"
+	},
+	"$card-box-shadow" : {
+	"prefix": "$card-box-shadow",
+	"body": "\\$card-box-shadow",
+	"description": "set $card-box-shadow component with default value"
+	},
+	"$card-padding-horizontal" : {
+	"prefix": "$card-padding-horizontal",
+	"body": "\\$card-padding-horizontal",
+	"description": "set $card-padding-horizontal component with default value"
+	},
+	"$card-padding-vertical" : {
+	"prefix": "$card-padding-vertical",
+	"body": "\\$card-padding-vertical",
+	"description": "set $card-padding-vertical component with default value"
+	},
+	"$chat-box-shadow" : {
+	"prefix": "$chat-box-shadow",
+	"body": "\\$chat-box-shadow",
+	"description": "set $chat-box-shadow component with default value"
+	},
+	"$chat-date-color" : {
+	"prefix": "$chat-date-color",
+	"body": "\\$chat-date-color",
+	"description": "set $chat-date-color component with default value"
+	},
+	"$chat-date-font-size" : {
+	"prefix": "$chat-date-font-size",
+	"body": "\\$chat-date-font-size",
+	"description": "set $chat-date-font-size component with default value"
+	},
+	"$chat-font-weight" : {
+	"prefix": "$chat-font-weight",
+	"body": "\\$chat-font-weight",
+	"description": "set $chat-font-weight component with default value"
+	},
+	"$chat-message-font-size" : {
+	"prefix": "$chat-message-font-size",
+	"body": "\\$chat-message-font-size",
+	"description": "set $chat-message-font-size component with default value"
+	},
+	"$chat-message-offset" : {
+	"prefix": "$chat-message-offset",
+	"body": "\\$chat-message-offset",
+	"description": "set $chat-message-offset component with default value"
+	},
+	"$chat-message-other-background" : {
+	"prefix": "$chat-message-other-background",
+	"body": "\\$chat-message-other-background",
+	"description": "set $chat-message-other-background component with default value"
+	},
+	"$chat-message-other-color" : {
+	"prefix": "$chat-message-other-color",
+	"body": "\\$chat-message-other-color",
+	"description": "set $chat-message-other-color component with default value"
+	},
+	"$chat-message-other-pointer-transform" : {
+	"prefix": "$chat-message-other-pointer-transform",
+	"body": "\\$chat-message-other-pointer-transform",
+	"description": "set $chat-message-other-pointer-transform component with default value"
+	},
+	"$chat-message-pointer-size" : {
+	"prefix": "$chat-message-pointer-size",
+	"body": "\\$chat-message-pointer-size",
+	"description": "set $chat-message-pointer-size component with default value"
+	},
+	"$chat-message-pointer-top" : {
+	"prefix": "$chat-message-pointer-top",
+	"body": "\\$chat-message-pointer-top",
+	"description": "set $chat-message-pointer-top component with default value"
+	},
+	"$chat-message-you-background" : {
+	"prefix": "$chat-message-you-background",
+	"body": "\\$chat-message-you-background",
+	"description": "set $chat-message-you-background component with default value"
+	},
+	"$chat-message-you-color" : {
+	"prefix": "$chat-message-you-color",
+	"body": "\\$chat-message-you-color",
+	"description": "set $chat-message-you-color component with default value"
+	},
+	"$chat-message-you-pointer-transform" : {
+	"prefix": "$chat-message-you-pointer-transform",
+	"body": "\\$chat-message-you-pointer-transform",
+	"description": "set $chat-message-you-pointer-transform component with default value"
+	},
+	"$chat-other-date-margin" : {
+	"prefix": "$chat-other-date-margin",
+	"body": "\\$chat-other-date-margin",
+	"description": "set $chat-other-date-margin component with default value"
+	},
+	"$chat-you-date-margin" : {
+	"prefix": "$chat-you-date-margin",
+	"body": "\\$chat-you-date-margin",
+	"description": "set $chat-you-date-margin component with default value"
+	},
+	"$checkbox-border-radius" : {
+	"prefix": "$checkbox-border-radius",
+	"body": "\\$checkbox-border-radius",
+	"description": "set $checkbox-border-radius component with default value"
+	},
+	"$checkbox-border-width" : {
+	"prefix": "$checkbox-border-width",
+	"body": "\\$checkbox-border-width",
+	"description": "set $checkbox-border-width component with default value"
+	},
+	"$checkbox-size" : {
+	"prefix": "$checkbox-size",
+	"body": "\\$checkbox-size",
+	"description": "set $checkbox-size component with default value"
+	},
+	"$checkbox-tick-thickness" : {
+	"prefix": "$checkbox-tick-thickness",
+	"body": "\\$checkbox-tick-thickness",
+	"description": "set $checkbox-tick-thickness component with default value"
+	},
+	"$dark" : {
+	"prefix": "$dark",
+	"body": "\\$dark",
+	"description": "set $dark component with default value"
+	},
+	"$datatable-border" : {
+	"prefix": "$datatable-border",
+	"body": "\\$datatable-border",
+	"description": "set $datatable-border component with default value"
+	},
+	"$datatable-font-size" : {
+	"prefix": "$datatable-font-size",
+	"body": "\\$datatable-font-size",
+	"description": "set $datatable-font-size component with default value"
+	},
+	"$datetime-color" : {
+	"prefix": "$datetime-color",
+	"body": "\\$datetime-color",
+	"description": "set $datetime-color component with default value"
+	},
+	"$datetime-range-space" : {
+	"prefix": "$datetime-range-space",
+	"body": "\\$datetime-range-space",
+	"description": "set $datetime-range-space component with default value"
+	},
+	"$dimmed-background" : {
+	"prefix": "$dimmed-background",
+	"body": "\\$dimmed-background",
+	"description": "set $dimmed-background component with default value"
+	},
+	"$drawer-background" : {
+	"prefix": "$drawer-background",
+	"body": "\\$drawer-background",
+	"description": "set $drawer-background component with default value"
+	},
+	"$drawer-border" : {
+	"prefix": "$drawer-border",
+	"body": "\\$drawer-border",
+	"description": "set $drawer-border component with default value"
+	},
+	"$drawer-box-shadow" : {
+	"prefix": "$drawer-box-shadow",
+	"body": "\\$drawer-box-shadow",
+	"description": "set $drawer-box-shadow component with default value"
+	},
+	"$drawer-font-size" : {
+	"prefix": "$drawer-font-size",
+	"body": "\\$drawer-font-size",
+	"description": "set $drawer-font-size component with default value"
+	},
+	"$drawer-header-font-size" : {
+	"prefix": "$drawer-header-font-size",
+	"body": "\\$drawer-header-font-size",
+	"description": "set $drawer-header-font-size component with default value"
+	},
+	"$drawer-icon-font-size" : {
+	"prefix": "$drawer-icon-font-size",
+	"body": "\\$drawer-icon-font-size",
+	"description": "set $drawer-icon-font-size component with default value"
+	},
+	"$drawer-screen-width-threshold" : {
+	"prefix": "$drawer-screen-width-threshold",
+	"body": "\\$drawer-screen-width-threshold",
+	"description": "set $drawer-screen-width-threshold component with default value"
+	},
+	"$drawer-width" : {
+	"prefix": "$drawer-width",
+	"body": "\\$drawer-width",
+	"description": "set $drawer-width component with default value"
+	},
+	"$fab-margin" : {
+	"prefix": "$fab-margin",
+	"body": "\\$fab-margin",
+	"description": "set $fab-margin component with default value"
+	},
+	"$faded" : {
+	"prefix": "$faded",
+	"body": "\\$faded",
+	"description": "set $faded component with default value"
+	},
+	"$form-active-color" : {
+	"prefix": "$form-active-color",
+	"body": "\\$form-active-color",
+	"description": "set $form-active-color component with default value"
+	},
+	"$form-border" : {
+	"prefix": "$form-border",
+	"body": "\\$form-border",
+	"description": "set $form-border component with default value"
+	},
+	"$form-border-radius" : {
+	"prefix": "$form-border-radius",
+	"body": "\\$form-border-radius",
+	"description": "set $form-border-radius component with default value"
+	},
+	"$form-darker-color" : {
+	"prefix": "$form-darker-color",
+	"body": "\\$form-darker-color",
+	"description": "set $form-darker-color component with default value"
+	},
+	"$form-lighter-color" : {
+	"prefix": "$form-lighter-color",
+	"body": "\\$form-lighter-color",
+	"description": "set $form-lighter-color component with default value"
+	},
+	"$form-shadow" : {
+	"prefix": "$form-shadow",
+	"body": "\\$form-shadow",
+	"description": "set $form-shadow component with default value"
+	},
+	"$generic-border-radius" : {
+	"prefix": "$generic-border-radius",
+	"body": "\\$generic-border-radius",
+	"description": "set $generic-border-radius component with default value"
+	},
+	"$generic-input-border-width" : {
+	"prefix": "$generic-input-border-width",
+	"body": "\\$generic-input-border-width",
+	"description": "set $generic-input-border-width component with default value"
+	},
+	"$generic-input-size" : {
+	"prefix": "$generic-input-size",
+	"body": "\\$generic-input-size",
+	"description": "set $generic-input-size component with default value"
+	},
+	"$generic-margin" : {
+	"prefix": "$generic-margin",
+	"body": "\\$generic-margin",
+	"description": "set $generic-margin component with default value"
+	},
+	"$grid-big-gutter" : {
+	"prefix": "$grid-big-gutter",
+	"body": "\\$grid-big-gutter",
+	"description": "set $grid-big-gutter component with default value"
+	},
+	"$grid-cols" : {
+	"prefix": "$grid-cols",
+	"body": "\\$grid-cols",
+	"description": "set $grid-cols component with default value"
+	},
+	"$grid-large-gutter" : {
+	"prefix": "$grid-large-gutter",
+	"body": "\\$grid-large-gutter",
+	"description": "set $grid-large-gutter component with default value"
+	},
+	"$grid-medium-gutter" : {
+	"prefix": "$grid-medium-gutter",
+	"body": "\\$grid-medium-gutter",
+	"description": "set $grid-medium-gutter component with default value"
+	},
+	"$grid-small-gutter" : {
+	"prefix": "$grid-small-gutter",
+	"body": "\\$grid-small-gutter",
+	"description": "set $grid-small-gutter component with default value"
+	},
+	"$has-error" : {
+	"prefix": "$has-error",
+	"body": "\\$has-error",
+	"description": "set $has-error component with default value"
+	},
+	"$icon-font-family" : {
+	"prefix": "$icon-font-family",
+	"body": "\\$icon-font-family",
+	"description": "set $icon-font-family component with default value"
+	},
+	"$icon-font-style" : {
+	"prefix": "$icon-font-style",
+	"body": "\\$icon-font-style",
+	"description": "set $icon-font-style component with default value"
+	},
+	"$icon-font-weight" : {
+	"prefix": "$icon-font-weight",
+	"body": "\\$icon-font-weight",
+	"description": "set $icon-font-weight component with default value"
+	},
+	"$icon-letter-spacing" : {
+	"prefix": "$icon-letter-spacing",
+	"body": "\\$icon-letter-spacing",
+	"description": "set $icon-letter-spacing component with default value"
+	},
+	"$icon-text-transform" : {
+	"prefix": "$icon-text-transform",
+	"body": "\\$icon-text-transform",
+	"description": "set $icon-text-transform component with default value"
+	},
+	"$info" : {
+	"prefix": "$info",
+	"body": "\\$info",
+	"description": "set $info component with default value"
+	},
+	"$ios-statusbar-height" : {
+	"prefix": "$ios-statusbar-height",
+	"body": "\\$ios-statusbar-height",
+	"description": "set $ios-statusbar-height component with default value"
+	},
+	"$item-content-label-color" : {
+	"prefix": "$item-content-label-color",
+	"body": "\\$item-content-label-color",
+	"description": "set $item-content-label-color component with default value"
+	},
+	"$item-label-color" : {
+	"prefix": "$item-label-color",
+	"body": "\\$item-label-color",
+	"description": "set $item-label-color component with default value"
+	},
+	"$item-primary-secondary-color" : {
+	"prefix": "$item-primary-secondary-color",
+	"body": "\\$item-primary-secondary-color",
+	"description": "set $item-primary-secondary-color component with default value"
+	},
+	"$label-before-transform" : {
+	"prefix": "$label-before-transform",
+	"body": "\\$label-before-transform",
+	"description": "set $label-before-transform component with default value"
+	},
+	"$label-border-radius" : {
+	"prefix": "$label-border-radius",
+	"body": "\\$label-border-radius",
+	"description": "set $label-border-radius component with default value"
+	},
+	"$label-font-size" : {
+	"prefix": "$label-font-size",
+	"body": "\\$label-font-size",
+	"description": "set $label-font-size component with default value"
+	},
+	"$label-padding-horizontal" : {
+	"prefix": "$label-padding-horizontal",
+	"body": "\\$label-padding-horizontal",
+	"description": "set $label-padding-horizontal component with default value"
+	},
+	"$label-padding-vertical" : {
+	"prefix": "$label-padding-vertical",
+	"body": "\\$label-padding-vertical",
+	"description": "set $label-padding-vertical component with default value"
+	},
+	"$layout-big" : {
+	"prefix": "$layout-big",
+	"body": "\\$layout-big",
+	"description": "set $layout-big component with default value"
+	},
+	"$layout-border" : {
+	"prefix": "$layout-border",
+	"body": "\\$layout-border",
+	"description": "set $layout-border component with default value"
+	},
+	"$layout-footer-shadow" : {
+	"prefix": "$layout-footer-shadow",
+	"body": "\\$layout-footer-shadow",
+	"description": "set $layout-footer-shadow component with default value"
+	},
+	"$layout-header-shadow" : {
+	"prefix": "$layout-header-shadow",
+	"body": "\\$layout-header-shadow",
+	"description": "set $layout-header-shadow component with default value"
+	},
+	"$layout-medium" : {
+	"prefix": "$layout-medium",
+	"body": "\\$layout-medium",
+	"description": "set $layout-medium component with default value"
+	},
+	"$layout-small" : {
+	"prefix": "$layout-small",
+	"body": "\\$layout-small",
+	"description": "set $layout-small component with default value"
+	},
+	"$layout-toolbar-min-height" : {
+	"prefix": "$layout-toolbar-min-height",
+	"body": "\\$layout-toolbar-min-height",
+	"description": "set $layout-toolbar-min-height component with default value"
+	},
+	"$light" : {
+	"prefix": "$light",
+	"body": "\\$light",
+	"description": "set $light component with default value"
+	},
+	"$light-dimmed-background" : {
+	"prefix": "$light-dimmed-background",
+	"body": "\\$light-dimmed-background",
+	"description": "set $light-dimmed-background component with default value"
+	},
+	"$link-color" : {
+	"prefix": "$link-color",
+	"body": "\\$link-color",
+	"description": "set $link-color component with default value"
+	},
+	"$link-color-active" : {
+	"prefix": "$link-color-active",
+	"body": "\\$link-color-active",
+	"description": "set $link-color-active component with default value"
+	},
+	"$loading-background" : {
+	"prefix": "$loading-background",
+	"body": "\\$loading-background",
+	"description": "set $loading-background component with default value"
+	},
+	"$media-avatar-box-shadow" : {
+	"prefix": "$media-avatar-box-shadow",
+	"body": "\\$media-avatar-box-shadow",
+	"description": "set $media-avatar-box-shadow component with default value"
+	},
+	"$modal-background" : {
+	"prefix": "$modal-background",
+	"body": "\\$modal-background",
+	"description": "set $modal-background component with default value"
+	},
+	"$modal-body-color" : {
+	"prefix": "$modal-body-color",
+	"body": "\\$modal-body-color",
+	"description": "set $modal-body-color component with default value"
+	},
+	"$modal-body-padding" : {
+	"prefix": "$modal-body-padding",
+	"body": "\\$modal-body-padding",
+	"description": "set $modal-body-padding component with default value"
+	},
+	"$modal-body-text-align" : {
+	"prefix": "$modal-body-text-align",
+	"body": "\\$modal-body-text-align",
+	"description": "set $modal-body-text-align component with default value"
+	},
+	"$modal-border-radius" : {
+	"prefix": "$modal-border-radius",
+	"body": "\\$modal-border-radius",
+	"description": "set $modal-border-radius component with default value"
+	},
+	"$modal-buttons-padding" : {
+	"prefix": "$modal-buttons-padding",
+	"body": "\\$modal-buttons-padding",
+	"description": "set $modal-buttons-padding component with default value"
+	},
+	"$modal-header-font-size" : {
+	"prefix": "$modal-header-font-size",
+	"body": "\\$modal-header-font-size",
+	"description": "set $modal-header-font-size component with default value"
+	},
+	"$modal-header-padding" : {
+	"prefix": "$modal-header-padding",
+	"body": "\\$modal-header-padding",
+	"description": "set $modal-header-padding component with default value"
+	},
+	"$modal-header-text-align" : {
+	"prefix": "$modal-header-text-align",
+	"body": "\\$modal-header-text-align",
+	"description": "set $modal-header-text-align component with default value"
+	},
+	"$modal-height" : {
+	"prefix": "$modal-height",
+	"body": "\\$modal-height",
+	"description": "set $modal-height component with default value"
+	},
+	"$modal-max-height" : {
+	"prefix": "$modal-max-height",
+	"body": "\\$modal-max-height",
+	"description": "set $modal-max-height component with default value"
+	},
+	"$modal-max-width" : {
+	"prefix": "$modal-max-width",
+	"body": "\\$modal-max-width",
+	"description": "set $modal-max-width component with default value"
+	},
+	"$modal-scroll-size" : {
+	"prefix": "$modal-scroll-size",
+	"body": "\\$modal-scroll-size",
+	"description": "set $modal-scroll-size component with default value"
+	},
+	"$modal-slim-body-padding" : {
+	"prefix": "$modal-slim-body-padding",
+	"body": "\\$modal-slim-body-padding",
+	"description": "set $modal-slim-body-padding component with default value"
+	},
+	"$modal-width" : {
+	"prefix": "$modal-width",
+	"body": "\\$modal-width",
+	"description": "set $modal-width component with default value"
+	},
+	"$negative" : {
+	"prefix": "$negative",
+	"body": "\\$negative",
+	"description": "set $negative component with default value"
+	},
+	"$paralax-text-shadow" : {
+	"prefix": "$paralax-text-shadow",
+	"body": "\\$paralax-text-shadow",
+	"description": "set $paralax-text-shadow component with default value"
+	},
+	"$picker-textfield-min-width" : {
+	"prefix": "$picker-textfield-min-width",
+	"body": "\\$picker-textfield-min-width",
+	"description": "set $picker-textfield-min-width component with default value"
+	},
+	"$popover-background" : {
+	"prefix": "$popover-background",
+	"body": "\\$popover-background",
+	"description": "set $popover-background component with default value"
+	},
+	"$popover-box-shadow" : {
+	"prefix": "$popover-box-shadow",
+	"body": "\\$popover-box-shadow",
+	"description": "set $popover-box-shadow component with default value"
+	},
+	"$positive" : {
+	"prefix": "$positive",
+	"body": "\\$positive",
+	"description": "set $positive component with default value"
+	},
+	"$primary" : {
+	"prefix": "$primary",
+	"body": "\\$primary",
+	"description": "set $primary component with default value"
+	},
+	"$progress-border-radius" : {
+	"prefix": "$progress-border-radius",
+	"body": "\\$progress-border-radius",
+	"description": "set $progress-border-radius component with default value"
+	},
+	"$progress-default-track-color" : {
+	"prefix": "$progress-default-track-color",
+	"body": "\\$progress-default-track-color",
+	"description": "set $progress-default-track-color component with default value"
+	},
+	"$progress-margin" : {
+	"prefix": "$progress-margin",
+	"body": "\\$progress-margin",
+	"description": "set $progress-margin component with default value"
+	},
+	"$progress-track-color" : {
+	"prefix": "$progress-track-color",
+	"body": "\\$progress-track-color",
+	"description": "set $progress-track-color component with default value"
+	},
+	"$progress-track-desktop-height" : {
+	"prefix": "$progress-track-desktop-height",
+	"body": "\\$progress-track-desktop-height",
+	"description": "set $progress-track-desktop-height component with default value"
+	},
+	"$progress-track-height" : {
+	"prefix": "$progress-track-height",
+	"body": "\\$progress-track-height",
+	"description": "set $progress-track-height component with default value"
+	},
+	"$progress-transition" : {
+	"prefix": "$progress-transition",
+	"body": "\\$progress-transition",
+	"description": "set $progress-transition component with default value"
+	},
+	"$pull-to-refresh-color" : {
+	"prefix": "$pull-to-refresh-color",
+	"body": "\\$pull-to-refresh-color",
+	"description": "set $pull-to-refresh-color component with default value"
+	},
+	"$pull-to-refresh-font-size" : {
+	"prefix": "$pull-to-refresh-font-size",
+	"body": "\\$pull-to-refresh-font-size",
+	"description": "set $pull-to-refresh-font-size component with default value"
+	},
+	"$pull-to-refresh-icon-size" : {
+	"prefix": "$pull-to-refresh-icon-size",
+	"body": "\\$pull-to-refresh-icon-size",
+	"description": "set $pull-to-refresh-icon-size component with default value"
+	},
+	"$radio-border" : {
+	"prefix": "$radio-border",
+	"body": "\\$radio-border",
+	"description": "set $radio-border component with default value"
+	},
+	"$radio-border-width" : {
+	"prefix": "$radio-border-width",
+	"body": "\\$radio-border-width",
+	"description": "set $radio-border-width component with default value"
+	},
+	"$radio-picker-size" : {
+	"prefix": "$radio-picker-size",
+	"body": "\\$radio-picker-size",
+	"description": "set $radio-picker-size component with default value"
+	},
+	"$radio-size" : {
+	"prefix": "$radio-size",
+	"body": "\\$radio-size",
+	"description": "set $radio-size component with default value"
+	},
+	"$radio-tick-thickness" : {
+	"prefix": "$radio-tick-thickness",
+	"body": "\\$radio-tick-thickness",
+	"description": "set $radio-tick-thickness component with default value"
+	},
+	"$range-active-color" : {
+	"prefix": "$range-active-color",
+	"body": "\\$range-active-color",
+	"description": "set $range-active-color component with default value"
+	},
+	"$range-color" : {
+	"prefix": "$range-color",
+	"body": "\\$range-color",
+	"description": "set $range-color component with default value"
+	},
+	"$range-handle-box-shadow" : {
+	"prefix": "$range-handle-box-shadow",
+	"body": "\\$range-handle-box-shadow",
+	"description": "set $range-handle-box-shadow component with default value"
+	},
+	"$range-handle-radius" : {
+	"prefix": "$range-handle-radius",
+	"body": "\\$range-handle-radius",
+	"description": "set $range-handle-radius component with default value"
+	},
+	"$range-handle-size" : {
+	"prefix": "$range-handle-size",
+	"body": "\\$range-handle-size",
+	"description": "set $range-handle-size component with default value"
+	},
+	"$range-height" : {
+	"prefix": "$range-height",
+	"body": "\\$range-height",
+	"description": "set $range-height component with default value"
+	},
+	"$range-mark-height" : {
+	"prefix": "$range-mark-height",
+	"body": "\\$range-mark-height",
+	"description": "set $range-mark-height component with default value"
+	},
+	"$range-track-height" : {
+	"prefix": "$range-track-height",
+	"body": "\\$range-track-height",
+	"description": "set $range-track-height component with default value"
+	},
+	"$rating-active-grade-color" : {
+	"prefix": "$rating-active-grade-color",
+	"body": "\\$rating-active-grade-color",
+	"description": "set $rating-active-grade-color component with default value"
+	},
+	"$rating-grade-color" : {
+	"prefix": "$rating-grade-color",
+	"body": "\\$rating-grade-color",
+	"description": "set $rating-grade-color component with default value"
+	},
+	"$rating-grade-exselected-color" : {
+	"prefix": "$rating-grade-exselected-color",
+	"body": "\\$rating-grade-exselected-color",
+	"description": "set $rating-grade-exselected-color component with default value"
+	},
+	"$rating-shadow" : {
+	"prefix": "$rating-shadow",
+	"body": "\\$rating-shadow",
+	"description": "set $rating-shadow component with default value"
+	},
+	"$secondary" : {
+	"prefix": "$secondary",
+	"body": "\\$secondary",
+	"description": "set $secondary component with default value"
+	},
+	"$shadow-color" : {
+	"prefix": "$shadow-color",
+	"body": "\\$shadow-color",
+	"description": "set $shadow-color component with default value"
+	},
+	"$shadow-transition" : {
+	"prefix": "$shadow-transition",
+	"body": "\\$shadow-transition",
+	"description": "set $shadow-transition component with default value"
+	},
+	"$slider-arrow-size" : {
+	"prefix": "$slider-arrow-size",
+	"body": "\\$slider-arrow-size",
+	"description": "set $slider-arrow-size component with default value"
+	},
+	"$slider-button-size" : {
+	"prefix": "$slider-button-size",
+	"body": "\\$slider-button-size",
+	"description": "set $slider-button-size component with default value"
+	},
+	"$slider-dots-size" : {
+	"prefix": "$slider-dots-size",
+	"body": "\\$slider-dots-size",
+	"description": "set $slider-dots-size component with default value"
+	},
+	"$slider-min-height" : {
+	"prefix": "$slider-min-height",
+	"body": "\\$slider-min-height",
+	"description": "set $slider-min-height component with default value"
+	},
+	"$slider-opacity" : {
+	"prefix": "$slider-opacity",
+	"body": "\\$slider-opacity",
+	"description": "set $slider-opacity component with default value"
+	},
+	"$slider-opacity-active" : {
+	"prefix": "$slider-opacity-active",
+	"body": "\\$slider-opacity-active",
+	"description": "set $slider-opacity-active component with default value"
+	},
+	"$slider-ovelay-color" : {
+	"prefix": "$slider-ovelay-color",
+	"body": "\\$slider-ovelay-color",
+	"description": "set $slider-ovelay-color component with default value"
+	},
+	"$slider-padding" : {
+	"prefix": "$slider-padding",
+	"body": "\\$slider-padding",
+	"description": "set $slider-padding component with default value"
+	},
+	"$table-border" : {
+	"prefix": "$table-border",
+	"body": "\\$table-border",
+	"description": "set $table-border component with default value"
+	},
+	"$table-highlight-color" : {
+	"prefix": "$table-highlight-color",
+	"body": "\\$table-highlight-color",
+	"description": "set $table-highlight-color component with default value"
+	},
+	"$table-stripe-color" : {
+	"prefix": "$table-stripe-color",
+	"body": "\\$table-stripe-color",
+	"description": "set $table-stripe-color component with default value"
+	},
+	"$tabs-active-border-bottom" : {
+	"prefix": "$tabs-active-border-bottom",
+	"body": "\\$tabs-active-border-bottom",
+	"description": "set $tabs-active-border-bottom component with default value"
+	},
+	"$tabs-active-color" : {
+	"prefix": "$tabs-active-color",
+	"body": "\\$tabs-active-color",
+	"description": "set $tabs-active-color component with default value"
+	},
+	"$tabs-background" : {
+	"prefix": "$tabs-background",
+	"body": "\\$tabs-background",
+	"description": "set $tabs-background component with default value"
+	},
+	"$tabs-big-screen-side-padding" : {
+	"prefix": "$tabs-big-screen-side-padding",
+	"body": "\\$tabs-big-screen-side-padding",
+	"description": "set $tabs-big-screen-side-padding component with default value"
+	},
+	"$tabs-big-window-font-size" : {
+	"prefix": "$tabs-big-window-font-size",
+	"body": "\\$tabs-big-window-font-size",
+	"description": "set $tabs-big-window-font-size component with default value"
+	},
+	"$tabs-big-window-font-weight" : {
+	"prefix": "$tabs-big-window-font-weight",
+	"body": "\\$tabs-big-window-font-weight",
+	"description": "set $tabs-big-window-font-weight component with default value"
+	},
+	"$tabs-big-window-icon-font-size" : {
+	"prefix": "$tabs-big-window-icon-font-size",
+	"body": "\\$tabs-big-window-icon-font-size",
+	"description": "set $tabs-big-window-icon-font-size component with default value"
+	},
+	"$tabs-big-window-label-margin" : {
+	"prefix": "$tabs-big-window-label-margin",
+	"body": "\\$tabs-big-window-label-margin",
+	"description": "set $tabs-big-window-label-margin component with default value"
+	},
+	"$tabs-big-window-min-height" : {
+	"prefix": "$tabs-big-window-min-height",
+	"body": "\\$tabs-big-window-min-height",
+	"description": "set $tabs-big-window-min-height component with default value"
+	},
+	"$tabs-border-bottom" : {
+	"prefix": "$tabs-border-bottom",
+	"body": "\\$tabs-border-bottom",
+	"description": "set $tabs-border-bottom component with default value"
+	},
+	"$tabs-color" : {
+	"prefix": "$tabs-color",
+	"body": "\\$tabs-color",
+	"description": "set $tabs-color component with default value"
+	},
+	"$tabs-font-size" : {
+	"prefix": "$tabs-font-size",
+	"body": "\\$tabs-font-size",
+	"description": "set $tabs-font-size component with default value"
+	},
+	"$tabs-font-weight" : {
+	"prefix": "$tabs-font-weight",
+	"body": "\\$tabs-font-weight",
+	"description": "set $tabs-font-weight component with default value"
+	},
+	"$tabs-highlight-color" : {
+	"prefix": "$tabs-highlight-color",
+	"body": "\\$tabs-highlight-color",
+	"description": "set $tabs-highlight-color component with default value"
+	},
+	"$tabs-icon-font-size" : {
+	"prefix": "$tabs-icon-font-size",
+	"body": "\\$tabs-icon-font-size",
+	"description": "set $tabs-icon-font-size component with default value"
+	},
+	"$tabs-label-margin" : {
+	"prefix": "$tabs-label-margin",
+	"body": "\\$tabs-label-margin",
+	"description": "set $tabs-label-margin component with default value"
+	},
+	"$tabs-min-height" : {
+	"prefix": "$tabs-min-height",
+	"body": "\\$tabs-min-height",
+	"description": "set $tabs-min-height component with default value"
+	},
+	"$tabs-order" : {
+	"prefix": "$tabs-order",
+	"body": "\\$tabs-order",
+	"description": "set $tabs-order component with default value"
+	},
+	"$tabs-padding" : {
+	"prefix": "$tabs-padding",
+	"body": "\\$tabs-padding",
+	"description": "set $tabs-padding component with default value"
+	},
+	"$tabs-text-transform" : {
+	"prefix": "$tabs-text-transform",
+	"body": "\\$tabs-text-transform",
+	"description": "set $tabs-text-transform component with default value"
+	},
+	"$tertiary" : {
+	"prefix": "$tertiary",
+	"body": "\\$tertiary",
+	"description": "set $tertiary component with default value"
+	},
+	"$textfield-border-color" : {
+	"prefix": "$textfield-border-color",
+	"body": "\\$textfield-border-color",
+	"description": "set $textfield-border-color component with default value"
+	},
+	"$textfield-border-size" : {
+	"prefix": "$textfield-border-size",
+	"body": "\\$textfield-border-size",
+	"description": "set $textfield-border-size component with default value"
+	},
+	"$textfield-border-style" : {
+	"prefix": "$textfield-border-style",
+	"body": "\\$textfield-border-style",
+	"description": "set $textfield-border-style component with default value"
+	},
+	"$textfield-focus-background" : {
+	"prefix": "$textfield-focus-background",
+	"body": "\\$textfield-focus-background",
+	"description": "set $textfield-focus-background component with default value"
+	},
+	"$textfield-focus-border-color" : {
+	"prefix": "$textfield-focus-border-color",
+	"body": "\\$textfield-focus-border-color",
+	"description": "set $textfield-focus-border-color component with default value"
+	},
+	"$textfield-font-size" : {
+	"prefix": "$textfield-font-size",
+	"body": "\\$textfield-font-size",
+	"description": "set $textfield-font-size component with default value"
+	},
+	"$textfield-padding-horizontal" : {
+	"prefix": "$textfield-padding-horizontal",
+	"body": "\\$textfield-padding-horizontal",
+	"description": "set $textfield-padding-horizontal component with default value"
+	},
+	"$textfield-padding-vertical" : {
+	"prefix": "$textfield-padding-vertical",
+	"body": "\\$textfield-padding-vertical",
+	"description": "set $textfield-padding-vertical component with default value"
+	},
+	"$timeline-badge-size" : {
+	"prefix": "$timeline-badge-size",
+	"body": "\\$timeline-badge-size",
+	"description": "set $timeline-badge-size component with default value"
+	},
+	"$timeline-border-width" : {
+	"prefix": "$timeline-border-width",
+	"body": "\\$timeline-border-width",
+	"description": "set $timeline-border-width component with default value"
+	},
+	"$timeline-color" : {
+	"prefix": "$timeline-color",
+	"body": "\\$timeline-color",
+	"description": "set $timeline-color component with default value"
+	},
+	"$timeline-item-padding" : {
+	"prefix": "$timeline-item-padding",
+	"body": "\\$timeline-item-padding",
+	"description": "set $timeline-item-padding component with default value"
+	},
+	"$timeline-light-color" : {
+	"prefix": "$timeline-light-color",
+	"body": "\\$timeline-light-color",
+	"description": "set $timeline-light-color component with default value"
+	},
+	"$toggle-size" : {
+	"prefix": "$toggle-size",
+	"body": "\\$toggle-size",
+	"description": "set $toggle-size component with default value"
+	},
+	"$toggle-width-factor" : {
+	"prefix": "$toggle-width-factor",
+	"body": "\\$toggle-width-factor",
+	"description": "set $toggle-width-factor component with default value"
+	},
+	"$toolbar-active-color" : {
+	"prefix": "$toolbar-active-color",
+	"body": "\\$toolbar-active-color",
+	"description": "set $toolbar-active-color component with default value"
+	},
+	"$toolbar-background" : {
+	"prefix": "$toolbar-background",
+	"body": "\\$toolbar-background",
+	"description": "set $toolbar-background component with default value"
+	},
+	"$toolbar-color" : {
+	"prefix": "$toolbar-color",
+	"body": "\\$toolbar-color",
+	"description": "set $toolbar-color component with default value"
+	},
+	"$toolbar-faded-color" : {
+	"prefix": "$toolbar-faded-color",
+	"body": "\\$toolbar-faded-color",
+	"description": "set $toolbar-faded-color component with default value"
+	},
+	"$toolbar-padding" : {
+	"prefix": "$toolbar-padding",
+	"body": "\\$toolbar-padding",
+	"description": "set $toolbar-padding component with default value"
+	},
+	"$toolbar-title-font-size" : {
+	"prefix": "$toolbar-title-font-size",
+	"body": "\\$toolbar-title-font-size",
+	"description": "set $toolbar-title-font-size component with default value"
+	},
+	"$tooltip-background" : {
+	"prefix": "$tooltip-background",
+	"body": "\\$tooltip-background",
+	"description": "set $tooltip-background component with default value"
+	},
+	"$tooltip-border-radius" : {
+	"prefix": "$tooltip-border-radius",
+	"body": "\\$tooltip-border-radius",
+	"description": "set $tooltip-border-radius component with default value"
+	},
+	"$tooltip-box-shadow" : {
+	"prefix": "$tooltip-box-shadow",
+	"body": "\\$tooltip-box-shadow",
+	"description": "set $tooltip-box-shadow component with default value"
+	},
+	"$tooltip-color" : {
+	"prefix": "$tooltip-color",
+	"body": "\\$tooltip-color",
+	"description": "set $tooltip-color component with default value"
+	},
+	"$tooltip-padding" : {
+	"prefix": "$tooltip-padding",
+	"body": "\\$tooltip-padding",
+	"description": "set $tooltip-padding component with default value"
+	},
+	"$tree-connector-color" : {
+	"prefix": "$tree-connector-color",
+	"body": "\\$tree-connector-color",
+	"description": "set $tree-connector-color component with default value"
+	},
+	"$tree-highlight-background" : {
+	"prefix": "$tree-highlight-background",
+	"body": "\\$tree-highlight-background",
+	"description": "set $tree-highlight-background component with default value"
+	},
+	"$tree-highlight-color" : {
+	"prefix": "$tree-highlight-color",
+	"body": "\\$tree-highlight-color",
+	"description": "set $tree-highlight-color component with default value"
+	},
+	"$tree-label-border-radius" : {
+	"prefix": "$tree-label-border-radius",
+	"body": "\\$tree-label-border-radius",
+	"description": "set $tree-label-border-radius component with default value"
+	},
+	"$tree-label-padding" : {
+	"prefix": "$tree-label-padding",
+	"body": "\\$tree-label-padding",
+	"description": "set $tree-label-padding component with default value"
+	},
+	"$typography-font-family" : {
+	"prefix": "$typography-font-family",
+	"body": "\\$typography-font-family",
+	"description": "set $typography-font-family component with default value"
+	},
+	"$uploader-failed-background" : {
+	"prefix": "$uploader-failed-background",
+	"body": "\\$uploader-failed-background",
+	"description": "set $uploader-failed-background component with default value"
+	},
+	"$uploader-failed-color" : {
+	"prefix": "$uploader-failed-color",
+	"body": "\\$uploader-failed-color",
+	"description": "set $uploader-failed-color component with default value"
+	},
+	"$uploader-file-max-width" : {
+	"prefix": "$uploader-file-max-width",
+	"body": "\\$uploader-file-max-width",
+	"description": "set $uploader-file-max-width component with default value"
+	},
+	"$uploader-font-size" : {
+	"prefix": "$uploader-font-size",
+	"body": "\\$uploader-font-size",
+	"description": "set $uploader-font-size component with default value"
+	},
+	"$uploader-img-max-height" : {
+	"prefix": "$uploader-img-max-height",
+	"body": "\\$uploader-img-max-height",
+	"description": "set $uploader-img-max-height component with default value"
+	},
+	"$uploader-progressbar-height" : {
+	"prefix": "$uploader-progressbar-height",
+	"body": "\\$uploader-progressbar-height",
+	"description": "set $uploader-progressbar-height component with default value"
+	},
+	"$warning" : {
+	"prefix": "$warning",
+	"body": "\\$warning",
+	"description": "set $warning component with default value"
+	},
+	"$white" : {
+	"prefix": "$white",
+	"body": "\\$white",
+	"description": "set $white component with default value"
+	},
+	"$z-absolute" : {
+	"prefix": "$z-absolute",
+	"body": "\\$z-absolute",
+	"description": "set $z-absolute component with default value"
+	},
+	"$z-body-dimmed" : {
+	"prefix": "$z-body-dimmed",
+	"body": "\\$z-body-dimmed",
+	"description": "set $z-body-dimmed component with default value"
+	},
+	"$z-drawer" : {
+	"prefix": "$z-drawer",
+	"body": "\\$z-drawer",
+	"description": "set $z-drawer component with default value"
+	},
+	"$z-fab" : {
+	"prefix": "$z-fab",
+	"body": "\\$z-fab",
+	"description": "set $z-fab component with default value"
+	},
+	"$z-marginals" : {
+	"prefix": "$z-marginals",
+	"body": "\\$z-marginals",
+	"description": "set $z-marginals component with default value"
+	},
+	"$z-modal" : {
+	"prefix": "$z-modal",
+	"body": "\\$z-modal",
+	"description": "set $z-modal component with default value"
+	},
+	"$z-popover" : {
+	"prefix": "$z-popover",
+	"body": "\\$z-popover",
+	"description": "set $z-popover component with default value"
+	},
+	"$z-toast" : {
+	"prefix": "$z-toast",
+	"body": "\\$z-toast",
+	"description": "set $z-toast component with default value"
+	},
+	"$z-tooltip" : {
+	"prefix": "$z-tooltip",
+	"body": "\\$z-tooltip",
+	"description": "set $z-tooltip component with default value"
 	}
 
 }
