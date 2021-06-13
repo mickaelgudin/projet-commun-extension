@@ -6,6 +6,18 @@ export default class PugLanguage{
 		return '(q-)(' + generateRegEx(PugLanguage.getQuasarRegElements()) + ')';
 	}
 
+	static getQuasarHelperClassesReg() {
+		//todo julien : s'inspirer de la méthode getQuasarReg
+	}
+
+	static getQuasarHelperClassesElements(): string[] {
+		//todo julien : s'inspirer de la méthode getQuasarRegElements
+		//les éléments sont à partir de la ligne 927 du snippets snippets/pug.code-snippets.json
+		return [
+			
+		];
+	}
+
 	static getQuasarRegElements(): string[] {
 		return [
 			'aja?x?-?b?a?r?', //q-ajax-bar

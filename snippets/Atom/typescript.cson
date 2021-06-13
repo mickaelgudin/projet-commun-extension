@@ -2,7 +2,7 @@
 ".source.ts, .source.vue":
 	"@Prop":
 		prefix: "@Prop"
-		body: """@Prop(Number) readonly propA: number | undefined"""
+		body: """Prop(Number) readonly propA: number | undefined"""
 		description: "complete @Prop attribute decorator"
 	"@PropSync":
 		prefix: "@PropSync"
