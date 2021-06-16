@@ -1,4 +1,4 @@
-element := vueDecorator
+element := vueDecorator | meteorFunction | vueRouter
 vueDecorator := 'Mixins' | propDecorator | modelDecorator | watchDecorator | provideDecorator | injectDecorator | emitDecorator | refDecorator | componentDecorator
 propDecorator := '@Prop'$ | '@PropSync'$
 modelDecorator := '@Model'$ | '@ModelSync'$ | '@VModel'
@@ -8,3 +8,6 @@ injectDecorator := '@Inject'$ | '@InjectReactive'$
 emitDecorator := '@Emit'
 refDecorator := '@Ref'
 componentDecorator := '@Component'
+meteorFunction := 'Meteor[.]' meteorMethods
+meteorMethods := 'startup' | 'methods' | 'publish'
+vueRouter := 'new VueRouter'$
