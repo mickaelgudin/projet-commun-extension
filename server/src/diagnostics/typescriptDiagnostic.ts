@@ -14,13 +14,19 @@ import TypeScriptLanguage from '../languages/typescriptLanguage'
 
 
 export default class TypeScriptDiagnosticHandler {
+
+	//diagnostic vue property decorator and meteor methods and vue router
 	launchDiagnosticTypescript(text:string, maxNumberOfProblems: number, textDocument: TextDocument, problems: number,
 		diagnostics: Diagnostic[]
 		) {
-	
-		let pattern = RegExp(TypeScriptLanguage.getVueDecoratorRegex(), 'gi');
+
+		let reg:string = TypeScriptLanguage.getVueDecoratorRegex() + '|' ;
+		reg += TypeScriptLanguage.getMeteorFunctionsRegex() + '|';
+		reg += TypeScriptLanguage.getVueRouterRegx();
+		
+		let pattern = RegExp(reg, 'gi');
 		let m = null;
-		//diagnostic vue property decorator
+		
 		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
 			let currentLanguage: string = getLanguage(textDocument, text, m);
 	
