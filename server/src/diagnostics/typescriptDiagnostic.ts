@@ -20,11 +20,7 @@ export default class TypeScriptDiagnosticHandler {
 		diagnostics: Diagnostic[]
 		) {
 
-		let reg:string = TypeScriptLanguage.getVueDecoratorRegex() + '|' ;
-		reg += TypeScriptLanguage.getMeteorFunctionsRegex() + '|';
-		reg += TypeScriptLanguage.getVueRouterRegx();
-		
-		let pattern = RegExp(reg, 'gi');
+		let pattern = RegExp(TypeScriptLanguage.getRegexForTypescript(), 'gi');
 		let m = null;
 		
 		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
@@ -36,7 +32,7 @@ export default class TypeScriptDiagnosticHandler {
 				createDiagnosticIfHasErrors(results.errs.length, 
 					textDocument, 
 					m, 
-					'This vue property decorator doesn\'t exist or is mispelled', 
+					'This element doesn\'t exist or is mispelled, use autocompletion', 
 					diagnostics);
 			}
 		}
