@@ -13,6 +13,7 @@ import TypeScriptDiagnosticHandler from './typescriptDiagnostic';
 import {parse, ParseResult} from '../syntaxes/svgParser'
 import {QuasarParser, ParseResultQuasar} from '../syntaxes/quasarParser'
 import {HtmlAndVueParser, ParseResultHtmlAndVue} from '../syntaxes/HtmlAndVueParser'
+import {QuasarClassesParser, ParseResultClassesQuasar} from '../syntaxes/QuasarClassesParser'
 
 export default class PugDiagnosticHandler {
 	tsDiagnosticHandler: TypeScriptDiagnosticHandler = new TypeScriptDiagnosticHandler();
@@ -63,6 +64,25 @@ export default class PugDiagnosticHandler {
 						createDiagnostic(DiagnosticSeverity.Information, textDocument, m, `${m[0]} string interpolation should be formed like : {{attribute}} or {{method()}} `)
 					);
 				}
+			} 
+			problems = diagnostics.length;
+		}
+
+		//quasar helper classes inside pug template class attributes
+		pattern = RegExp(PugLanguage.getQuasarHelperClassesReg(), 'gi');
+		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {
+			if(m[0].length <= 1 ) continue; //excluding if not in pug template
+
+			let currentLanguage: string = getLanguage(textDocument, text, m);
+			if(currentLanguage === 'jade' || currentLanguage === 'vue-jade') {
+				let quasarClassesParser:QuasarClassesParser = new QuasarClassesParser(m[0].replace('class=\"', ''));
+				let results:ParseResultClassesQuasar= quasarClassesParser.parse();
+
+				createDiagnosticIfHasErrors(results.errs.length, 
+											textDocument, 
+											m, 
+											'This quasar helper class doesn\'t exist or is mispelled', 
+											diagnostics);
 			} 
 			problems = diagnostics.length;
 		}

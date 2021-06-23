@@ -598,7 +598,7 @@ export interface Z_1 {
 export interface Z_2 {
     kind: ASTKinds.Z_2;
 }
-export class Parser {
+export class QuasarClassesParser {
     private readonly input: string;
     private pos: PosInfo;
     private negating: boolean = false;
@@ -2559,7 +2559,7 @@ export class Parser {
         this.reset(mrk);
         return ans;
     }
-    public parse(): ParseResult {
+    public parse(): ParseResultClassesQuasar {
         const mrk = this.mark();
         const res = this.matchquasarClasse(0);
         if (res)
@@ -2680,11 +2680,11 @@ export class Parser {
         return res;
     }
 }
-export function parse(s: string): ParseResult {
-    const p = new Parser(s);
+export function parse(s: string): ParseResultClassesQuasar {
+    const p = new QuasarClassesParser(s);
     return p.parse();
 }
-export interface ParseResult {
+export interface ParseResultClassesQuasar {
     ast: Nullable<quasarClasse>;
     errs: SyntaxErr[];
 }
