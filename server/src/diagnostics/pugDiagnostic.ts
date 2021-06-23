@@ -75,7 +75,7 @@ export default class PugDiagnosticHandler {
 
 			let currentLanguage: string = getLanguage(textDocument, text, m);
 			if(currentLanguage === 'jade' || currentLanguage === 'vue-jade') {
-				let quasarClassesParser:QuasarClassesParser = new QuasarClassesParser(m[0].replace('class=\"', ''));
+				let quasarClassesParser:QuasarClassesParser = new QuasarClassesParser(m[0].replace('class="', ''));
 				let results:ParseResultClassesQuasar= quasarClassesParser.parse();
 
 				createDiagnosticIfHasErrors(results.errs.length, 
