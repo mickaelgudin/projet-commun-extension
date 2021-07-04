@@ -1,5 +1,5 @@
 # Generated with Atomizr – https://atom.io/packages/atomizr
-".source.pug":
+".text.html.vue, .source.pug":
 	input:
 		prefix: "input"
 		body: """

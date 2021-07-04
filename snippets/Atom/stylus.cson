@@ -1,6 +1,6 @@
 # Generated with Atomizr – https://atom.io/packages/atomizr
 
-".source.styl, .source.css.styl":
+".source.styl, .source.styl, .source.css.styl":
   "redefine stylus variable":
     prefix: "redifine stylus var"
     body: """\\$variable ?= newValue"""
