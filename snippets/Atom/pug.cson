@@ -1,0 +1,1263 @@
+# Generated with Atomizr – https://atom.io/packages/atomizr
+".source.pug":
+	input:
+		prefix: "input"
+		body: """
+			input(v-model=\"${0:data}\")
+		"""
+		description: "v-model directive input"
+	img:
+		prefix: "img"
+		body: """
+			img(:src=\"'${1:filePath}'\" alt=\"${0:altText}\")
+		"""
+		description: "Vue image source binding"
+	a:
+		prefix: "a"
+		body: """a(:href=\"'${1:#}'\" title=\"${2:title}\")
+		description: "a(href=\"#\" title=\"title\")"""
+	div:
+		prefix: "div"
+		body: """div($0)"""
+		description: "div()"
+	span:
+		prefix: "span"
+		body: """span($0)"""
+		description: "span()"
+	component:
+		prefix: "component"
+		body: """
+			component(:is=\"${1:componentId}\") $0
+		"""
+		description: "component element"
+	"keep-alive":
+		prefix: "keep-alive"
+		body: """
+			keep-alive
+		"""
+		description: "keep-alive element"
+	transition:
+		prefix: "transition"
+		body: """
+			transition(name='${1:fade}' mode='${2:out-in}')
+		"""
+		description: "transition element"
+	"transition-group":
+		prefix: "transition-group"
+		body: """
+			transition-group
+		"""
+		description: "transition-group element"
+	"enter-class":
+		prefix: "enter-class"
+		body: """
+			enter-class=\"$1\"$0
+		"""
+		description: "enter-class=''. Expects: string."
+	"leave-class":
+		prefix: "leave-class"
+		body: """
+			leave-class=\"$1\"$0
+		"""
+		description: "leave-class=''. Expects: string."
+	"appear-class":
+		prefix: "appear-class"
+		body: """
+			appear-class=\"$1\"$0
+		"""
+		description: "appear-class=''. Expects: string."
+	"enter-to-class":
+		prefix: "enter-to-class"
+		body: """
+			enter-to-class=\"$1\"$0
+		"""
+		description: "enter-to-class=''. Expects: string."
+	"leave-to-class":
+		prefix: "leave-to-class"
+		body: """
+			leave-to-class=\"$1\"$0
+		"""
+		description: "leave-to-class=''. Expects: string."
+	"appear-to-class":
+		prefix: "appear-to-class"
+		body: """
+			appear-to-class=\"$1\"$0
+		"""
+		description: "appear-to-class=''. Expects: string."
+	"enter-active-class":
+		prefix: "enter-active-class"
+		body: """
+			enter-active-class=\"$1\"$0
+		"""
+		description: "enter-active-class=''. Expects: string."
+	"leave-active-class":
+		prefix: "leave-active-class"
+		body: """
+			leave-active-class=\"$1\"$0
+		"""
+		description: "leave-active-class=''. Expects: string."
+	"appear-active-class":
+		prefix: "appear-active-class"
+		body: """
+			appear-active-class=\"$1\"$0
+		"""
+		description: "appear-active-class=''. Expects: string."
+	"v-show":
+		prefix: "v-show"
+		body: """
+			v-show=\"${1:condition}\"
+		"""
+		description: "v-show inline statement"
+	"v-if":
+		prefix: "v-if"
+		body: """
+			v-if=\"${1:condition}\"
+		"""
+		description: "v-if inline statement"
+	"v-else-if":
+		prefix: "v-else-if"
+		body: """
+			v-else-if=\"${1:condition}\"
+		"""
+		description: "v-else-if inline statement"
+	"v-else":
+		prefix: "v-else"
+		body: """
+			v-else=\"${1:condition}\"
+		"""
+		description: "v-else inline statement"
+	"v-for":
+		prefix: "v-for"
+		body: """
+			v-for=\"(${1:item}, index, key) in ${2:items}\" :key=\"${0:key}\"
+		"""
+		description: "v-for inline with index and key"
+	"v-on":
+		prefix: "v-on"
+		body: """
+			v-on:${1:event}=\"${2:handle}\"
+		"""
+		description: "v-on"
+	"v-bind":
+		prefix: "v-bind"
+		body: """
+			v-bind$1=\"${2}\"
+		"""
+		description: "v-bind"
+	"v-model":
+		prefix: "v-model"
+		body: """
+			v-model=\"${0:data}\"
+		"""
+		description: "v-model inline statement"
+	"v-text":
+		prefix: "v-text"
+		body: """
+			v-text=\"${1:msg}\"
+		"""
+		description: "v-text"
+	"v-html":
+		prefix: "v-html"
+		body: """
+			v-html=\"${1:html}\"
+		"""
+		description: "v-html"
+	"v-pre":
+		prefix: "v-pre"
+		body: """
+			v-pre=\"${1:pre}\"
+		"""
+		description: "v-pre"
+	"v-cloak":
+		prefix: "v-cloak"
+		body: """
+			v-cloak
+		"""
+		description: "v-cloak"
+	"v-once":
+		prefix: "v-once"
+		body: """
+			v-once
+		"""
+		description: "v-once"
+	":key":
+		prefix: ":key"
+		body: """
+			:key=\"${1:key}\"
+		"""
+		description: "Expects: string. Children of the same common parent must have unique keys. Duplicate keys will cause render errors."
+	ref:
+		prefix: "ref"
+		body: """
+			ref=\"${1:reference}\"
+		"""
+		description: "Expects: string. ref is used to register a reference to an element or a child component. The reference will be registered under the parent component’s $refs object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance."
+	slot:
+		prefix: "slot"
+		body: """
+			slot=\"$1\"
+		"""
+		description: "slot=''. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
+	"slot:scope":
+		prefix: "slot:scope"
+		body: """
+			slot-scope=\"$1\"
+		"""
+		description: "Used to denote an element or component as a scoped slot. The attribute’s value should be a valid JavaScript expression that can appear in the argument position of a function signature. This means in supported environments you can also use ES2015 destructuring in the expression. Serves as a replacement for scope in 2.5.0+."
+	scope:
+		prefix: "scope"
+		body: """
+			scope=\"${1:scope}\"$0
+		"""
+		description: "Used to denote a <template> element as a scoped slot, which is replaced by `slot-scope` in 2.5.0+."
+	tag:
+		prefix: "tag"
+		body: """
+			tag=\"$1\"$0
+		"""
+		description: "tag"
+	"router-link":
+		prefix: "router-link"
+		body: """
+			router-link(to=\"/${1:page}\") ${2:RouterName}
+		"""
+		description: "Vue router link"
+	"router-view":
+		prefix: "router-view"
+		body: """
+			router-view $0
+		"""
+		description: "router-view element"
+	to:
+		prefix: "to"
+		body: """
+			to=\"$1\"$0
+		"""
+		description: "to=''"
+	":src":
+		prefix: ":src"
+		body: """
+			:src=\"'${1:filePath}'\" alt=\"${0:altText}\"
+		"""
+		description: "inline source binding"
+	":style":
+		prefix: ":style"
+		body: """
+			:style=\"{ ${0} }\")
+		"""
+		description: "Vue style binding"
+	":class":
+		prefix: ":class"
+		body: """
+			:class=\"{ ${0} }\"
+		"""
+		description: "Vue class binding"
+	class:
+		prefix: "class"
+		body: """class=\"$1\"$0"""
+		description: "Set class attribute"
+	id:
+		prefix: "id"
+		body: """id=\"$1\"$0"""
+		description: "Set id attribute"
+	type:
+		prefix: "type"
+		body: """type=\"$1\"$0"""
+		description: "Set type attribute for form elements"
+	name:
+		prefix: "name"
+		body: """name=\"$1\"$0"""
+		description: "Set name attribute for form elements"
+	placeholder:
+		prefix: "placeholder"
+		body: "placeholder=\"$1\"$0"
+		description: "Set placeholder attribute for form elements"
+	value:
+		prefix: "value"
+		body: """value=\"$1\"$0"""
+		description: "Set value attribute for form elements"
+	"q-ajax-bar":
+		prefix: "q-ajax-bar"
+		body: """q-ajax-bar(color=\"orange\" text-color=\"black\" label=\"2\")"""
+		description: "set q-ajax-bar component with default value"
+	"q-avatar":
+		prefix: "q-avatar"
+		body: """q-avatar(color=\"red\" text-color=\"white\" icon=\"directions\")"""
+		description: "set q-avatar component with default value"
+	"q-badge":
+		prefix: "q-badge"
+		body: """q-badge(color=\"orange\" text-color=\"black\" label=\"2\")"""
+		description: "set q-badge component with default value"
+	"q-banner":
+		prefix: "q-banner"
+		body: """
+			q-banner(class=\"bg-primary text-white\")
+			\tDefault text for banner
+			\ttemplate(v-slot:action)
+			\t\tq-btn(flat color=\"white\" label=\"Dismiss\")
+		"""
+		description: "set q-banner component with default value"
+	"q-bar":
+		prefix: "q-bar"
+		body: """
+			q-bar
+			\tdiv(class=\"text-weight-bold\")
+			\t\ttitle of the banner
+		"""
+		description: "set q-bar component with default value"
+	"q-breadcrumbs":
+		prefix: "q-breadcrumbs"
+		body: """
+			q-breadcrumbs
+			\tq-breadcrumbs-el(label=\"Home\")
+		"""
+		description: "set q-breadcrumbs component with default value"
+	"q-btn":
+		prefix: "q-btn"
+		body: """q-btn(color=\"primary\" label=\"Primary\")"""
+		description: "set q-btn component with default value"
+	"q-btn-group":
+		prefix: "q-btn-group"
+		body: """q-btn-group"""
+		description: "set q-btn-group component with default value"
+	"q-btn-dropdown":
+		prefix: "q-btn-dropdown"
+		body: """
+			q-btn-dropdown(color=\"primary\" label=\"Dropdown Button\")
+			\tq-list
+			\t\tq-item(clickable v-close-popup @click=\"onItemClick\")
+			\t\t\tq-item-section
+			\t\t\t\tq-item-label Articles
+		"""
+		description: "set q-btn-dropdown component with default value"
+	"q-card":
+		prefix: "q-card"
+		body: """
+			q-card(class=\"my-card\")
+			\tq-card-section
+			\t\tText by default for card component
+		"""
+		description: "set q-card component with default value"
+	"q-carousel":
+		prefix: "q-carousel"
+		body: """
+			q-carousel(v-model=\"slide\"
+			\ttransition-prev=\"slide-right\"
+			\ttransition-next=\"slide-left\"
+			\tanimated
+			\tcontrol-color=\"primary\"
+			\tclass=\"rounded-borders\"
+			)
+			\t\tq-carousel-slide(name=\"Default text\" class=\"column no-wrap flex-center\")
+			\t\t\tDefault text for carousel
+			\t\tq-carousel-slide(name=\"Default text 2\" class=\"column no-wrap flex-center\")
+			\t\t\tDefault text 2 for carousel
+			div(class=\"row justify-center\")
+			\tq-btn-toggle(
+			\t\tglossy
+			\t\tv-model=\"slide\"
+			\t\t:options=\"[{ label: 1, value: 'Default text'}, { label: 2, value: 'Default text 2'}]\"
+		"""
+		description: "set q-carousel component with default value"
+	"q-chat-message":
+		prefix: "q-chat-message"
+		body: """q-chat-message(text=\"['Default chat message']\" sent )"""
+		description: "set q-chat-message component with default value"
+	"q-chip":
+		prefix: "q-chip"
+		body: """q-chip(icon=\"event\" ) Default text for calendar """
+		description: "set q-chip component with default value"
+	"q-circular-progress":
+		prefix: "q-circular-progress"
+		body: """q-circular-progress(:value=\"value\" size=\"50px\" color=\"orange\" class=\"q-ma-md\")"""
+		description: "set q-circular-progress component with default value"
+	"q-color":
+		prefix: "q-color"
+		body: """q-color(v-model=\"hex\" class=\"my-picker\")"""
+		description: "set q-color component with default value"
+	"q-dialog":
+		prefix: "q-dialog"
+		body: """
+			q-dialog(v-model=\"alert\")
+			\tq-card
+			\t\tq-card-section
+			\t\t\tdiv(class=\"text-h6\") Default q-dialog b
+			\t\tq-card-section( class=\"q-pt-none\" )
+			\t\t\tDefault qdialog text
+			\t\tq-card-actions( align=\"right\")
+			\t\t\tq-btn( flat label=\"OK\" color=\"primary\" v-close-popup)
+		"""
+		description: "set q-dialog component with default value"
+	"q-editor":
+		prefix: "q-editor"
+		body: """q-editor(v-model=\"editor\" min-height=\"5rem\")"""
+		description: "set q-editor component with default value"
+	"q-expansion-item":
+		prefix: "q-expansion-item"
+		body: """
+			q-expansion-item(
+			\texpand-separator
+			\ticon=\"perm_identity\"
+			\tlabel=\"Account settings\"
+			\tcaption=\"Profil\"
+			)
+			\tq-card
+			\t\tq-card-section
+			\t\t\t Default text in q-expansion item
+		"""
+		description: "set q-expansion-item component with default value"
+	"q-layout":
+		prefix: "q-layout"
+		body: """
+			q-layout( view=\"lhh LpR lff\" container style=\"height: 300px\" class=\"shadow-2 rounded-borders\")
+			\tq-header(class=\"bg-black\")
+			\t\tq-toolbar
+			\t\t\tq-btn(flat round dense icon=\"menu\")
+			\t\t\t\tq-toolbar-title
+			\t\t\t\tDefault text header
+			\tq-page-container
+			\t\tq-page(padding)
+			\t\t\tp(v-for=\"n in 15\" :key=\"n\")
+			\t\t\t\tDefault text
+			\t\t\tq-page-sticky(position=\"bottom-right\" :offset=\"[18, 18]\")
+			\t\t\t\tq-btn(fab icon=\"add\" color=\"accent\")
+		"""
+		description: "set q-layout component with default value"
+	"q-input":
+		prefix: "q-input"
+		body: """q-input(v-model=\"text\" label=\"Standard\")"""
+		description: "set q-input component with default value"
+	"q-select":
+		prefix: "q-select"
+		body: """q-select(v-model=\"model\" :options=\"options\" label=\"Standard\")"""
+		description: "set q-select component with default value"
+	"q-file":
+		prefix: "q-file"
+		body: """q-file(v-model=\"model\" label=\"Standard\")"""
+		description: "set q-file component with default value"
+	"q-form":
+		prefix: "q-form"
+		body: """
+			q-form(@submit=\"onSubmit\" @reset=\"onReset\" class=\"q-gutter-md\")
+			\tq-input(
+			\tfilled
+			\tv-model=\"name\"
+			\tlabel=\"Your name *\"
+			\thint=\"Name and surname\"
+			\tlazy-rules
+			\t:rules=\"[ val => val && val.length > 0 || 'Please type something']\"
+			\t)
+			\tq-input(
+			\tfilled
+			\ttype=\"number\"
+			\tv-model=\"age\"
+			\tlabel=\"Your age *\"
+			\tlazy-rules
+			\t:rules=\"[val => val !== null && val !== '' || 'Please type your age', val => val > 0 && val < 100 || 'Please type a real age']\"
+			\t)
+			\tq-toogle(v-model=\"accept\" label=\"I accept the license and terms\")
+			\tdiv
+			\t\tq-btn(label=\"Submit\" type=\"submit\" color=\"primary\")
+			\t\tq-btn(label=\"Reset\" type=\"reset\" color=\"primary\" flat class=\"q-ml-sm\")
+		"""
+		description: "set q-form component with default value"
+	"q-field":
+		prefix: "q-field"
+		body: """
+			q-field(label=\"Standard\" stack-label)
+			\t<template v-slot:control>
+			\t\tdiv(class=\"self-center full-width no-outline\" tabindex=\"0\")Field content
+			\t</template>
+		"""
+		description: "set q-field component with default value"
+	"q-radio":
+		prefix: "q-radio"
+		body: """q-radio(v-model=\"shape\" val=\"line\" label=\"Line\")"""
+		description: "set q-radio component with default value"
+	"q-checkbox":
+		prefix: "q-checkbox"
+		body: """q-checkbox(v-model=\"val\")"""
+		description: "set q-checkbox component with default value"
+	"q-toggle":
+		prefix: "q-toggle"
+		body: """q-toggle(v-model=\"value\")"""
+		description: "set q-toggle component with default value"
+	"q-btn-toggle":
+		prefix: "q-btn-toggle"
+		body: """
+			q-btn-toggle(
+			\tv-model=\"val\"
+			\tpush
+			\tglossy
+			\ttoggle-color=\"primary\"
+			\t:options=\"[{label: 'One', value: 'one'},{label: 'Two', value: 'two'},{label: 'Three', value: 'three'}]\"
+			)
+		"""
+		description: "set q-btn-toggle component with default value"
+	"q-option-group":
+		prefix: "q-option-group"
+		body: """q-option-group(v-model=\"group\" :options=\"options\" color=\"primary\")"""
+		description: "set q-option-group component with default value"
+	"q-slider":
+		prefix: "q-slider"
+		body: """q-slider(v-model=\"standard\" :min=\"0\" :max=\"50\")"""
+		description: "set q-slider component with default value"
+	"q-range":
+		prefix: "q-range"
+		body: """q-range(v-model=\"standard\" :min=\"0\" :max=\"50\")"""
+		description: "set q-range component with default value"
+	"q-time":
+		prefix: "q-time"
+		body: """q-time(v-model=\"time\")"""
+		description: "set q-time component with default value"
+	"q-date":
+		prefix: "q-date"
+		body: """q-date(v-model=\"date\")"""
+		description: "set q-date component with default value"
+	"q-icon":
+		prefix: "q-icon"
+		body: """q-icon(name=\"font_download\")"""
+		description: "set q-icon component with default value"
+	"q-img":
+		prefix: "q-img"
+		body: """q-img(:src=\"url\" spinner-color=\"white\" style=\"height: 140px; max-width: 150px\")"""
+		description: "set q-img component with default value"
+	"q-infinite-scroll":
+		prefix: "q-infinite-scroll"
+		body: """
+			q-infinite-scroll(@load=\"onLoad\" :offset=\"250\")
+			\tdiv(v-for=\"(item, index) in items\" :key=\"index\" class=\"caption\")
+			\t\tp
+			\t\t\t Default text
+			\t<template  v-slot:loading>
+			\t\tdiv(class=\"row justify-center q-my-md\")
+			\t\t\tq-spinner-dots(color=\"primary\" size=\"40px\")
+			\t</template>
+		"""
+		description: "set q-infinite-scroll component with default value"
+	"q-inner-loading":
+		prefix: "q-inner-loading"
+		body: """
+			q-inner-loading(:showing=\"visible\")
+			\tq-spinner-gears(size=\"50px\" color=\"primary\")
+		"""
+		description: "set q-inner-loading component with default value"
+	"q-intersection":
+		prefix: "q-intersection"
+		body: """
+			q-intersection(
+			\tv-for=\"index in 60\"
+			\t:key=\"index\"
+			\tclass=\"example-item\"
+			)
+			\tq-card(class=\"q-ma-sm\")
+			\t\timg(src=\"url\")
+			\t\tq-card-section
+			\t\t\tdiv(class=\"text-h6\")
+			\t\t\t\tDefault Card title
+			\t\t\tdiv(class=\"text-subtitle2\")
+			\t\t\t\tby Default Name
+		"""
+		description: "set q-intersection component with default value"
+	"q-knob":
+		prefix: "q-knob"
+		body: """q-knob(v-model=\"value\" size=\"50px\" color=\"light-blue\" class=\"q-ma-md\")"""
+		description: "set q-knob component with default value"
+	"q-linear-progress":
+		prefix: "q-linear-progress"
+		body: """q-linear-progress(:value=\"progress\" class=\"q-mt-md\")"""
+		description: "set q-linear-progress component with default value"
+	"q-list":
+		prefix: "q-list"
+		body: """
+			q-list(bordered separator)
+			\tq-item(clickable v-ripple)
+			\t\tq-item-section
+			\t\t\tDefault single line item text
+			\tq-item(clickable v-ripple)
+			\t\tq-item-section
+			\t\t\tq-item-label
+			\t\t\t\tItem with caption
+			\t\t\tq-item-label(caption)
+			\t\t\t\tCaption
+		"""
+		description: "set q-list component with default value"
+	"q-markup-table":
+		prefix: "q-markup-table"
+		body: """
+			q-markup-table
+			\tthead
+			\t\ttr
+			\t\t\tth(class=\"text-left\")
+			\t\t\t\tDefault title column 1
+			\t\t\tth(class=\"text-right\")
+			\t\t\t\tDefault title column 2
+			\t\t\tth(class=\"text-right\")
+			\t\t\t\tDefault title column 3
+			\t\t\tth(class=\"text-right\")
+			\t\t\t\tDefault title column 4
+			\t\t\tth(class=\"text-right\")
+			\t\t\t\tDefault title column 5
+			\t\t\tth(class=\"text-right\")
+			\t\t\t\tDefault title column 6
+			\ttbody
+			\t\ttr
+			\t\t\ttd(class=\"text-left\")
+			\t\t\t\tDefault item 1
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\ttr
+			\t\t\ttd(class=\"text-left\")
+			\t\t\t\tDefault item 2
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\ttr
+			\t\t\ttd(class=\"text-left\")
+			\t\t\t\tDefault item 3
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\ttr
+			\t\t\ttd(class=\"text-left\")
+			\t\t\t\tDefault item 4
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\ttr
+			\t\t\ttd(class=\"text-left\")
+			\t\t\t\tDefault item 5
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\ttr
+			\t\t\ttd(class=\"text-left\")
+			\t\t\t\tDefault item 6
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+			\t\t\ttd(class=\"text-right\")
+			\t\t\t\tDefault text
+		"""
+		description: "set q-markup-table component with default value"
+	"q-menu":
+		prefix: "q-menu"
+		body: """
+			q-menu
+			\tq-list(style=\"min-width: 100px\")
+			\t\tq-item(clickable v-close-popup)
+			\t\t\tq-item-section
+			\t\t\t\tDefault item 1
+			\t\tq-item(clickable v-close-popup)
+			\t\t\tq-item-section
+			\t\t\t\tDefault item 2
+			\t\tq-item(clickable v-close-popup)
+			\t\t\tq-item-section
+			\t\t\t\tDefault item 3
+		"""
+		description: "set q-menu component with default value"
+	"q-resize-observer":
+		prefix: "q-resize-observer"
+		body: """q-resize-observer(@resize=\"onResize\")"""
+		description: "set q-resize-observer component with default value"
+	"q-scroll-observer":
+		prefix: "q-scroll-observer"
+		body: """q-scroll-observer( @scroll=\"onScroll\")"""
+		description: "set q-scroll-observer component with default value"
+	"q-pagination":
+		prefix: "q-pagination"
+		body: """q-pagination( v-model=\"current\" :max=\"5\")"""
+		description: "set q-pagination component with default value"
+	"q-table":
+		prefix: "q-table"
+		body: """q-table(title=\"Treats\" :data=\"data\" :columns=\"columns\" row-key=\"name\")"""
+		description: "set q-table component with default value"
+	"q-separator":
+		prefix: "q-separator"
+		body: """q-separator"""
+		description: "set q-separator component with default value"
+	svg:
+		prefix: "svg"
+		body: """svg(xmlns=\"http://www.w3.org/2000/svg\" width=\"150\" height=\"100\" viewBox=\"0 0 3 2\")"""
+		description: "set svg component svg with default value"
+	rect:
+		prefix: "rect"
+		body: """rect(width=\"1\" height=\"2\" x=\"0\" fill=\"#008d46\")"""
+		description: "set rect component svg with default value"
+	circle:
+		prefix: "circle"
+		body: """circle(cx=\"50\" cy=\"50\" r=\"30\" style=\"fill:url(#gradient)\")"""
+		description: "set circle component svg with default value"
+	linearGradient:
+		prefix: "linearGradient"
+		body: """
+			linearGradient(id=\"gradient\")
+			\tstop(class=\"begin\" offset=\"0%\")
+			\tstop(class=\"end\" offset=\"100%\")
+		"""
+		description: "set linearGradient component svg with default value"
+	polygon:
+		prefix: "polygon"
+		body: """polygon(points=\"100,10 40,198 190,78 10,78 160,198\" style=\"fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;\")"""
+		description: "set polygon component svg with default value"
+	ellipse:
+		prefix: "ellipse"
+		body: """ellipse(cx=\"100\" cy=\"70\" rx=\"85\" ry=\"55\" fill=\"url(#grad1)\")"""
+		description: "set ellipse component svg with default value"
+	attribute:
+		prefix: "attribute"
+		body: """{{ attribute }}"""
+		description: "set string interpolation {{ attribute }} for attribute"
+	method:
+		prefix: "method"
+		body: """{{ method() }}"""
+		description: "set string interpolation {{ method() }} for method"
+	fullscreen:
+		prefix: "fullscreen"
+		body: """fullscreen"""
+		description: "set fullscreen component with default value"
+	fixed:
+		prefix: "fixed"
+		body: """fixed"""
+		description: "set fixed component with default value"
+	properties:
+		prefix: "properties"
+		body: """properties"""
+		description: "set properties component with default value"
+	"fixed-center":
+		prefix: "fixed-center"
+		body: """fixed-center"""
+		description: "set fixed-center component with default value"
+	absolute:
+		prefix: "absolute"
+		body: """absolute"""
+		description: "set absolute component with default value"
+	"absolute-center":
+		prefix: "absolute-center"
+		body: """absolute-center"""
+		description: "set absolute-center component with default value"
+	"fixed-top":
+		prefix: "fixed-top"
+		body: """fixed-top"""
+		description: "set fixed-top component with default value"
+	"absolute-top":
+		prefix: "absolute-top"
+		body: """absolute-top"""
+		description: "set absolute-top component with default value"
+	"fixed-right":
+		prefix: "fixed-right"
+		body: """fixed-right"""
+		description: "set fixed-right component with default value"
+	"absolute-right":
+		prefix: "absolute-right"
+		body: """absolute-right"""
+		description: "set absolute-right component with default value"
+	"fixed-bottom":
+		prefix: "fixed-bottom"
+		body: """fixed-bottom"""
+		description: "set fixed-bottom component with default value"
+	"absolute-bottom":
+		prefix: "absolute-bottom"
+		body: """absolute-bottom"""
+		description: "set absolute-bottom component with default value"
+	"fixed-left":
+		prefix: "fixed-left"
+		body: """fixed-left"""
+		description: "set fixed-left component with default value"
+	"absolute-left":
+		prefix: "absolute-left"
+		body: """absolute-left"""
+		description: "set absolute-left component with default value"
+	"fixed-top-left":
+		prefix: "fixed-top-left"
+		body: """fixed-top-left"""
+		description: "set fixed-top-left component with default value"
+	"absolute-top-left":
+		prefix: "absolute-top-left"
+		body: """absolute-top-left"""
+		description: "set absolute-top-left component with default value"
+	"fixed-top-right":
+		prefix: "fixed-top-right"
+		body: """fixed-top-right"""
+		description: "set fixed-top-right component with default value"
+	"absolute-top-right":
+		prefix: "absolute-top-right"
+		body: """absolute-top-right"""
+		description: "set absolute-top-right component with default value"
+	"fixed-bottom-left":
+		prefix: "fixed-bottom-left"
+		body: """fixed-bottom-left"""
+		description: "set fixed-bottom-left component with default value"
+	"absolute-bottom-left":
+		prefix: "absolute-bottom-left"
+		body: """absolute-bottom-left"""
+		description: "set absolute-bottom-left component with default value"
+	"fixed-bottom-right":
+		prefix: "fixed-bottom-right"
+		body: """fixed-bottom-right"""
+		description: "set fixed-bottom-right component with default value"
+	"absolute-bottom-right":
+		prefix: "absolute-bottom-right"
+		body: """absolute-bottom-right"""
+		description: "set absolute-bottom-right component with default value"
+	"fixed-full":
+		prefix: "fixed-full"
+		body: """fixed-full"""
+		description: "set fixed-full component with default value"
+	"absolute-full":
+		prefix: "absolute-full"
+		body: """absolute-full"""
+		description: "set absolute-full component with default value"
+	"float-left":
+		prefix: "float-left"
+		body: """float-left"""
+		description: "set float-left component with default value"
+	"float-right":
+		prefix: "float-right"
+		body: """float-right"""
+		description: "set float-right component with default value"
+	"on-left":
+		prefix: "on-left"
+		body: """on-left"""
+		description: "set on-left component with default value"
+	"on-right":
+		prefix: "on-right"
+		body: """on-right"""
+		description: "set on-right component with default value"
+	"vertical-top":
+		prefix: "vertical-top"
+		body: """vertical-top"""
+		description: "set vertical-top component with default value"
+	"vertical-middle":
+		prefix: "vertical-middle"
+		body: """vertical-middle"""
+		description: "set vertical-middle component with default value"
+	"vertical-bottom":
+		prefix: "vertical-bottom"
+		body: """vertical-bottom"""
+		description: "set vertical-bottom component with default value"
+	"no-shadow":
+		prefix: "no-shadow"
+		body: """no-shadow"""
+		description: "set no-shadow component with default value"
+	"inset-shadow":
+		prefix: "inset-shadow"
+		body: """inset-shadow"""
+		description: "set inset-shadow component with default value"
+	"shadow-1":
+		prefix: "shadow-1"
+		body: """shadow-1"""
+		description: "set shadow-1 component with default value"
+	hoverable:
+		prefix: "hoverable"
+		body: """hoverable"""
+		description: "set hoverable component with default value"
+	"hoverable-1":
+		prefix: "hoverable-1"
+		body: """hoverable-1"""
+		description: "set hoverable-1 component with default value"
+	"shadow-2":
+		prefix: "shadow-2"
+		body: """shadow-2"""
+		description: "set shadow-2 component with default value"
+	"hoverable-2":
+		prefix: "hoverable-2"
+		body: """hoverable-2"""
+		description: "set hoverable-2 component with default value"
+	"shadow-3":
+		prefix: "shadow-3"
+		body: """shadow-3"""
+		description: "set shadow-3 component with default value"
+	"hoverable-3":
+		prefix: "hoverable-3"
+		body: """hoverable-3"""
+		description: "set hoverable-3 component with default value"
+	"shadow-4":
+		prefix: "shadow-4"
+		body: """shadow-4"""
+		description: "set shadow-4 component with default value"
+	"hoverable-4":
+		prefix: "hoverable-4"
+		body: """hoverable-4"""
+		description: "set hoverable-4 component with default value"
+	"shadow-5":
+		prefix: "shadow-5"
+		body: """shadow-5"""
+		description: "set shadow-5 component with default value"
+	"hoverable-5":
+		prefix: "hoverable-5"
+		body: """hoverable-5"""
+		description: "set hoverable-5 component with default value"
+	"shadow-transition":
+		prefix: "shadow-transition"
+		body: """shadow-transition"""
+		description: "set shadow-transition component with default value"
+	"shadow-up-1":
+		prefix: "shadow-up-1"
+		body: """shadow-up-1"""
+		description: "set shadow-up-1 component with default value"
+	"hoverable-up":
+		prefix: "hoverable-up"
+		body: """hoverable-up"""
+		description: "set hoverable-up component with default value"
+	"hoverable-up-1":
+		prefix: "hoverable-up-1"
+		body: """hoverable-up-1"""
+		description: "set hoverable-up-1 component with default value"
+	"shadow-up-2":
+		prefix: "shadow-up-2"
+		body: """shadow-up-2"""
+		description: "set shadow-up-2 component with default value"
+	"hoverable-up-2":
+		prefix: "hoverable-up-2"
+		body: """hoverable-up-2"""
+		description: "set hoverable-up-2 component with default value"
+	"shadow-up-3":
+		prefix: "shadow-up-3"
+		body: """shadow-up-3"""
+		description: "set shadow-up-3 component with default value"
+	"hoverable-up-3":
+		prefix: "hoverable-up-3"
+		body: """hoverable-up-3"""
+		description: "set hoverable-up-3 component with default value"
+	"shadow-up-4":
+		prefix: "shadow-up-4"
+		body: """shadow-up-4"""
+		description: "set shadow-up-4 component with default value"
+	"hoverable-up-4":
+		prefix: "hoverable-up-4"
+		body: """hoverable-up-4"""
+		description: "set hoverable-up-4 component with default value"
+	"shadow-up-5":
+		prefix: "shadow-up-5"
+		body: """shadow-up-5"""
+		description: "set shadow-up-5 component with default value"
+	"hoverable-up-5":
+		prefix: "hoverable-up-5"
+		body: """hoverable-up-5"""
+		description: "set hoverable-up-5 component with default value"
+	disabled:
+		prefix: "disabled"
+		body: """disabled"""
+		description: "set disabled component with default value"
+	hidden:
+		prefix: "hidden"
+		body: """hidden"""
+		description: "set hidden component with default value"
+	invisible:
+		prefix: "invisible"
+		body: """invisible"""
+		description: "set invisible component with default value"
+	transparent:
+		prefix: "transparent"
+		body: """transparent"""
+		description: "set transparent component with default value"
+	"light-dimmed":
+		prefix: "light-dimmed"
+		body: """light-dimmed"""
+		description: "set light-dimmed component with default value"
+	ellipsis:
+		prefix: "ellipsis"
+		body: """ellipsis"""
+		description: "set ellipsis component with default value"
+	"ellipsis-2-lines":
+		prefix: "ellipsis-2-lines"
+		body: """ellipsis-2-lines"""
+		description: "set ellipsis-2-lines component with default value"
+	"ellipsis-3-lines":
+		prefix: "ellipsis-3-lines"
+		body: """ellipsis-3-lines"""
+		description: "set ellipsis-3-lines component with default value"
+	"z-top":
+		prefix: "z-top"
+		body: """z-top"""
+		description: "set z-top component with default value"
+	"z-max":
+		prefix: "z-max"
+		body: """z-max"""
+		description: "set z-max component with default value"
+	xs:
+		prefix: "xs"
+		body: """xs"""
+		description: "set xs component with default value"
+	sm:
+		prefix: "sm"
+		body: """sm"""
+		description: "set sm component with default value"
+	md:
+		prefix: "md"
+		body: """md"""
+		description: "set md component with default value"
+	lg:
+		prefix: "lg"
+		body: """lg"""
+		description: "set lg component with default value"
+	xl:
+		prefix: "xl"
+		body: """xl"""
+		description: "set xl component with default value"
+	"desktop-only":
+		prefix: "desktop-only"
+		body: """desktop-only"""
+		description: "set desktop-only component with default value"
+	"mobile-only":
+		prefix: "mobile-only"
+		body: """mobile-only"""
+		description: "set mobile-only component with default value"
+	"native-mobile-only":
+		prefix: "native-mobile-only"
+		body: """native-mobile-only"""
+		description: "set native-mobile-only component with default value"
+	"cordova-only":
+		prefix: "cordova-only"
+		body: """cordova-only"""
+		description: "set cordova-only component with default value"
+	"capacitor-only":
+		prefix: "capacitor-only"
+		body: """capacitor-only"""
+		description: "set capacitor-only component with default value"
+	"electron-only":
+		prefix: "electron-only"
+		body: """electron-only"""
+		description: "set electron-only component with default value"
+	"touch-only":
+		prefix: "touch-only"
+		body: """touch-only"""
+		description: "set touch-only component with default value"
+	"platform-ios-only":
+		prefix: "platform-ios-only"
+		body: """platform-ios-only"""
+		description: "set platform-ios-only component with default value"
+	"platform-android-only":
+		prefix: "platform-android-only"
+		body: """platform-android-only"""
+		description: "set platform-android-only component with default value"
+	"within-iframe-only":
+		prefix: "within-iframe-only"
+		body: """within-iframe-only"""
+		description: "set within-iframe-only component with default value"
+	"desktop-hide":
+		prefix: "desktop-hide"
+		body: """desktop-hide"""
+		description: "set desktop-hide component with default value"
+	"mobile-hide":
+		prefix: "mobile-hide"
+		body: """mobile-hide"""
+		description: "set mobile-hide component with default value"
+	"native-mobile-hide":
+		prefix: "native-mobile-hide"
+		body: """native-mobile-hide"""
+		description: "set native-mobile-hide component with default value"
+	"cordova-hide":
+		prefix: "cordova-hide"
+		body: """cordova-hide"""
+		description: "set cordova-hide component with default value"
+	"capacitor-hide":
+		prefix: "capacitor-hide"
+		body: """capacitor-hide"""
+		description: "set capacitor-hide component with default value"
+	"electron-hide":
+		prefix: "electron-hide"
+		body: """electron-hide"""
+		description: "set electron-hide component with default value"
+	"touch-hide":
+		prefix: "touch-hide"
+		body: """touch-hide"""
+		description: "set touch-hide component with default value"
+	"platform-ios-hide":
+		prefix: "platform-ios-hide"
+		body: """platform-ios-hide"""
+		description: "set platform-ios-hide component with default value"
+	"platform-android-hide":
+		prefix: "platform-android-hide"
+		body: """platform-android-hide"""
+		description: "set platform-android-hide component with default value"
+	"within-iframe-hide":
+		prefix: "within-iframe-hide"
+		body: """within-iframe-hide"""
+		description: "set within-iframe-hide component with default value"
+	"orientation-portrait":
+		prefix: "orientation-portrait"
+		body: """orientation-portrait"""
+		description: "set orientation-portrait component with default value"
+	"orientation-landscape":
+		prefix: "orientation-landscape"
+		body: """orientation-landscape"""
+		description: "set orientation-landscape component with default value"
+	"print-only":
+		prefix: "print-only"
+		body: """print-only"""
+		description: "set print-only component with default value"
+	"print-hide":
+		prefix: "print-hide"
+		body: """print-hide"""
+		description: "set print-hide component with default value"
+	"text-right":
+		prefix: "text-right"
+		body: """text-right"""
+		description: "set text-right component with default value"
+	"text-left":
+		prefix: "text-left"
+		body: """text-left"""
+		description: "set text-left component with default value"
+	"text-center":
+		prefix: "text-center"
+		body: """text-center"""
+		description: "set text-center component with default value"
+	"text-justify":
+		prefix: "text-justify"
+		body: """text-justify"""
+		description: "set text-justify component with default value"
+	"text-bold":
+		prefix: "text-bold"
+		body: """text-bold"""
+		description: "set text-bold component with default value"
+	"text-italic":
+		prefix: "text-italic"
+		body: """text-italic"""
+		description: "set text-italic component with default value"
+	"text-no-wrap":
+		prefix: "text-no-wrap"
+		body: """text-no-wrap"""
+		description: "set text-no-wrap component with default value"
+	"text-strike":
+		prefix: "text-strike"
+		body: """text-strike"""
+		description: "set text-strike component with default value"
+	"text-uppercase":
+		prefix: "text-uppercase"
+		body: """text-uppercase"""
+		description: "set text-uppercase component with default value"
+	"text-lowercase":
+		prefix: "text-lowercase"
+		body: """text-lowercase"""
+		description: "set text-lowercase component with default value"
+	"text-capitalize":
+		prefix: "text-capitalize"
+		body: """text-capitalize"""
+		description: "set text-capitalize component with default value"
+	"non-selectable":
+		prefix: "non-selectable"
+		body: """non-selectable"""
+		description: "set non-selectable component with default value"
+	scrollplatforms:
+		prefix: "scrollplatforms"
+		body: """scrollplatforms"""
+		description: "set scrollplatforms component with default value"
+	"no-scroll":
+		prefix: "no-scroll"
+		body: """no-scroll"""
+		description: "set no-scroll component with default value"
+	"no-pointer-events":
+		prefix: "no-pointer-events"
+		body: """no-pointer-events"""
+		description: "set no-pointer-events component with default value"
+	"all-pointer-events":
+		prefix: "all-pointer-events"
+		body: """all-pointer-events"""
+		description: "set all-pointer-events component with default value"
+	"cursor-pointer":
+		prefix: "cursor-pointer"
+		body: """cursor-pointer"""
+		description: "set cursor-pointer component with default value"
+	fit:
+		prefix: "fit"
+		body: """fit"""
+		description: "set fit component with default value"
+	"full-height":
+		prefix: "full-height"
+		body: """full-height"""
+		description: "set full-height component with default value"
+	"full-width":
+		prefix: "full-width"
+		body: """full-width"""
+		description: "set full-width component with default value"
+	"window-height":
+		prefix: "window-height"
+		body: """window-height"""
+		description: "set window-height component with default value"
+	"window-width":
+		prefix: "window-width"
+		body: """window-width"""
+		description: "set window-width component with default value"
+	block:
+		prefix: "block"
+		body: """block"""
+		description: "set block component with default value"
+	"rotate-90":
+		prefix: "rotate-90"
+		body: """rotate-90"""
+		description: "set rotate-90 component with default value"
+	"rotate-180":
+		prefix: "rotate-180"
+		body: """rotate-180"""
+		description: "set rotate-180 component with default value"
+	"rotate-270":
+		prefix: "rotate-270"
+		body: """rotate-270"""
+		description: "set rotate-270 component with default value"
+	"flip-horizontal":
+		prefix: "flip-horizontal"
+		body: """flip-horizontal"""
+		description: "set flip-horizontal component with default value"
+	"flip-vertical":
+		prefix: "flip-vertical"
+		body: """flip-vertical"""
+		description: "set flip-vertical component with default value"
+	"no-border":
+		prefix: "no-border"
+		body: """no-border"""
+		description: "set no-border component with default value"
+	"round-borders":
+		prefix: "round-borders"
+		body: """round-borders"""
+		description: "set round-borders component with default value"
+	"no-margin":
+		prefix: "no-margin"
+		body: """no-margin"""
+		description: "set no-margin component with default value"
+	"no-padding":
+		prefix: "no-padding"
+		body: """no-padding"""
+		description: "set no-padding component with default value"

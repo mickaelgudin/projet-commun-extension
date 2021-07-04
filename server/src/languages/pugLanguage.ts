@@ -6,15 +6,222 @@ export default class PugLanguage{
 		return '(q-)(' + generateRegEx(PugLanguage.getQuasarRegElements()) + ')';
 	}
 
-	static getQuasarHelperClassesReg() {
-		//todo julien : s'inspirer de la méthode getQuasarReg
+	static getQuasarHelperClassesReg(): string {
+		return '(class=\")('+generateRegEx(PugLanguage.getQuasarHelperClassesElements()) + ')';
 	}
 
 	static getQuasarHelperClassesElements(): string[] {
 		//todo julien : s'inspirer de la méthode getQuasarRegElements
 		//les éléments sont à partir de la ligne 927 du snippets snippets/pug.code-snippets.json
 		return [
+			// absolute
+			// absolute-bottom class="test absolute-bottom"
+			// absolute-bottom-left
+			// absolute-bottom-right
+			// absolute-center
+			// absolute-full
+			// absolute-left
+			// absolute-right
+			// absolute-top
+			// absolute-top-left
+			// absolute-top-right
+			'absolute-?(((bo?t?t?o?m?-?)((le?f?t?)|(ri?g?h?t?))?)?|((to?p?-?)((le?f?t?)|(ri?g?h?t?))?)?|(ce?n?t?e?r?)|(fu?l?l?)|(le?f?t?)|(ri?g?h?t?))?',
+
+			'all-p?o?i?n?t?e?r?-?e?v?e?n?t?s?',
+			//all-pointer-events
+			'bloc?k?',
+			//block
+			'capacitor-((h?i?d?e?)|(o?n?l?y?))?',
+			//capacitor-hide
+			//capacitor-only
+			'cordova-((h?i?d?e?)|(o?n?l?y?))?',
+			//cordova-hide
+			//cordova-only
 			
+			// cursor-pointer
+			'cursor-p?o?i?n?t?e?r?',
+			// desktop-hide
+			// desktop-only
+			'desktop-((hi?d?e?)|(on?l?y?))?',
+			// disabled
+			'disabl?e?d?',
+			// electron-hide
+			// electron-only
+			'electron-((hi?d?e?)|(on?l?y?))?',
+			// ellipsis
+			// ellipsis-2-lines
+			// ellipsis-3-lines
+			'ellipsis-((2-?l?i?n?e?s?)|(3-?l?i?n?e?s?))?',
+			// fit
+			'fit',
+			// fixed
+			// fixed-bottom
+			// fixed-bottom-left
+			// fixed-bottom-right
+			// fixed-center
+			// fixed-full
+			// fixed-left
+			// fixed-right
+			// fixed-top
+			// fixed-top-left
+			// fixed-top-right
+			'fixed-(((bo?t?t?o?m?-?)((le?f?t?)|(ri?g?h?t?))?)?|((to?p?-?)((le?f?t?)|(ri?g?h?t?))?)?|(ce?n?t?e?r?)|(fu?l?l?)|(le?f?t?)|(ri?g?h?t?))?',
+
+			// flip-horizontal
+			// flip-vertical
+			'flip-((ho?r?i?z?o?n?t?a?l?)|(ve?r?t?i?c?a?l?))?',
+
+			// float-left
+			// float-right
+			'float-((le?f?t?)|(ri?g?h?t?))?',
+
+			// full-height
+			// full-width
+			'full-((he?i?g?h?t?)|(wi?d?t?h?))?',
+
+			// fullscreen
+			'fullsc?r?e?e?n?',
+
+			// hidden
+			'hidde?n?',
+
+			// hoverable
+			// hoverable-1
+			// hoverable-2
+			// hoverable-3
+			// hoverable-4
+			// hoverable-5
+			// hoverable-up
+			// hoverable-up-1
+			// hoverable-up-2
+			// hoverable-up-3
+			// hoverable-up-4
+			// hoverable-up-5
+			'hoverable-((up-?)?(1|2|3|4|5)?)?',
+
+			// inset-shadow
+			'inset-s?h?a?d?o?w?',
+
+			// invisible
+			'invisi?b?l?e?',
+
+			// lg
+			'lg',
+
+			// light-dimmed
+			'light-d?i?m?m?e?d?',
+
+			// md
+			'md',
+
+			// mobile-hide
+			// mobile-only
+			'mobile-((hi?d?e?)|(on?l?y))?',
+
+			// native-mobile-hide
+			// native-mobile-only
+			'native-m?o?b?i?l?e?((hi?d?e?)|(on?l?y))?',
+
+			// no-border
+			// no-margin
+			// no-padding
+			// no-pointer-events
+			// no-scroll
+			// no-shadow
+			'no-((bo?r?d?e?r?)|(ma?r?g?i?n?)|(pad?d?i?n?g?)|(poi?n?t?e?r?-?e?v?e?n?t?s?)|(scr?o?l?l?)|(sha?d?o?w?))?',
+
+			// non-selectable
+			'non-?s?e?l?e?c?t?a?b?l?e?',
+
+			// on-left
+			// on-right
+			'on-((le?f?t?)|(ri?g?h?t?))?',
+
+			// orientation-landscape
+			// orientation-portrait
+			'orientation-((la?n?d?s?c?a?p?e?)|(po?r?t?r?a?i?t?))?',
+
+			// platform-android-hide
+			// platform-android-only
+			// platform-ios-hide
+			// platform-ios-only
+			'platform-(((an?d?r?o?i?d?-?)((hi?d?e?)|(on?l?y?))?)?|((ios-)((hi?d?e?)|(on?l?y?))?))?',
+			
+			// print-hide
+			// print-only
+			'print-((hi?d?e?)|(on?l?y))?',
+
+			// properties
+			'propertie?s?',
+
+			// rotate-180
+			// rotate-270
+			// rotate-90
+			'rotate-((18?0?)|(27?0?)|(90?))?',
+
+			// round-borders
+			'round-b?o?r?d?e?r?s?',
+
+			// scrollplatforms
+			'scrollpla?t?f?o?r?m?s?',
+
+			// shadow-1
+			// shadow-2
+			// shadow-3
+			// shadow-4
+			// shadow-5
+			// shadow-transition
+			// shadow-up-1
+			// shadow-up-2
+			// shadow-up-3
+			// shadow-up-4
+			// shadow-up-5
+			'shadow-(((up?-?)((1?)|(2?)|(3?)|(4?)|(5?))?)?|(1?)|(2?)|(3?)|(4?)|(5?)|(tr?a?n?s?i?t?i?o?n?))?',
+
+			// sm
+			'sm',
+
+			// text-bold
+			// text-capitalize
+			// text-center
+			// text-italic
+			// text-justify
+			// text-left
+			// text-lowercase
+			// text-no-wrap
+			// text-right
+			// text-strike
+			// text-uppercase
+			'text-((bo?l?d?)|(cap?i?t?a?l?i?z?e?)|(cen?t?e?r?)|(it?a?l?i?c?)|(ju?s?t?i?f?y?)|(lef?t?)|(low?e?r?c?a?s?e?)|(no?-?w?r?a?p?)|(ri?g?h?t?)|(st?r?i?k?e?)|(up?p?e?r?c?a?s?e?))?',
+
+			// touch-hide
+			// touch-only
+			'touch-((hi?d?e?)|(on?l?y))?',
+
+			// transparent
+			'transpare?n?t?',
+
+			// vertical-bottom
+			// vertical-middle
+			// vertical-top
+			'vertical-((bo?t?t?o?m?)|(mi?d?d?l?e?)|(to?p?))?',
+
+			// window-height
+			// window-width
+			'window-((he?i?g?h?t?)|(wi?d?t?h?))?',
+
+			// within-iframe-hide
+			// within-iframe-only
+			'within-if?r?a?m?e?-?((hi?d?e?)|(on?l?y))?',
+
+			// xl
+			'xl',
+			// xs
+			'xs',
+
+			// z-max
+			// z-top
+			'z-(ma?x?|to?p?)?',
 		];
 	}
 
