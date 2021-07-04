@@ -361,6 +361,7 @@ export class Parser {
     public matchelement_4($$dpth: number, $$cr?: ErrorTracker): Nullable<element_4> {
         return this.matchcypress($$dpth + 1, $$cr);
     }
+
     public matchvueDecorator($$dpth: number, $$cr?: ErrorTracker): Nullable<vueDecorator> {
         return this.choice<vueDecorator>([
             () => this.matchvueDecorator_1($$dpth + 1, $$cr),
@@ -1283,6 +1284,7 @@ export class Parser {
                 return $$res;
             });
     }
+
     public test(): boolean {
         const mrk = this.mark();
         const res = this.matchelement(0);

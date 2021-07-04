@@ -222,7 +222,6 @@ export default class PugLanguage{
 			// z-max
 			// z-top
 			'z-(ma?x?|to?p?)?',
-
 		];
 	}
 

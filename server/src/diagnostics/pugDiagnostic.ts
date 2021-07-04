@@ -15,6 +15,7 @@ import {QuasarParser, ParseResultQuasar} from '../syntaxes/quasarParser'
 import {HtmlAndVueParser, ParseResultHtmlAndVue} from '../syntaxes/HtmlAndVueParser'
 import {QuasarClassesParser, ParseResultClassesQuasar} from '../syntaxes/QuasarClassesParser'
 
+
 export default class PugDiagnosticHandler {
 	tsDiagnosticHandler: TypeScriptDiagnosticHandler = new TypeScriptDiagnosticHandler();
 
@@ -67,7 +68,6 @@ export default class PugDiagnosticHandler {
 			} 
 			problems = diagnostics.length;
 		}
-
 		//quasar helper classes inside pug template class attributes
 		pattern = RegExp(PugLanguage.getQuasarHelperClassesReg(), 'gi');
 		while ((m = pattern.exec(text)) && problems < maxNumberOfProblems) {

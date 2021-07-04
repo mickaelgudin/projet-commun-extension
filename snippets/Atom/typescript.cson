@@ -64,12 +64,10 @@
 		prefix: "Component"
 		body: """@Component"""
 		description: "complete @Component attribute decorator"
-
 	"Mixins":
 		prefix: "Mixins"
 		body: """Mixins """
 		description: "complete Mixins attribute decorator"
-
 	"vue-class-component":
 		prefix: "vue-class-component"
 		body: """@Component export default class LoginForm extends Vue {\t${0}}"""
@@ -599,7 +597,6 @@
 		prefix: "expect(null).to.not.exist;"
 		body: """expect(null).to.not.exist;"""
 		description: "set expect(null).to.not.exist; component with default value"
-
 	"expect('').to.be.empty;":
 		prefix: "expect('').to.be.empty;"
 		body: """expect('').to.be.empty;"""

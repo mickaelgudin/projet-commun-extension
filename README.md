@@ -1,38 +1,60 @@
-# LSP Example
+# The project
+This project uses snippets for autocompletion and the language server protocol for the diagnostic(see below what this extension provides).
 
-Heavily documented sample code for https://code.visualstudio.com/api/language-extensions/language-server-extension-guide
+## Installation
 
-## Functionality
+**For Vscode**
+```npm install```
+Then you can run the projet with the menu : ```Run > Run without debugging```
 
-This Language Server works for plain text file. It has the following language features:
-- Completions
-- Diagnostics regenerated on each file change or configuration change
+**For Atom**
+You can access the Atom snippets in snippets/Atom and set them in the global file snippets for your local Atom app.
 
-It also includes an End-to-End test.
+## Github repositories reuse
+- https://github.com/quanzaiyu/vscode-vue-pug-enhanced (to start with some already implemented pug snippets)
+- https://github.com/AlanCezarAraujo/vs-code-stylus (for the grammar and snippets for stylus)
+- https://github.com/vuejs/vetur (for the grammar of pug and detection of sublanguage inside a .vue file)
 
-## Structure
+We used this repo https://github.com/EoinDavey/tsPEG to generate all the parsers for our diagnostic part.
 
-```
-.
-├── client // Language Client
-│   ├── src
-│   │   ├── test // End to End tests for Language Client / Server
-│   │   └── extension.ts // Language Client entry point
-├── package.json // The extension manifest.
-└── server // Language Server
-    └── src
-        └── server.ts // Language Server entry point
-```
+The Vscode snippets were translated into Atom snippets with the help of the Atom extension Atomizr(which allow us to translate the snippets between different IDE not only Vscode and Atom), although issues were encountered in the translation(Atom snippet don't allow $ inside key definition, [] in body property is allowed in Vscode snippets but not in Atom and Atomizr doesn't make that translation) but Atomizr was helpful nonetheless.
 
-## Running the Sample
+## Autocompletion for the following technologies
 
-- Run `npm install` in this folder. This installs all necessary npm modules in both the client and server folder
-- Open VS Code on this folder.
-- Press Ctrl+Shift+B to compile the client and server.
-- Switch to the Debug viewlet.
-- Select `Launch Client` from the drop down.
-- Run the launch config.
-- If you want to debug the server as well use the launch configuration `Attach to Server`
-- In the [Extension Development Host] instance of VSCode, open a document in 'plain text' language mode.
-  - Type `j` or `t` to see `Javascript` and `TypeScript` completion.
-  - Enter text content such as `AAA aaa BBB`. The extension will emit diagnostics for all words in all-uppercase.
+**Pug (inside pug templates in a .vue files and also inside .pug files)**
+- Quasar component
+- CSS Quasar helper classes css
+- SVG
+- HTML
+- Attributes and directives de Vue & string interpolation
+
+**Stylus (style tag with stylus as the language inside .vue files but also inside .styl files)**
+- Stylus (voir : https://github.com/AlanCezarAraujo/vs-code-stylus) 
+- Stylus Quasar variables
+
+**Typescript (script tag with ts as the language inside .vue files but also inside .ts files)**
+- Meteor(startup, methods, publish)
+- Vue property decorator
+- Vue router constructor
+- Astronomy schema (Class.create, https://jagi.github.io/meteor-astronomy/)
+- functions for Mocha et Chai
+- functions for les stubs Sinon
+- functions for Cypress.io API
+
+## Diagnostic for the following technologies
+
+**Pug(inside pug templates in a .vue files and also inside .pug files)**
+- Quasar component
+- Quasar classes css helper
+- SVG
+- HTML
+- Attributes and directives de Vue & string interpolation
+
+**Stylus(style tag with stylus as the language inside .vue files but also inside .styl files)**
+- Stylus quasar variables
+
+**Typescript(script tag with ts as the language inside .vue files but also inside .ts files)**
+- Meteor(startup, methods, publish)
+- Vue property decorator
+- Vue router constructor
+- functions for Cypress.io API
