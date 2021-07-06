@@ -1,10 +1,11 @@
 # The project
 This project uses snippets for autocompletion and the language server protocol for the diagnostic(see below what this extension provides).
+See the youtube video of the app (French version) : https://www.youtube.com/watch?v=ke35a9rsh0M
 
 ## Installation
 
 ## For Vscode
-Run this command ```npm install```
+Run this commands ```npm install && npm run compile```
 
 Then you can run the projet with the menu : ```Run > Run without debugging```
 
